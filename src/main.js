@@ -34,12 +34,17 @@ if (header) {
 
 // Hero slider logic
 const slides = document.querySelectorAll('.hero-slide');
+const headings = document.querySelectorAll('.hero-heading');
 if (slides.length > 0) {
   let currentSlide = 0;
   setInterval(() => {
     slides[currentSlide].classList.remove('active');
+    if (headings[currentSlide]) headings[currentSlide].classList.remove('active');
+    
     currentSlide = (currentSlide + 1) % slides.length;
+    
     slides[currentSlide].classList.add('active');
+    if (headings[currentSlide]) headings[currentSlide].classList.add('active');
   }, 5000);
 }
 

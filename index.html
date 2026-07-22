@@ -35,24 +35,15 @@
         <!-- Logo -->
         <a href="#" class="logo-link">
           <div class="logo-container">
-            <div class="logo-icon-svg">
-              <svg viewBox="0 0 120 50" width="45" height="20">
-                <path d="M10,35 Q40,40 70,15 L90,10 L100,18 L85,38 L75,32 Z" fill="none" stroke="#F44B6D" stroke-width="2"/>
-                <polygon points="70,15 90,10 100,18 85,38 75,32" fill="#F44B6D"/>
-                <polygon points="70,15 90,10 85,25 75,32" fill="#fff"/>
-                <polygon points="85,25 90,10 100,18" fill="#F44B6D"/>
-              </svg>
-            </div>
-            <h2 class="logo-title">Tımbercubés</h2>
-            <span class="logo-subtitle">kitchen <span class="logo-plus">+</span> wardrobe <span class="logo-plus">+</span> interior</span>
+            <img src="/logo.jpg" alt="Timbercubes Logo" class="brand-logo" />
           </div>
         </a>
 
         <!-- Navigation -->
         <nav class="nav">
-          <a href="#" class="active">Home</a>
-          <a href="#">About us</a>
-          <a href="#">Services We Offer</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About us</a>
+          <a href="services.html">Services We Offer</a>
           <a href="#">Testimonials</a>
           <a href="#">Blog</a>
           <a href="#">Gallery</a>
@@ -93,7 +84,9 @@
           <div class="hero-inset-content">
             <div class="hero-main-row">
               <div class="hero-title-area">
-                <h1>The Art of<br>Modern Interior<br>Living</h1>
+                <h1 class="hero-heading active">The widest-ever selection<br>of luxury modular kitchens</h1>
+                <h1 class="hero-heading">Smart wardrobe solutions<br>for your comfort</h1>
+                <h1 class="hero-heading">Stylish designs for<br>every budget</h1>
               </div>
               <div class="hero-desc-area">
                 <p>Curated furniture and decor that blend elegance, comfort, and functionality. We organize the most beautiful interior setups with clear schedules and simple booking.</p>
@@ -112,9 +105,16 @@
               </div>
               
               <div class="hf-right">
-                <div class="hf-pill"><i class="ph ph-shield-check"></i> Quality Assurance</div>
-                <div class="hf-pill"><i class="ph ph-truck"></i> Free Shipping</div>
-                <div class="hf-pill"><i class="ph ph-map-pin"></i> Custom Setup</div>
+                <a href="tel:08129188188" class="btn-free-quote">
+                  <div class="btn-fq-inner">
+                    <i class="ph-fill ph-phone btn-fq-icon"></i>
+                    <span class="btn-fq-label">FREE<br>QUOTE</span>
+                  </div>
+                  <span class="btn-fq-number">08129- 188 188</span>
+                </a>
+                <div class="hf-pill hide-on-mobile"><i class="ph ph-shield-check"></i> Quality Assurance</div>
+                <div class="hf-pill hide-on-mobile"><i class="ph ph-truck"></i> Free Shipping</div>
+                <div class="hf-pill hide-on-mobile"><i class="ph ph-map-pin"></i> Custom Setup</div>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@
         <div class="container" style="max-width: 1000px;">
           <span class="badge-outline">About Timbercubes Interiors</span>
           <h2 class="about-fade-text">
-            Timbercubes Interiors, established in 2008, is a trusted name in creating stylish and functional living spaces. With expertise in modular kitchens, wardrobes, ceilings, partitions, and custom furniture, we combine quality craftsmanship with innovative design to transform homes and workplaces. Every project reflects our commitment to durability, elegance, and customer satisfaction, making us a preferred choice for interiors that inspire.
+            Timbercubes is a leading Modular kitchen designers and dealers in Thrissur Kerala, we also deal with Wardrobes and Kitchen Interior product designing and manufacturing. We are the best modular kitchen designers in Thrissur with a well-equipped manufacturing unit with professional interior designers to work on your dream kitchen cabinets. We offer our services in Kochi, Thrissur, Malappuram, Palakkad and also in Calicut. Our attractive, yet flexible designs keep in mind your space constraints to offer the added benefits of lower cost and utmost comfort. Our furniture and fit-outs comes with built in Acrylic, Poly Acrylic, Laminated, PVC foil, Lacquered Glass, PVC Foam sheet, Marine ply and Solid wood materials.
           </h2>
         </div>
       </section>
@@ -237,17 +237,21 @@
             <!-- Left Text Column -->
             <div class="explore-text-col">
               <span class="badge-light">Explore</span>
-              <h2>Discover beautiful layouts and premium furniture across our modern collections.</h2>
+              <h2>Design your home<br>with love</h2>
               <div class="explore-actions">
-                <a href="#" class="btn-black-pill">Start your styling</a>
+                <a href="#" class="btn-black-pill">Our gallery</a>
                 <a href="#" class="btn-circle-dark"><i class="ph ph-arrow-up-right"></i></a>
               </div>
             </div>
 
             <!-- Middle Image Column -->
             <div class="explore-img-col portrait">
-              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=800" alt="Modern Setup">
-              <div class="portrait-overlay">
+              <div class="cf-slider">
+                <img src="/6.png" alt="Setup 1">
+                <img src="/4.png" alt="Setup 2">
+                <img src="/3.png" alt="Setup 3">
+              </div>
+              <div class="portrait-overlay" style="z-index: 10;">
                 <p>See real moments<br>from our setups.</p>
                 <a href="#" class="btn-circle-light"><i class="ph ph-arrow-up-right"></i></a>
               </div>
@@ -256,69 +260,98 @@
             <!-- Right Image Column -->
             <div class="explore-img-col landscape-wrap">
               <div class="landscape-img-box">
-                <span class="badge-translucent">Premium Path</span>
-                <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&q=80&w=800" alt="Living Room">
+                <span class="badge-translucent" style="z-index: 10;">Premium Path</span>
+                <div class="cf-slider">
+                  <img src="/5.png" alt="Living Room 1">
+                  <img src="/1.png" alt="Living Room 2">
+                  <img src="/2.png" alt="Living Room 3">
+                </div>
               </div>
-              <p class="landscape-desc">Every layout reveals new perspectives — from cozy corners to grand living rooms waiting to be styled.</p>
+              <p class="landscape-desc">Timbercubes is a fast emerging brand in modular kitchens, wardrobes and home furniture industry. Our functional yet funky designs always keep the end users in perspective and promise optimum comfort. All our products and services are delivered to exceed customer expectations in terms of time, quality and reliability, and cost. Our extensive collection of designs, styles and colors will help you to choose a kitchen,</p>
             </div>
 
           </div>
+          </div>
         </div>
       </section>
 
-      <!-- Features Banner -->
-      <section class="features-banner">
-        <div class="container features-grid">
-          <div class="feature-item">
-            <i class="ph ph-truck"></i>
-            <span>Free Shipping Over $50</span>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-shield-check"></i>
-            <span>Quality Assurance</span>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-package"></i>
-            <span>Return within 14 days</span>
-          </div>
-          <div class="feature-item">
-            <i class="ph ph-headset"></i>
-            <span>Support 24/7</span>
+      <!-- 3.5 Award Section -->
+      <section class="award-section section-padding" style="padding-top: 0;">
+        <div class="container">
+          <div class="award-box">
+            <div class="award-img">
+              <img src="/certificate.png" alt="Just Dial 5 Star Rated">
+            </div>
+            <div class="award-text">
+              <h3>5 Star Rated</h3>
+              <p>We are delighted and proud to announce that Timbercubes Kitchen Wardrobe Interior –Kozhikode has been awarded the highest rating of 5/5 Stars by Just dial Limited – India’s No.1 Local search engine, in collaboration with Bollywood’s greatest superstar Amitabh Bachchan.</p>
+              <p>The rating was awarded on extensive assessment of customer reviews, satisfaction and is a resounding endorsement of our commitment to deliver excellence in our products and service quality.</p>
+              <p>As we share this moment of achievement with you, we are truly grateful to you for choosing us as your partner. This wouldn’t have been possible without your trust in us and your unwavering support. We look forward to working with you for many more years to come.</p>
+              <div class="award-signature">
+                Best Regards,<br>
+                Abdul Jalal Panthenkaden<br>
+                Founder & CEO
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+
 
       <!-- 4. Categories Grid -->
       <section class="categories section-padding">
-        <div class="container cat-grid">
-          <a href="#" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&q=80&w=600" alt="Bathroom">
-            <div class="cat-info">
-              <h3>Bathroom</h3>
-              <span>6 ITEMS</span>
-            </div>
-          </a>
-          <a href="#" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=600" alt="Chair">
-            <div class="cat-info">
-              <h3>Chair</h3>
-              <span>17 ITEMS</span>
-            </div>
-          </a>
-          <a href="#" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Decor">
-            <div class="cat-info">
-              <h3>Decor</h3>
-              <span>17 ITEMS</span>
-            </div>
-          </a>
-          <a href="#" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=600" alt="Lamp">
-            <div class="cat-info">
-              <h3>Lamp</h3>
-              <span>3 ITEMS</span>
-            </div>
-          </a>
+        <div class="container cat-grid-wrap">
+          <div class="cat-grid">
+            <a href="modular-kitchen.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&q=80&w=600" alt="Modular Kitchen">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Modular Kitchen</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+            <a href="wardrobes.html" class="cat-card">
+              <img src="public/8.jpg" alt="Wardrobes">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Wardrobes</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+            <a href="bedroom-designing.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=600" alt="Bedroom Designing">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Bedroom Designing</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+            <a href="commercial-interior.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Commercial Interior">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Commercial Interior</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+            <a href="consoles-crockery.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=600" alt="Consoles & Crockery Shelves">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Consoles & Crockery</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+            <a href="cots-side-tables.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=600" alt="Cots & Side Tables">
+              <div class="cat-info-pill btn-layered-pill">
+                <span class="btn-text-pill">Cots & Side Tables</span>
+                <i class="ph ph-arrow-right btn-arrow"></i>
+              </div>
+            </a>
+          </div>
+          <div class="cat-actions" style="text-align: center; margin-top: 40px;">
+            <a href="services.html" class="btn-layered-pill" style="display: inline-flex;">
+              <span class="btn-text-pill">Services We Offer</span>
+              <i class="ph ph-arrow-right btn-arrow"></i>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -359,58 +392,7 @@
         </div>
       </section>
 
-      <!-- 6. Catalog Section -->
-      <section class="catalog-section section-padding section-gray">
-        <div class="container">
-          <div class="catalog-header flex-between">
-            <div>
-              <h2>Catalog of our premium<br>collections for 2024</h2>
-            </div>
-            <div class="catalog-header-text">
-              <p>Modern interior setups are<br>at the peak of popularity</p>
-            </div>
-          </div>
-          
-          <div class="catalog-grid">
-            <!-- Item 1 -->
-            <div class="catalog-card">
-              <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=600" alt="Modern House">
-              <div class="catalog-info">
-                <h4>Nordic Living Setup, 77m²</h4>
-              </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="catalog-card">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Wood Architecture">
-              <div class="catalog-info">
-                <h4>Wooden Retreat, 94m²</h4>
-              </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="catalog-card">
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=600" alt="Dark Cabin">
-              <div class="catalog-info">
-                <h4>Forest Cabin Setup, 66m²</h4>
-              </div>
-            </div>
-            <!-- Item 4 -->
-            <div class="catalog-card">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Minimalist Home">
-              <div class="catalog-info">
-                <h4>Minimalist Space, 60m²</h4>
-              </div>
-            </div>
-          </div>
 
-          <div class="catalog-footer flex-between">
-            <a href="#" class="btn-dark-pill">To Catalog <i class="ph ph-arrow-right"></i></a>
-            <div class="catalog-arrows">
-              <button class="arrow-btn"><i class="ph ph-caret-left"></i></button>
-              <button class="arrow-btn"><i class="ph ph-caret-right"></i></button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- 6.5 How It Works Section -->
       <section class="how-it-works-section section-padding">
@@ -498,14 +480,6 @@
               </div>
             </div>
           </div>
-
-          <div class="hiw-footer">
-            <div class="hiw-cta-text">
-              <h4>READY TO GET STARTED?</h4>
-              <p>Simple pricing, no hidden fees -<br>see what works for your space.</p>
-            </div>
-            <a href="#" class="btn-yellow">View Our Pricing</a>
-          </div>
         </div>
       </section>
 
@@ -549,13 +523,10 @@
       <div class="container">
         <div class="footer-top">
           <div class="footer-col brand-col">
-            <a href="#" class="logo footer-logo">
-              <div class="logo-text">
-                <h2>Timbercubés</h2>
-                <span>kitchen + wardrobe + interior</span>
-              </div>
-            </a>
-            <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
+          <a href="index.html" class="footer-logo-link" style="display: block; margin-bottom: 20px;">
+            <img src="public/logo.jpg" alt="Timbercubes Logo" class="footer-logo" style="max-width: 250px; border-radius: 8px;">
+          </a>
+          <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
             <div class="socials">
               <a href="#"><i class="ph ph-facebook-logo"></i></a>
               <a href="#"><i class="ph ph-instagram-logo"></i></a>
