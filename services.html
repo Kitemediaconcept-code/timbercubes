@@ -27,6 +27,7 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
     
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/src/gallery-categories.css" />
   </head>
   <body>
     <!-- 1. Header (Pill Style as requested previously) -->
@@ -68,24 +69,232 @@
 
     <main class="services-main">
       
-      <!-- 1. Hero Section -->
-      <section class="svc-hero section-padding">
-        <div class="container svc-hero-container">
-          <div class="svc-hero-image-wrap">
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200" alt="Beautiful Wood Design" class="svc-hero-img">
-            <div class="svc-hero-overlay-text">
-              <h1 class="display-title-large text-white">We craft interior spaces rooted in aesthetic brilliance — poised to fulfill your dream home...</h1>
-            </div>
-            <div class="svc-hero-floating-card">
-              <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&q=80&w=100" alt="Icon" class="floating-icon">
-              <div>
-                <span class="text-sm text-gray">We specialize in</span>
-                <br>
-                <span class="font-bold text-dark">Designing & Solutions</span>
+      <!-- 1. Hero Split Booking Section -->
+      <section class="hero-split-booking">
+        <div class="hsb-bg">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000" alt="Modern Interior Setup">
+          <div class="hsb-overlay"></div>
+        </div>
+        
+        <div class="container hsb-container">
+          <!-- Left Text Column -->
+          <div class="hsb-text-col">
+            <p class="hsb-subtitle">Strategic design that captures who you are—and who you're here for.</p>
+            <h1 class="hsb-title">Bold Brands<br>with Purpose</h1>
+            <p class="hsb-desc">I craft standout brand identities for founders ready to be seen, heard, and remembered.</p>
+          </div>
+          
+          <!-- Right Glassmorphism Booking Card Column -->
+          <div class="hsb-card-col">
+            <div class="hsb-glass-card">
+              <button class="hsb-close-btn"><i class="ph ph-x"></i></button>
+              
+              
+
+              <h2 class="hsb-card-title">Book Your 30-Minute<br>Design Consultation</h2>
+              <p class="hsb-card-desc">Let's unlock the direction, identity, and visual style your home truly needs.</p>
+              
+              <div class="hsb-form-fields" style="margin-top: 30px;">
+                <input type="text" class="hsb-email-input" placeholder="Your Name" required>
+                <input type="tel" class="hsb-email-input" placeholder="Phone Number" required>
+                <input type="email" class="hsb-email-input" placeholder="Email Address" required>
+                <textarea class="hsb-email-input" placeholder="Your Address" rows="3" style="border-radius: 20px; resize: none;"></textarea>
               </div>
-              <div class="card-dots">
-                <i class="ph-fill ph-circle text-gray"></i>
-                <i class="ph ph-circle text-gray"></i>
+              <button class="hsb-book-btn">Request Consultation</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Categories Vertical Grid -->
+      <section class="gallery-categories-grid section-padding">
+        <div class="container">
+          
+          <div class="text-center mb-60">
+            <h2 class="display-title-medium text-dark">Explore Categories</h2>
+          </div>
+
+          <div class="category-cards-wrapper">
+            
+            <!-- Card 1 -->
+            <div class="cat-card">
+              <img src="/rust_kitchen.png" alt="Laminate Solid Kitchen" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              
+              <div class="cat-card-top">
+                <span class="cat-tag">Solid Color</span>
+              </div>
+              
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Laminate-solid<br>color Kitchen</h3>
+                <p class="cat-card-desc">Perfect combination of durability and seamless matte or gloss finishes.</p>
+                <a href="#cat-solid-color" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="cat-card">
+              <img src="/black_wood_kitchen.png" alt="Wooden Grains" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              
+              <div class="cat-card-top">
+                <span class="cat-tag">Wood + Solid</span>
+              </div>
+              
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Laminate-solid color<br>+ wooden grains</h3>
+                <p class="cat-card-desc">A beautiful contrast bringing natural warmth and modern minimalism.</p>
+                <a href="#cat-wooden-grains" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="cat-card">
+              <img src="/acrylic_kitchen.png" alt="Acrylic Kitchen" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              
+              <div class="cat-card-top">
+                <span class="cat-tag">High Gloss</span>
+              </div>
+              
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Acrylic<br>Kitchen</h3>
+                <p class="cat-card-desc">Ultra-glossy, highly reflective surfaces for a premium, spacious look.</p>
+                <a href="#cat-acrylic" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="cat-card">
+              <img src="/pu_kitchen.png" alt="Polyurethane Coating" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              
+              <div class="cat-card-top">
+                <span class="cat-tag">PU Paint</span>
+              </div>
+              
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Polyurethane<br>Coating</h3>
+                <p class="cat-card-desc">Seamless luxury finishes adding immense value to the kitchen.</p>
+                <a href="#cat-pu" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="cat-card">
+              <img src="/glass_kitchen.png" alt="Lacquered Glass" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              
+              <div class="cat-card-top">
+                <span class="cat-tag">Glass & Matte</span>
+              </div>
+              
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Lacquered Glass<br>+ Laminate</h3>
+                <p class="cat-card-desc">The ultimate blend of reflective glass and subtle laminate textures.</p>
+                <a href="#cat-glass" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 6: Wardrobes -->
+            <div class="cat-card">
+              <img src="/wardrobes_card.png" alt="Wardrobes" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              <div class="cat-card-top">
+                <span class="cat-tag">Storage</span>
+              </div>
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Wardrobes</h3>
+                <p class="cat-card-desc">Elegant and spacious wardrobe solutions tailored to your lifestyle.</p>
+                <a href="#cat-wardrobes" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 7: Cots & Side Tables -->
+            <div class="cat-card">
+              <img src="/cots_card.png" alt="Cots and Side Tables" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              <div class="cat-card-top">
+                <span class="cat-tag">Bedroom</span>
+              </div>
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Cots &<br>Side Tables</h3>
+                <p class="cat-card-desc">Comfortable and stylish bedroom essentials.</p>
+                <a href="#cat-cots" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 8: TV units & Sofas -->
+            <div class="cat-card">
+              <img src="/tv_unit.png" alt="TV Units and Sofas" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              <div class="cat-card-top">
+                <span class="cat-tag">Living Room</span>
+              </div>
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">TV units<br>& Sofas</h3>
+                <p class="cat-card-desc">Modern entertainment units and comfortable seating for the living area.</p>
+                <a href="#cat-tv" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 9: Consoles & Study tables -->
+            <div class="cat-card">
+              <img src="/console_card.png" alt="Consoles and Study Tables" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              <div class="cat-card-top">
+                <span class="cat-tag">Workspace</span>
+              </div>
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Consoles &<br>Study tables</h3>
+                <p class="cat-card-desc">Functional and minimalist workspaces and entry consoles.</p>
+                <a href="#cat-consoles" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 10: Partitions, Wall Paneling & Architraves -->
+            <div class="cat-card">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Partitions and Wall Paneling" class="cat-card-img">
+              <div class="cat-card-overlay"></div>
+              <div class="cat-card-top">
+                <span class="cat-tag">Architecture</span>
+              </div>
+              <div class="cat-card-bottom">
+                <h3 class="cat-card-title">Partitions, Wall Paneling<br>& Architraves</h3>
+                <p class="cat-card-desc">Architectural details to divide spaces and add character to walls.</p>
+                <a href="#cat-partitions" class="cat-explore-btn">EXPLORE DESIGN <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- Stats Section -->
+      <section class="stats-section section-padding-sm" style="background-color: #F8F7F5;">
+        <div class="container">
+          <div class="stats-grid">
+            <!-- Stat Card 1 -->
+            <div class="stat-card">
+              <p class="stat-text">By choosing our interior design services, you can achieve your dream space.</p>
+              <div class="stat-numbers">
+                <span class="stat-value">16+</span>
+                <span class="stat-label">YEARS<br>EXPERIENCE</span>
+              </div>
+            </div>
+            <!-- Stat Card 2 -->
+            <div class="stat-card">
+              <p class="stat-text">By choosing our interior design services, you can achieve your dream space.</p>
+              <div class="stat-numbers">
+                <span class="stat-value">1000+</span>
+                <span class="stat-label">PROJECTS<br>COMPLETED</span>
+              </div>
+            </div>
+            <!-- Stat Card 3 -->
+            <div class="stat-card">
+              <p class="stat-text">By choosing our interior design services, you can achieve your dream space.</p>
+              <div class="stat-numbers">
+                <span class="stat-value">80+</span>
+                <span class="stat-label">TEAM<br>MEMBERS</span>
               </div>
             </div>
           </div>
@@ -263,7 +472,7 @@
           </div>
           
           <div class="special-img-card radius-40 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1600607688069-ce21fb0847bb?auto=format&fit=crop&q=80&w=800" alt="Wood Design" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" alt="Wood Design" class="w-full h-full object-cover">
             <div class="absolute bottom-30 right-30 bg-glass-light radius-20 p-10 pr-40 flex items-center gap-15 backdrop-blur">
               <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&q=80&w=50" alt="Product" class="radius-10 w-40 h-40 object-cover">
               <div>

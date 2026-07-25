@@ -1,0 +1,220 @@
+/* --- Gallery Categories Vertical Grid Styles --- */
+
+.gallery-categories-grid {
+  background-color: #f8f9fa; /* Light, clean background to replace the brown */
+}
+
+.category-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Individual Card */
+.cat-card {
+  position: relative;
+  height: 650px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cat-card:hover {
+  transform: translateY(-10px);
+}
+
+.cat-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.cat-card:hover .cat-card-img {
+  transform: scale(1.05);
+}
+
+.cat-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.8) 100%);
+  z-index: 1;
+}
+
+/* Top Section (Tags) */
+.cat-card-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cat-tag {
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bottom Section (Text & Button) */
+.cat-card-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cat-card-title {
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.cat-card-desc {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  text-align: left;
+  max-width: 90%;
+}
+
+.cat-explore-btn {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.cat-explore-btn i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.cat-explore-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.cat-explore-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .category-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-cards-wrapper {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+  
+  .cat-card {
+    height: 500px;
+  }
+  
+  .cat-card-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================================
+   CATEGORY 6-IMAGE DETAIL GRIDS
+   ========================================= */
+
+.gallery-category-detail {
+  border-top: 1px solid #eaeaea;
+}
+
+.category-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px;
+  gap: 20px;
+  width: 100%;
+}
+
+.cg-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.cg-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.cg-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Bento/Masonry classes */
+.cg-span-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.cg-span-wide {
+  grid-column: span 2;
+}
+
+/* Responsive Grid */
+@media (max-width: 991px) {
+  .category-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+  
+  .cg-span-2x2, .cg-span-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-grid-6 {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+  }
+}

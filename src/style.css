@@ -2015,6 +2015,306 @@ a {
   margin-bottom: 20px;
 }
 
+/* 8. Footer Features */
+.footer-features {
+  border-top: 1px solid #EAE8E3;
+}
+
+/* --- Hero Split Booking Section (About Page) --- */
+.hero-split-booking {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 60px;
+  overflow: hidden;
+}
+
+.hsb-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hsb-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hsb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.hsb-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.hsb-text-col {
+  flex: 1;
+  max-width: 600px;
+  color: #fff;
+}
+
+.hsb-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hsb-title {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hsb-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 450px;
+}
+
+/* Glassmorphism Card */
+.hsb-card-col {
+  flex: 0 0 450px;
+  max-width: 100%;
+}
+
+.hsb-glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 40px;
+  color: #111;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hsb-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.hsb-close-btn:hover {
+  color: #111;
+}
+
+.hsb-profile-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hsb-profile-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hsb-profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hsb-profile-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hsb-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.hsb-card-desc {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Date Selector */
+.hsb-date-selector {
+  margin-bottom: 20px;
+}
+
+.hsb-date-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hsb-days-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hsb-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hsb-day:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hsb-day.active {
+  background: #fff;
+  color: #111;
+}
+
+.hsb-day .day-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hsb-day .day-num {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Time Slots */
+.hsb-time-slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.time-slot {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.time-slot:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Inputs and Buttons */
+.hsb-email-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 20px;
+  border-radius: 30px;
+  color: #111;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.hsb-email-input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.hsb-email-input:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hsb-book-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 20px;
+  border-radius: 30px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.hsb-book-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hsb-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hsb-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+  }
+  .hsb-card-col {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .hsb-glass-card {
+    padding: 24px;
+  }
+  .hsb-title {
+    font-size: 2.8rem;
+  }
+  .hsb-time-slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* 3. Logo Strip */
 .border-top-bottom {
   border-top: 1px solid #eee;
@@ -2612,3 +2912,82 @@ a {
   color: #fff;
 }
 
+/* --- Contact Page Responsive Styles --- */
+@media (max-width: 991px) {
+  .locations-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .locations-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* --- Stats Section --- */
+.stats-section {
+  padding: 80px 0;
+}
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.stat-card {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.stat-text {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 400px;
+  line-height: 1.6;
+}
+.stat-numbers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.stat-value {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 30px;
+    padding: 30px;
+    gap: 25px;
+  }
+  .stat-numbers {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stat-value {
+    font-size: 4rem;
+  }
+}
