@@ -61,57 +61,88 @@
 
     <main class="contact-main">
       
-      <!-- 1. Hero Split Booking Section (Contact) -->
-      <section class="hero-split-booking">
-        <div class="hsb-bg">
-          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000" alt="Office Setup">
-          <div class="hsb-overlay" style="background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(0,0,0,0.3) 100%); mix-blend-mode: normal;"></div>
-        </div>
-        
-        <div class="container hsb-container">
+      <!-- Contact Modern Section -->
+      <section class="contact-modern-section">
+        <div class="container cm-container">
           <!-- Left Text Column -->
-          <div class="hsb-text-col" style="color: #111;">
-            <h1 class="hsb-title" style="font-size: 6rem; line-height: 1; letter-spacing: -2px; margin-bottom: 20px; color: #111;">Let's talk</h1>
-            <p class="hsb-desc" style="max-width: 400px; color: #333; margin-bottom: 60px;">Whether you're looking to collaborate or simply want to chat about the magic of visual storytelling, drop us a line.</p>
+          <div class="cm-text-col">
+            <span class="cm-subtitle">WE'RE HERE TO HELP YOU</span>
+            <h1 class="cm-title">Get in touch</h1>
+            <p class="cm-desc">Are you looking for top-quality interior solutions tailored to your needs? Reach out to us.</p>
             
-            <div class="contact-details-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
-              <div>
-                <span style="font-size: 12px; color: #666; display: block; margin-bottom: 8px;">Email address</span>
-                <a href="mailto:info@timbercubes.in" style="font-size: 18px; font-weight: 700; color: #111; text-decoration: none;">info@timbercubes.in</a>
+            <div class="cm-details">
+              <div class="cm-detail-item">
+                <div class="cm-icon"><i class="ph-fill ph-envelope"></i></div>
+                <div class="cm-info">
+                  <span class="cm-label">E-mail</span>
+                  <a href="mailto:info@timbercubes.in" class="cm-value">info@timbercubes.in</a>
+                </div>
               </div>
-              <div>
-                <span style="font-size: 12px; color: #666; display: block; margin-bottom: 8px;">Phone Number</span>
-                <a href="tel:+919349186060" style="font-size: 18px; font-weight: 700; color: #111; text-decoration: none;">+91 9349 18 6060</a>
+              
+              <div class="cm-detail-item">
+                <div class="cm-icon"><i class="ph-fill ph-phone"></i></div>
+                <div class="cm-info">
+                  <span class="cm-label">Phone number</span>
+                  <a href="tel:+919349186060" class="cm-value">+91 9349 18 6060</a>
+                </div>
               </div>
-            </div>
-            
-            <div class="social-links-area">
-              <span style="font-size: 12px; color: #666; display: block; margin-bottom: 12px;">Lets connect</span>
-              <div style="display: flex; gap: 30px;">
-                <a href="#" style="font-weight: 600; font-size: 14px; color: #111; text-decoration: none;">Facebook</a>
-                <a href="#" style="font-weight: 600; font-size: 14px; color: #111; text-decoration: none;">Instagram</a>
-                <a href="#" style="font-weight: 600; font-size: 14px; color: #111; text-decoration: none;">Pinterest</a>
+              
+              <div class="cm-detail-item">
+                <div class="cm-icon"><i class="ph-fill ph-map-pin"></i></div>
+                <div class="cm-info">
+                  <span class="cm-label">Address</span>
+                  <span class="cm-value">Calicut, Kerala, India</span>
+                </div>
+              </div>
+
+              <div class="cm-detail-item">
+                <div class="cm-icon"><i class="ph-fill ph-clock"></i></div>
+                <div class="cm-info">
+                  <span class="cm-label">Working Hours</span>
+                  <span class="cm-value">Mon - Sat : 9:00 AM - 7:00 PM<br>Sunday : Closed</span>
+                </div>
               </div>
             </div>
           </div>
           
-          <!-- Right Glassmorphism Booking Card Column -->
-          <div class="hsb-card-col">
-            <div class="hsb-glass-card">
-              <button class="hsb-close-btn"><i class="ph ph-x"></i></button>
-              
-              
-
-              <h2 class="hsb-card-title">Book Your 30-Minute<br>Design Consultation</h2>
-              <p class="hsb-card-desc">Let's unlock the direction, identity, and visual style your home truly needs.</p>
-              
-              <div class="hsb-form-fields" style="margin-top: 30px;">
-                <input type="text" class="hsb-email-input" placeholder="Your Name" required>
-                <input type="tel" class="hsb-email-input" placeholder="Phone Number" required>
-                <input type="email" class="hsb-email-input" placeholder="Email Address" required>
-                <textarea class="hsb-email-input" placeholder="Your Address" rows="3" style="border-radius: 20px; resize: none;"></textarea>
-              </div>
-              <button class="hsb-book-btn">Request Consultation</button>
+          <!-- Right Form Column -->
+          <div class="cm-form-col">
+            <div class="cm-form-card">
+              <form action="#" method="POST">
+                <div class="cm-input-group">
+                  <label>Name</label>
+                  <input type="text" placeholder="Jane Smith" required>
+                </div>
+                
+                <div class="cm-input-group">
+                  <label>Email</label>
+                  <input type="email" placeholder="jane@frame.com" required>
+                </div>
+                
+                <div class="cm-input-group">
+                  <label>Industry</label>
+                  <div class="cm-select-wrapper">
+                    <select required>
+                      <option value="" disabled selected>Select...</option>
+                      <option value="interior">Interior Design</option>
+                      <option value="wardrobe">Wardrobes</option>
+                      <option value="kitchen">Modular Kitchen</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <i class="ph ph-caret-down"></i>
+                  </div>
+                </div>
+                
+                <div class="cm-input-group">
+                  <label>Message</label>
+                  <textarea placeholder="Type your message" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="cm-submit-btn">
+                  <span class="cm-submit-icon"><i class="ph ph-arrow-right"></i></span>
+                  <span class="cm-submit-text">Get a Solution</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>
