@@ -909,6 +909,7 @@ a {
   color: var(--text-light);
   line-height: 1.5;
   padding: 0 10px;
+  text-align: justify;
 }
 
 @media (max-width: 1024px) {
@@ -1123,6 +1124,7 @@ a {
   line-height: 1.5;
   margin-bottom: 40px;
   max-width: 500px;
+  text-align: justify;
 }
 
 .tech-image-wrap {
@@ -1756,7 +1758,7 @@ a {
 
 .mobile-nav-large a {
   font-family: var(--font-sans);
-  font-size: 2.8rem;
+  font-size: 2.0rem;
   font-weight: 500;
   color: #111;
   text-decoration: none;
@@ -1771,7 +1773,7 @@ a {
 
 .mobile-nav-medium a {
   font-family: var(--font-sans);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #444;
   text-decoration: none;
@@ -1841,6 +1843,7 @@ a {
   color: #555;
   margin-bottom: 15px;
   line-height: 1.6;
+  text-align: justify;
 }
 .award-signature {
   margin-top: 25px;
@@ -2891,25 +2894,28 @@ a {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background-color: #25D366;
-  color: #fff;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 9999;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.whatsapp-sticky img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .whatsapp-sticky:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  color: #fff;
 }
 
 /* --- Contact Page Responsive Styles --- */
@@ -3186,4 +3192,9 @@ a {
   .cm-title {
     font-size: 2.5rem;
   }
+}
+
+/* Adjust footer logo alignment */
+.footer-logo {
+  margin-left: -18px;
 }
