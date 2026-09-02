@@ -311,7 +311,43 @@ a {
 
 .hero-title-area {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-since-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  margin-bottom: 24px;
+}
+
+.hero-since-badge i {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.hero-since-badge span {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero-headings-wrapper {
+  position: relative;
   display: grid;
+  width: 100%;
 }
 
 .hero-title-area h1 {
