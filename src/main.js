@@ -89,4 +89,42 @@ if (mobileBtn && mobileOverlay && mobileCloseBtn) {
   });
 }
 
+// Gallery Lightbox Logic
+const lightbox = document.getElementById('galleryLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxCards = document.querySelectorAll('[data-lightbox]');
+
+if (lightbox && lightboxImg && lightboxClose) {
+  lightboxCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.kitchen-card-img');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        if (typeof lenis !== 'undefined') lenis.stop();
+      }
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    if (typeof lenis !== 'undefined') lenis.start();
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
+
 
