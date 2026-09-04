@@ -1757,9 +1757,7 @@ a {
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background-color: #ffffff;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -1792,6 +1790,8 @@ a {
 .mobile-nav-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 30px;
   flex: 1;
 }
@@ -1799,6 +1799,7 @@ a {
 .mobile-nav-large {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
@@ -1814,6 +1815,7 @@ a {
 .mobile-nav-medium {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
@@ -1829,6 +1831,7 @@ a {
   margin-top: auto;
   padding-top: 40px;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .mobile-nav-contact p {
