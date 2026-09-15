@@ -540,16 +540,6 @@ a {
   }
 }
 
-/* --- Hero first-slide black text on mobile --- */
-@media (max-width: 900px) {
-  .hero-inset-content.hero-light-text .hero-heading {
-    color: #111111 !important;
-  }
-  .hero-inset-content.hero-light-text .hero-desc-area p {
-    color: rgba(0, 0, 0, 0.8) !important;
-  }
-}
-
 /* --- About Fading Text Section --- */
 .about-fade-section {
   display: flex;

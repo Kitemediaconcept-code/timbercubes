@@ -37,20 +37,8 @@ const slides = document.querySelectorAll('.hero-slide');
 const headings = document.querySelectorAll('.hero-heading');
 const heroContent = document.querySelector('.hero-inset-content');
 
-function updateHeroTextStyle(slideIndex) {
-  if (!heroContent) return;
-  // Apply black text on mobile for the first (0) and last (3) slides
-  if (slideIndex === 0 || slideIndex === slides.length - 1) {
-    heroContent.classList.add('hero-light-text');
-  } else {
-    heroContent.classList.remove('hero-light-text');
-  }
-}
-
 if (slides.length > 0) {
   let currentSlide = 0;
-  // Apply initial state
-  updateHeroTextStyle(currentSlide);
 
   setInterval(() => {
     slides[currentSlide].classList.remove('active');
@@ -60,7 +48,6 @@ if (slides.length > 0) {
     
     slides[currentSlide].classList.add('active');
     if (headings[currentSlide]) headings[currentSlide].classList.add('active');
-    updateHeroTextStyle(currentSlide);
   }, 5000);
 }
 
