@@ -540,6 +540,16 @@ a {
   }
 }
 
+/* --- Hero first-slide black text on mobile --- */
+@media (max-width: 900px) {
+  .hero-inset-content.hero-light-text .hero-heading {
+    color: #111111 !important;
+  }
+  .hero-inset-content.hero-light-text .hero-desc-area p {
+    color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
 /* --- About Fading Text Section --- */
 .about-fade-section {
   display: flex;
@@ -3386,6 +3396,7 @@ a {
     flex-direction: column;
     padding: 12px;
     gap: 12px;
+    height: 100%;
   }
   .testimonial-img-wrapper {
     flex: none;
@@ -3401,6 +3412,7 @@ a {
   }
   .testimonial-card-body {
     padding: 0;
+    flex: 1;
   }
   .testimonial-card-body::before {
     margin-bottom: 8px;
@@ -3411,8 +3423,14 @@ a {
     font-size: 0.8rem;
     margin-bottom: 12px;
     line-height: 1.4;
+    /* Truncate text to align cards */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .testimonial-author {
     font-size: 0.75rem;
+    margin-top: auto;
   }
 }
