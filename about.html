@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Meta Tags -->
-    <title>Timbercubés Kitchen & Wardrobes | Modern Interior Living</title>
-    <meta name="description" content="Curated furniture and decor that blend elegance, comfort, and functionality. Experience timeless elegance with Timbercubés." />
+    <title>About Timbercubés | Premium Interior Design & Furniture</title>
+    <meta name="description" content="Learn about Timbercubés, our mission, and our dedication to blending elegance, comfort, and functionality in modern interior design." />
     <meta name="keywords" content="furniture, modern interior, wardrobes, kitchen, decor, chairs, lamps" />
     
     <!-- Open Graph -->
@@ -27,7 +27,60 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
     
     <link rel="stylesheet" href="/src/style.css" />
-  </head>
+  
+    <!-- Global SEO Tags added dynamically -->
+    <meta name="google-site-verification" content="_3WxVJqLj3Sbej38fFt8WXdG7LMAXQx3I2erx18jP0w" />
+    <meta name="Robots" content="Index,follow,All"/>
+    <meta name="YahooSeeker" content="INDEX, FOLLOW, all"/>
+    <meta name="msnbot" content="INDEX, FOLLOW, all"/>
+    <meta name="googlebot" content="noodp"/>
+    <meta name="rating" content="Safe For Kids"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/", 
+      "@type": "Product", 
+      "name": "modular kitchen",
+      "image": "https://timbercubes.com/images/slides/timbercubes5.jpg",
+      "description": "Timbercubes is a leading Modular kitchen, Wardrobes and Interior products manufactures in Kerala who deals with a wide range of interior products",
+      "brand": "Timbercubes"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "FurnitureStore",
+      "name": "Timbercubes",
+      "logo": "https://timbercubes.com/images/main_logo.jpg",
+      "url": "https://timbercubes.com",
+      "telephone": "08129188188",
+      "priceRange": "15000-100000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valayamkulam",
+        "addressLocality": "Thrissur",
+        "postalCode": "679591",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <link rel="canonical" href="https://timbercubes.com/about.html" />
+
+    <!-- Local SEO Geo-Tags -->
+    <meta name="geo.region" content="IN-KL" />
+    <meta name="geo.placename" content="Kerala" />
+
+</head>
   <body>
     <!-- 1. Header (Pill Style as requested previously) -->
     <header class="header">
@@ -78,35 +131,853 @@
           <!-- Left Text Column -->
           <div class="hsb-text-col">
             <p class="hsb-subtitle">Strategic design that captures who you are—and who you're here for.</p>
-            <h1 class="hsb-title">Bold Brands<br>with Purpose</h1>
+            <h1 class="hsb-title">About<br>Timbercubés</h1>
             <p class="hsb-desc">I craft standout brand identities for founders ready to be seen, heard, and remembered.</p>
           </div>
         </div>
       </section>
 
       <!-- 2. Discover Section -->
-      <section class="about-discover section-padding">
-        <div class="container about-discover-container">
-          <div class="about-discover-image">
-             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Modern Dining Area" class="rounded-img-tall">
+      <section class="about-us-minimal section-padding" style="background-color: #ffffff;">
+        <style>
+          .about-minimal-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+          }
+          .about-minimal-sidebar {
+            flex: 0 0 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-top: 15px;
+          }
+          .about-minimal-sidebar a {
+            font-size: 1rem;
+            color: #111;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+            font-weight: 500;
+          }
+          .about-minimal-sidebar a:hover {
+            color: var(--accent);
+          }
+          .about-minimal-content {
+            flex: 1;
+          }
+          .about-minimal-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: #111;
+            margin-bottom: 40px;
+            line-height: 1;
+          }
+          .about-minimal-text p {
+            font-size: 1.05rem;
+            color: #6A6763;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-weight: 400;
+          }
+          @media (max-width: 768px) {
+            .about-minimal-container {
+              flex-direction: column;
+              gap: 40px;
+            }
+            .about-minimal-sidebar {
+              flex: none;
+              flex-direction: row;
+              gap: 20px;
+              border-bottom: 1px solid #EAE8E3;
+              padding-bottom: 20px;
+              padding-top: 0;
+            }
+            .about-minimal-title {
+              font-size: 2.8rem;
+              margin-bottom: 24px;
+            }
+          }
+        </style>
+        <div class="container about-minimal-container">
+          <div class="about-minimal-sidebar">
+            <a href="#">About us.</a>
+            <a href="#">Our team.</a>
+            <a href="#">Press.</a>
           </div>
-          <div class="about-discover-content">
-            <h2 class="display-title">Discover a World of Interior Opportunities</h2>
-            <div class="discover-text-top-row">
-              <div class="discover-text-first-para">
-                <p>Timbercubes interior designers thrissurTimber Cubes Interior desginers is one of the leading modular kitchen and home interior products manufacturers in Kerala, thrissur, calicut. Timbercubes offers the latest kitchen aesthetics and functionality to make your dream kitchen a reality. We have a broad range of modular kitchen and home interior products. Our attractive, yet flexible interior designs keep in mind your space constraints to offer the added benefits of lower cost and utmost comfort.</p>
-              </div>
-              <div class="discover-image-small-wrap">
-                <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=400" alt="Living Room Setup" class="rounded-img-small">
-              </div>
-            </div>
-            <div class="discover-text-bottom">
-              <p>Everyone should live in a home they love. With this in mind and through technology and innovation, we make it possible for people to easily find exactly what they need from a wide range of selection across kitchen cabinets, bedroom wardrobes, interior design products etc. Our Modular kitchen furniture and fit-outs come built in Lacquered glass, Laminated, Acrylic, Poly Acrylic, UV Printed,UV coated, PVC foil, PVC foam sheet, Marine Ply, WPC, 304 grade stainless steel and solid wood like Mahogany, Teak materials etc. are available in Modern, Contemporary and Classic Designs.</p>
-              <p>The Bed room wardrobes of Timbercubes offer interior designer standards in quality and finish, either in custom or sliding door designs. Our wide range of modular kitchen products with the ideal blend of style, quality and functionality makes us Kerala’s No1 home interior design company. Not just readymade products Timbercubes also provide a wide variety of customised interior designs to suit your need and taste. Committed to delighting customers every step of the way, we provide the best modular kitchen services in Kozhikode, Thrissur, Malappuram, Palakkad& Kochi.</p>
+          <div class="about-minimal-content">
+            <h2 class="about-minimal-title">ABOUT US.</h2>
+            <div class="about-minimal-text">
+              <p>TimberCubes began in 2008 with one goal: build every kitchen and interior to the same dependable standard, planned around what each house actually needed instead of a repeated design.</p>
+              <p>That approach grew into a full interior business spanning 18 years and over 1000 completed projects across Kerala, built with the same craftsmanship at every stage. Justdial has recognised this consistency, rating TimberCubes 5 stars and naming it a Users' Choice award winner.</p>
+              <p>Abdul Jalal Panthenkaden, our Founder and CEO, has led the company since it started, bringing 18 years of experience in India and another 8 in the Middle East. We're based in Thrissur, where it all began and still home today.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Mission and Vision Section -->
+      <section class="mission-vision-section section-padding" style="background-color: #ffffff;">
+        <style>
+          .mv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 0 20px;
+          }
+          .mv-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .mv-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+          }
+          .mv-icon-wrapper i {
+            font-size: 1.5rem;
+            color: #111;
+          }
+          .mv-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+          }
+          .mv-text {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.7;
+          }
+          @media (max-width: 768px) {
+            .mv-container {
+              grid-template-columns: 1fr;
+            }
+            .mv-card {
+              padding: 40px 30px;
+            }
+          }
+        </style>
+        
+        <div class="mv-container">
+          <!-- Mission Card -->
+          <div class="mv-card">
+            <div class="mv-icon-wrapper">
+              <i class="ph ph-target"></i>
+            </div>
+            <h2 class="mv-title">Our Mission</h2>
+            <p class="mv-text">Our mission is to design and build kitchens, wardrobes and interiors made specifically for each customer's space and requirements. Every project brings together practical design, precision manufacturing, quality materials and professional installation.</p>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="mv-card">
+            <div class="mv-icon-wrapper">
+              <i class="ph ph-lightbulb"></i>
+            </div>
+            <h2 class="mv-title">Our Vision</h2>
+            <p class="mv-text">Our vision is to keep pace with how interior design, materials and manufacturing technology change over time. We carry that forward into every home and space we build, with the same consistency and integrity we started with back in 2008.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How We Design Section -->
+      <section class="how-we-design-section section-padding" style="padding-top: 0;">
+        <style>
+          .hwd-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+          .hwd-header {
+            margin-bottom: 30px;
+          }
+          .hwd-subtitle {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #b07e5b;
+            margin-bottom: 10px;
+          }
+          .hwd-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #111;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+          }
+          
+          .hwd-main {
+            display: flex;
+            gap: 50px;
+          }
+          .hwd-image {
+            flex: 1;
+          }
+          .hwd-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+          }
+          
+          .hwd-list-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          .hwd-list-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid #EAE8E3;
+          }
+          .hwd-list-item:first-child {
+            padding-top: 0;
+          }
+          .hwd-list-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+          .hwd-number {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #b07e5b;
+            flex: 0 0 30px;
+          }
+          .hwd-text {
+            font-size: 1.1rem;
+            color: #111;
+            line-height: 1.5;
+            font-weight: 400;
+          }
+          
+          .hwd-footer-wrapper {
+            background-color: #f3efe9;
+            margin-top: 50px;
+          }
+          .hwd-footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .hwd-footer p {
+            font-size: 1.3rem;
+            color: #111;
+            font-weight: 400;
+            margin: 0;
+          }
+          .hwd-footer-btn {
+            background-color: #111;
+            color: #fff;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+          }
+          .hwd-footer-btn:hover {
+            background-color: #333;
+          }
+          
+          @media (max-width: 900px) {
+            .hwd-main {
+              flex-direction: column;
+              gap: 30px;
+            }
+            .hwd-image img {
+              height: 350px;
+            }
+            .hwd-footer {
+              flex-direction: column;
+              text-align: center;
+              gap: 20px;
+              padding: 30px 20px;
+            }
+          }
+        </style>
+        
+        <div class="hwd-container">
+          <div class="hwd-header">
+            <div class="hwd-subtitle">Our Approach</div>
+            <h2 class="hwd-title">How We Design</h2>
+          </div>
+          
+          <div class="hwd-main">
+            <div class="hwd-image">
+              <img src="/aboutus_images/a1.png" alt="How We Design" />
+            </div>
+            <div class="hwd-list-wrapper">
+              <div class="hwd-list-item">
+                <span class="hwd-number">01</span>
+                <span class="hwd-text">Every layout is planned around the actual room: its dimensions, storage needs and how it's used day to day</span>
+              </div>
+              <div class="hwd-list-item">
+                <span class="hwd-number">02</span>
+                <span class="hwd-text">No design gets reused from one house to the next</span>
+              </div>
+              <div class="hwd-list-item">
+                <span class="hwd-number">03</span>
+                <span class="hwd-text">Modern design is balanced with everyday functionality</span>
+              </div>
+              <div class="hwd-list-item">
+                <span class="hwd-number">04</span>
+                <span class="hwd-text">Materials, finishes and hardware are chosen to fit the customer's budget</span>
+              </div>
+              <div class="hwd-list-item">
+                <span class="hwd-number">05</span>
+                <span class="hwd-text">Quality and affordability are planned together, from the start</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hwd-footer-wrapper">
+          <div class="hwd-footer">
+            <p>Every project follows the same process, from first enquiry to final handover.</p>
+            <a href="#" class="hwd-footer-btn">See our full process &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Specialise In Section -->
+      <section class="specialise-section section-padding" style="background-color: #ffffff;">
+        <style>
+          .spec-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .spec-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 50px;
+            letter-spacing: -0.02em;
+            text-align: center;
+          }
+          .spec-menu-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 30px;
+          }
+          .spec-menu-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+          .spec-menu-row {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #111;
+            transition: background-color 0.2s;
+            gap: 16px;
+          }
+          .spec-menu-row:hover {
+            background-color: #f4f5f7;
+          }
+          .spec-menu-icon {
+            font-size: 1.4rem;
+            color: #4b5563;
+            display: flex;
+          }
+          .spec-menu-text {
+            flex: 1;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #1f2937;
+          }
+          .spec-footer {
+            text-align: center;
+            margin-top: 10px;
+          }
+          .spec-link {
+            font-size: 1.05rem;
+            color: #111;
+            text-decoration: none;
+            border-bottom: 1px solid #111;
+            padding-bottom: 2px;
+            font-weight: 500;
+          }
+          .spec-link:hover {
+            color: #666;
+            border-color: #666;
+          }
+          @media (max-width: 768px) {
+            .spec-menu-container {
+              grid-template-columns: 1fr;
+              gap: 20px;
+            }
+          }
+        </style>
+        
+        <div class="spec-container">
+          <h2 class="spec-title">What We Specialise In</h2>
+          
+          <div class="spec-menu-container">
+            <!-- Left Section -->
+            <div class="spec-menu-card">
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-cooking-pot"></i></div>
+                <div class="spec-menu-text">Modular kitchen design</div>
+              </a>
+              
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-door"></i></div>
+                <div class="spec-menu-text">Custom wardrobes</div>
+              </a>
+              
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-armchair"></i></div>
+                <div class="spec-menu-text">Custom furniture</div>
+              </a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="spec-menu-card">
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-television"></i></div>
+                <div class="spec-menu-text">TV units and consoles</div>
+              </a>
+              
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-bed"></i></div>
+                <div class="spec-menu-text">Bedroom interiors</div>
+              </a>
+              
+              <a href="services.html" class="spec-menu-row">
+                <div class="spec-menu-icon"><i class="ph ph-wall"></i></div>
+                <div class="spec-menu-text">Wall panelling & ceilings</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="spec-footer">
+            <a href="services.html" class="spec-link">See our full range of services &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Materials & Craftsmanship Section -->
+      <section class="materials-section section-padding" style="background-color: #ffffff;">
+        <style>
+          .mat-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+          }
+          .mat-image {
+            flex: 1;
+          }
+          .mat-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+          }
+          .mat-content {
+            flex: 1;
+          }
+          .mat-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            color: #111;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 5px;
+          }
+          .mat-subtitle {
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 20px;
+          }
+          .mat-desc {
+            font-size: 1.1rem;
+            color: #6A6763;
+            margin-bottom: 30px;
+            line-height: 1.6;
+          }
+          .mat-list {
+            display: flex;
+            flex-direction: column;
+          }
+          .mat-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #EAE8E3;
+          }
+          .mat-item:first-child {
+            border-top: 1px solid #EAE8E3;
+          }
+          .mat-item-img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            background: #e0e0e0;
+          }
+          .mat-item-text {
+            flex: 1;
+          }
+          .mat-item-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 4px;
+          }
+          .mat-item-desc {
+            font-size: 0.95rem;
+            color: #6A6763;
+            line-height: 1.4;
+          }
+          .mat-btn-wrap {
+            margin-top: 30px;
+          }
+          .mat-btn {
+            background-color: #111;
+            color: #fff;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+          }
+          .mat-btn:hover {
+            background-color: #333;
+          }
+          @media (max-width: 900px) {
+            .mat-container {
+              flex-direction: column;
+            }
+          }
+        </style>
+        
+        <div class="mat-container">
+          <div class="mat-image">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Material Swatches">
+          </div>
+          <div class="mat-content">
+            <h2 class="mat-title">Materials & Craftsmanship</h2>
+            <div class="mat-subtitle">Built to Last</div>
+            <p class="mat-desc">Everything we build uses materials chosen for durability and finish.</p>
+            
+            <div class="mat-list">
+              <div class="mat-item">
+                <img src="/aboutus_images/surface_finishes.png" alt="Surface finishes" class="mat-item-img">
+                <div class="mat-item-text">
+                  <div class="mat-item-title">Surface finishes</div>
+                  <div class="mat-item-desc">Lacquered glass, laminate, acrylic, poly acrylic, UV-printed and UV-coated finishes</div>
+                </div>
+              </div>
+              <div class="mat-item">
+                <img src="/aboutus_images/core_board.png" alt="Core & board" class="mat-item-img">
+                <div class="mat-item-text">
+                  <div class="mat-item-title">Core & board</div>
+                  <div class="mat-item-desc">Marine Ply | WPC | PVC Foil | PVC Foam Board</div>
+                </div>
+              </div>
+              <div class="mat-item">
+                <img src="/aboutus_images/solid_wood.png" alt="Solid wood" class="mat-item-img">
+                <div class="mat-item-text">
+                  <div class="mat-item-title">Solid wood</div>
+                  <div class="mat-item-desc">Mahogany, teak</div>
+                </div>
+              </div>
+              <div class="mat-item">
+                <img src="/aboutus_images/steel.png" alt="Metal" class="mat-item-img">
+                <div class="mat-item-text">
+                  <div class="mat-item-title">Metal</div>
+                  <div class="mat-item-desc">304-grade stainless steel</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mat-btn-wrap">
+              <a href="#" class="mat-btn">Explore all finishes &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Why Choose Us Section -->
+      <section class="why-choose-section">
+        <style>
+          .wcu-section {
+            background-color: #ffffff;
+            background-image: radial-gradient(#d1d5db 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+          }
+          .wcu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+          }
+          .wcu-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 70px;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+          }
+          
+          /* Grid Row */
+          .wcu-grid {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            margin-bottom: 20px;
+          }
+          /* Dotted connector lines */
+          .wcu-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px; /* Half of the 80px icon box */
+            left: 12%;
+            right: 12%;
+            height: 1px;
+            border-top: 2px dashed #9ca3af;
+            z-index: -1;
+          }
+          
+          .wcu-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+          }
+          
+          .wcu-icon-box {
+            background: #fff;
+            border-radius: 20px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #f3f4f6;
+            font-size: 32px;
+            color: #3b82f6; /* Blue tint to match the design */
+            margin-bottom: 25px;
+            background-color: #fff;
+          }
+          
+          .wcu-stat-number {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 12px;
+            line-height: 1.2;
+          }
+          
+          .wcu-stat-text {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.5;
+          }
+          
+          @media (max-width: 900px) {
+            .wcu-grid {
+              flex-wrap: wrap;
+              gap: 40px 20px;
+            }
+            .wcu-item {
+              flex: 0 0 calc(50% - 10px);
+            }
+            .wcu-grid::before {
+              display: none; /* Hide connector on mobile to avoid overlap */
+            }
+          }
+          @media (max-width: 500px) {
+            .wcu-item {
+              flex: 0 0 100%;
+            }
+          }
+        </style>
+        
+        <div class="wcu-section">
+          <div class="wcu-container">
+            <h2 class="wcu-title">Why Choose Us</h2>
+            
+            <div class="wcu-grid">
+              <div class="wcu-item">
+                <div class="wcu-icon-box">
+                  <i class="ph ph-calendar-star"></i>
+                </div>
+                <div class="wcu-stat-number">18+ Years</div>
+                <div class="wcu-stat-text">In the industry</div>
+              </div>
+              
+              <div class="wcu-item">
+                <div class="wcu-icon-box">
+                  <i class="ph ph-buildings"></i>
+                </div>
+                <div class="wcu-stat-number">1000+</div>
+                <div class="wcu-stat-text">Projects completed</div>
+              </div>
+              
+              <div class="wcu-item">
+                <div class="wcu-icon-box">
+                  <i class="ph ph-shield-check"></i>
+                </div>
+                <div class="wcu-stat-number" style="font-size: clamp(1.4rem, 2vw, 1.8rem);">6 Months &ndash;<br>25 Years</div>
+                <div class="wcu-stat-text">Warranty coverage, by material</div>
+              </div>
+              
+              <div class="wcu-item">
+                <div class="wcu-icon-box">
+                  <i class="ph ph-users-three"></i>
+                </div>
+                <div class="wcu-stat-number">1 Team</div>
+                <div class="wcu-stat-text">Design, manufacturing and installation, together</div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Reviews Section -->
+      <section class="customer-reviews-section section-padding">
+        <style>
+          .cr-container {
+            background-color: #ffffff;
+            background-image: radial-gradient(#d1d5db 1.5px, transparent 1.5px);
+            background-size: 30px 30px;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 30px;
+            margin: 0 auto 60px auto;
+            max-width: 1000px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+          }
+          .cr-content {
+            max-width: 600px; /* Small content area */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .cr-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 3.5vw, 2.6rem); /* Smaller font size */
+            font-weight: 700;
+            color: #111;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+          }
+          .cr-desc {
+            font-size: 0.95rem; /* Smaller font size */
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            max-width: 500px; /* Tighter alignment */
+          }
+          .cr-btn {
+            background-color: #111;
+            color: #fff;
+            padding: 14px 32px; /* Slightly smaller button to match */
+            border-radius: 30px; 
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s;
+          }
+          .cr-btn:hover {
+            background-color: #333;
+          }
+          @media (max-width: 900px) {
+            .cr-container {
+              padding: 50px 20px;
+              margin: 0 20px 50px 20px;
+            }
+          }
+        </style>
+        
+        <div class="cr-container">
+          <div class="cr-content">
+            <h2 class="cr-title">Hear From Our Customers</h2>
+            <p class="cr-desc">Homeowners and businesses across Kerala have trusted us with their kitchens and interiors &mdash; here's what some of them have to say.</p>
+            <a href="testimonials.html" class="cr-btn">Read customer reviews &rarr;</a>
+          </div>
+        </div>
+      </section>
+
 
       <!-- 3. Partners Section -->
       <section class="partners-section section-padding">
@@ -131,6 +1002,303 @@
               <div class="partner-cell"><img src="client-logo/sleek-removebg-preview.png" alt="Sleek"></div>
               <div class="partner-cell"><img src="client-logo/virgo-removebg-preview.png" alt="Virgo"></div>
               <div class="partner-cell"><img src="client-logo/CENTURY.png" alt="Century Laminates"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- A Look at Our Work Section -->
+      <section class="our-work-section section-padding">
+        <style>
+          .ow-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+          }
+          .ow-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+          }
+          .ow-subtitle {
+            font-size: 1.15rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            max-width: 800px;
+          }
+          .ow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+          .ow-grid-item {
+            position: relative;
+            overflow: hidden;
+          }
+          .ow-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+            transition: transform 0.5s ease;
+          }
+          .ow-grid-item:hover img {
+            transform: scale(1.05);
+          }
+          @media (max-width: 768px) {
+            .ow-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+        <div class="ow-container">
+          <h2 class="ow-title">A Look at Our Work</h2>
+          <p class="ow-subtitle">Every home here started as a real house with its own layout, its own family and its own list of requirements. Here's some of what we've built.</p>
+          <div class="ow-grid">
+            <div class="ow-grid-item">
+              <!-- Upload image here: <img src="your-image.jpg" alt="Project 1"> -->
+            </div>
+            <div class="ow-grid-item">
+              <!-- Upload image here: <img src="your-image.jpg" alt="Project 2"> -->
+            </div>
+            <div class="ow-grid-item">
+              <!-- Upload image here: <img src="your-image.jpg" alt="Project 3"> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Where You'll Find Us Section -->
+      <section class="locations-section">
+        <style>
+          .loc-section {
+            background-color: #ffffff;
+            padding: 100px 20px;
+          }
+          .loc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+          }
+          .loc-content {
+            flex: 1;
+            padding-right: 40px;
+          }
+          .loc-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+          }
+          .loc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 50px 0;
+          }
+          .loc-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            color: #111;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+          }
+          .loc-item::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d1bfae;
+            margin-right: 20px;
+          }
+          .loc-item:first-child::before {
+            background-color: #5c3a21; /* Dark brown for Thrissur */
+          }
+          .loc-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s;
+          }
+          .loc-btn:hover {
+            background-color: #333;
+          }
+          .loc-map {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .loc-map img {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px;
+          }
+          @media (max-width: 900px) {
+            .loc-container {
+              flex-direction: column;
+            }
+            .loc-content {
+              padding-right: 0;
+              width: 100%;
+            }
+          }
+        </style>
+        
+        <div class="loc-section">
+          <div class="loc-container">
+            <div class="loc-content">
+              <h2 class="loc-title">Where You'll Find Us</h2>
+              <ul class="loc-list">
+                <li class="loc-item">Thrissur (our base)</li>
+                <li class="loc-item">Kochi</li>
+                <li class="loc-item">Kozhikode</li>
+                <li class="loc-item">Malappuram</li>
+                <li class="loc-item">Palakkad</li>
+              </ul>
+              <a href="contact.html" class="loc-btn">See our full service area &rarr;</a>
+            </div>
+            <div class="loc-map">
+              <img src="/keralamap.png?v=2" alt="Map of Kerala" onerror="this.src='https://via.placeholder.com/400x600/FAF8F5/d1bfae?text=Upload+Kerala+Map'">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet Our Team Section -->
+      <section class="meet-team-section section-padding" style="background-color: #ffffff;">
+        <style>
+          .team-container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+          .team-label { display: inline-block; padding: 4px 16px; border: 1px solid #111; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
+          .team-title { font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 700; color: #111; margin: 0; letter-spacing: -0.03em; }
+          .team-divider { height: 1px; background-color: rgba(0,0,0,0.1); margin: 30px 0; }
+          
+          .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 40px; }
+          
+          .team-img-box { background-color: #A3A29D; aspect-ratio: 4/3; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative; overflow: hidden; box-shadow: inset 0 0 100px rgba(255,255,255,0.1); }
+          .team-img-initials { font-family: 'Times New Roman', Georgia, serif; font-size: 9rem; color: #E8E6E1; line-height: 1; font-weight: 300; position: relative; z-index: 2; }
+          .team-img-glare { position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(to bottom right, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 40%, rgba(0,0,0,0) 100%); transform: rotate(30deg); z-index: 1; pointer-events: none; }
+          
+          .team-name { font-size: 1.4rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+          .team-role { font-size: 1.1rem; color: #666; margin: 0; }
+          
+          .team-bio-title { font-size: 1.5rem; font-weight: 500; color: #111; margin-bottom: 15px; letter-spacing: -0.01em; }
+          .team-bio-text { font-size: 1.15rem; color: #666; line-height: 1.6; margin-bottom: 30px; }
+          
+          .team-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+          .team-stat-card { background: #ffffff; padding: 25px 20px; border-radius: 16px; display: flex; flex-direction: column; border: 1px solid #eaeaea; }
+          .team-stat-card.green { background: #FF6666; border: none; }
+          .team-stat-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+          .team-stat-num { font-size: 2.8rem; font-weight: 800; color: #111; line-height: 1; letter-spacing: -0.05em; font-family: var(--font-display); }
+          .team-stat-icon { width: 36px; height: 36px; background: #fff0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+          .team-stat-card.green .team-stat-icon { background: #ffffff; }
+          .team-stat-icon i { font-size: 1.2rem; color: #FF6666; }
+          .team-stat-text { font-size: 1rem; color: #666; line-height: 1.3; margin: 0; }
+          .team-stat-card.green .team-stat-text { color: #ffffff; font-weight: 500; }
+          
+          .team-cta-wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+          .team-cta-title { font-size: 2.2rem; font-weight: 700; color: #111; margin-bottom: 5px; font-family: var(--font-display); letter-spacing: -0.02em; }
+          .team-cta-text { font-size: 1.15rem; color: #666; margin: 0; }
+          .team-cta-btns { display: flex; gap: 15px; }
+          .team-btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; background-color: #FF6666; color: #ffffff; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.05rem; transition: background-color 0.2s; }
+          .team-btn-primary:hover { background-color: #e55b5b; }
+          .team-btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; background-color: transparent; border: 1px solid #111; color: #111; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.05rem; transition: background-color 0.2s; }
+          .team-btn-secondary:hover { background-color: #111; color: #fff; }
+          
+          @media (max-width: 900px) {
+            .team-grid { grid-template-columns: 1fr; gap: 30px; }
+            .team-stats-grid { grid-template-columns: 1fr 1fr; }
+            .team-cta-wrap { flex-direction: column; align-items: flex-start; }
+          }
+          @media (max-width: 600px) {
+            .team-stats-grid { grid-template-columns: 1fr; }
+            .team-cta-btns { flex-direction: column; width: 100%; }
+            .team-btn-primary, .team-btn-secondary { width: 100%; }
+          }
+        </style>
+        
+        <div class="team-container">
+          <!-- Header -->
+          <div style="margin-bottom: 20px;">
+            <span class="team-label">About Us</span>
+            <h2 class="team-title">Meet Our Team</h2>
+          </div>
+          
+          <div class="team-divider"></div>
+          
+          <!-- Content Block -->
+          <div class="team-grid">
+            <!-- Left side -->
+            <div>
+              <div class="team-img-box">
+                <div class="team-img-glare"></div>
+                <div class="team-img-initials">AJ</div>
+              </div>
+              <h3 class="team-name">Abdul Jalal Panthenkaden</h3>
+              <p class="team-role">Founder & CEO, TimberCubes</p>
+            </div>
+            
+            <!-- Right side -->
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <h3 class="team-bio-title">Founder and CEO of TimberCubes</h3>
+              <p class="team-bio-text">With a deep focus on design, manufacturing and project execution, Abdul Jalal Panthenkaden brings over two decades of industry experience across India and the Middle East.</p>
+              
+              <!-- Stats Cards -->
+              <div class="team-stats-grid">
+                <div class="team-stat-card">
+                  <div class="team-stat-header">
+                    <span class="team-stat-num">18+</span>
+                    <div class="team-stat-icon"><i class="ph ph-map-pin"></i></div>
+                  </div>
+                  <p class="team-stat-text">years of industry experience in India</p>
+                </div>
+                
+                <div class="team-stat-card">
+                  <div class="team-stat-header">
+                    <span class="team-stat-num">8</span>
+                    <div class="team-stat-icon"><i class="ph ph-globe"></i></div>
+                  </div>
+                  <p class="team-stat-text">more years of experience in the Middle East</p>
+                </div>
+                
+                <div class="team-stat-card green">
+                  <div class="team-stat-icon" style="margin-bottom: 15px;"><i class="ph ph-gear"></i></div>
+                  <p class="team-stat-text">Focus on design, manufacturing and project execution</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-divider"></div>
+          
+          <!-- CTA Block -->
+          <div class="team-cta-wrap">
+            <div>
+              <h3 class="team-cta-title">Let's Build Something Together</h3>
+              <p class="team-cta-text">See the kitchens and wardrobes we've built. Or tell us about yours.</p>
+            </div>
+            <div class="team-cta-btns">
+              <a href="gallery.html" class="team-btn-primary">
+                Explore Our Gallery <i class="ph ph-arrow-right" style="margin-left: 8px;"></i>
+              </a>
+              <a href="contact.html" class="team-btn-secondary">
+                Get in Touch <i class="ph ph-arrow-right" style="margin-left: 8px;"></i>
+              </a>
             </div>
           </div>
         </div>
