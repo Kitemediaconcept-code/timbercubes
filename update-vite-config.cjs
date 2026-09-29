@@ -1,4 +1,6 @@
-import { defineConfig } from 'vite'
+const fs = require('fs');
+
+const code = `import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import fs from 'fs'
 
@@ -17,3 +19,6 @@ export default defineConfig({
     }
   }
 })
+`;
+
+fs.writeFileSync('vite.config.js', code);
