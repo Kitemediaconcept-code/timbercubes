@@ -389,16 +389,16 @@
               </div>
             </a>
             <a href="service-wardrobes.html" class="cat-card">
-              <img src="public/8.jpg" alt="Wardrobes">
+              <img src="public/8.jpg" alt="Bedroom Interiors">
               <div class="cat-info-pill btn-layered-pill">
-                <span class="btn-text-pill">Wardrobes</span>
+                <span class="btn-text-pill">Bedroom Interiors</span>
                 <i class="ph ph-arrow-right btn-arrow"></i>
               </div>
             </a>
-            <a href="services.html" class="cat-card">
-              <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=600" alt="Bedroom Designing">
+            <a href="service-living-room-interiors.html" class="cat-card">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600" alt="Living Room Interiors">
               <div class="cat-info-pill btn-layered-pill">
-                <span class="btn-text-pill">Bedroom Designing</span>
+                <span class="btn-text-pill">Living Room Interiors</span>
                 <i class="ph ph-arrow-right btn-arrow"></i>
               </div>
             </a>
@@ -406,20 +406,6 @@
               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Commercial Interior">
               <div class="cat-info-pill btn-layered-pill">
                 <span class="btn-text-pill">Commercial Interior</span>
-                <i class="ph ph-arrow-right btn-arrow"></i>
-              </div>
-            </a>
-            <a href="services.html" class="cat-card">
-              <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&q=80&w=600" alt="Consoles & Crockery Units">
-              <div class="cat-info-pill btn-layered-pill">
-                <span class="btn-text-pill">Consoles & Crockery Units</span>
-                <i class="ph ph-arrow-right btn-arrow"></i>
-              </div>
-            </a>
-            <a href="services.html" class="cat-card">
-              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=600" alt="Cots & Side Tables">
-              <div class="cat-info-pill btn-layered-pill">
-                <span class="btn-text-pill">Cots & Side Tables</span>
                 <i class="ph ph-arrow-right btn-arrow"></i>
               </div>
             </a>
@@ -432,31 +418,943 @@
           </div>
         </div>
       </section>
+<!-- SERVICE DETAILS EXPANDED -->
+<style>
+  .service-details-wrap {
+    padding: 40px 0 20px;
+    background: #fcf9f5;
+    overflow: hidden;
+  }
+  .sd-slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding-bottom: 20px;
+    align-items: start;
+  }
+  .sd-section {
+    width: 100%;
+    height: fit-content;
+    align-self: start;
+    margin: 0;
+    padding: 15px 12px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+  .sd-section:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transform: translateY(-2px);
+  }
+  .sd-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+  }
+  .sd-title {
+    font-size: 0.95rem;
+    font-family: var(--font-display);
+    color: #111;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .sd-intro {
+    font-size: 0.7rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .sd-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .sd-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 6px 10px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .sd-item:hover, .sd-item.active {
+    background: #fff5ec;
+    border-color: #f5cbb6;
+    box-shadow: 0 2px 8px rgba(194,99,60,0.05);
+  }
+  .sd-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: #fff9f5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c2633c;
+    font-size: 0.85rem;
+    border: 1px solid #fcede5;
+  }
+  .sd-item-content {
+    flex-grow: 1;
+  }
+  .sd-item-content h4 {
+    font-size: 0.65rem;
+    color: #111;
+    margin: 0 0 2px 0;
+    font-weight: 600;
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .sd-item-content h4 .caret {
+    color: #999;
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .sd-item-content p {
+    font-size: 0.6rem;
+    color: #555;
+    line-height: 1.35;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.3s ease;
+  }
+  .sd-item:hover .sd-item-content p,
+  .sd-item.active .sd-item-content p {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 6px;
+  }
+  .sd-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #fff;
+    background: #111;
+    text-decoration: none;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    width: 100%;
+  }
+  .sd-cta:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 900px) {
+    .sd-slider-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    .sd-section {
+      padding: 10px 8px;
+    }
+    .sd-header {
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+    }
+    .sd-title {
+      font-size: 0.8rem;
+    }
+    .sd-intro {
+      font-size: 0.6rem;
+      line-height: 1.3;
+    }
+    .sd-grid {
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .sd-item {
+      padding: 4px 6px;
+      gap: 6px;
+    }
+    .sd-icon {
+      width: 20px;
+      height: 20px;
+      font-size: 0.75rem;
+    }
+    .sd-item-content h4 {
+      font-size: 0.55rem;
+      line-height: 1.1;
+    }
+    .sd-item-content h4 .caret {
+      font-size: 0.65rem;
+    }
+    .sd-cta {
+      padding: 6px;
+      font-size: 0.55rem;
+      margin-top: 2px;
+    }
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const items = document.querySelectorAll('.sd-item');
+    items.forEach(item => {
+      // Add caret icon
+      const h4 = item.querySelector('.sd-item-content h4');
+      if (h4 && !h4.querySelector('.caret')) {
+        const caret = document.createElement('i');
+        caret.className = 'ph ph-caret-right caret';
+        h4.appendChild(caret);
+      }
+
+      item.addEventListener('click', function(e) {
+        this.classList.toggle('active');
+        const icon = this.querySelector('.caret');
+        if (icon) {
+          if (this.classList.contains('active')) {
+            icon.classList.remove('ph-caret-right');
+            icon.classList.add('ph-caret-up');
+          } else {
+            icon.classList.remove('ph-caret-up');
+            icon.classList.add('ph-caret-right');
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<div class="service-details-wrap">
+  <div class="container">
+    
+    <div class="sd-slider-wrapper">
+    <!-- Section 1 -->
+    <div class="sd-section">
+      <div class="sd-header">
+        <h3 class="sd-title">Modular Kitchen Design Services For You</h3>
+        <p class="sd-intro">As a modular kitchen designer in Thrissur, Timbercubes offers four services, from custom layouts to complete installation support.</p>
+      </div>
+      <div class="sd-grid">
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-ruler"></i></div>
+          <div class="sd-item-content">
+            <h4>Custom Modular Kitchen Designs</h4>
+            <p>Layouts built to the kitchen's exact dimensions, storage needs and budget, with custom-sized cabinets throughout.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-sparkle"></i></div>
+          <div class="sd-item-content">
+            <h4>Modern Modular Kitchens</h4>
+            <p>Contemporary finishes and hardware sourced from brand partners.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-arrows-in"></i></div>
+          <div class="sd-item-content">
+            <h4>Space-Saving Kitchen Solutions</h4>
+            <p>Corner units, pull-out baskets and tall units add kitchen storage in the tighter layouts common to apartments and smaller villas.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-wrench"></i></div>
+          <div class="sd-item-content">
+            <h4>Design-to-Installation Support</h4>
+            <p>Timbercubes designs, manufactures and installs each kitchen at its own facility.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/918129188188" class="sd-cta">See a Design for My Kitchen <i class="ph ph-arrow-right"></i></a>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="sd-section">
+      <div class="sd-header">
+        <h3 class="sd-title">Modular Kitchen Layouts We Design</h3>
+        <p class="sd-intro">Room shape and family size decide which of the five layouts fits best.</p>
+      </div>
+      <div class="sd-grid">
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-corners-out"></i></div>
+          <div class="sd-item-content">
+            <h4>L-Shaped Kitchens</h4>
+            <p>Fits square or slightly rectangular kitchens, splitting the sink, hob and storage across two adjoining walls.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-magnet"></i></div>
+          <div class="sd-item-content">
+            <h4>U-Shaped Kitchens</h4>
+            <p>Uses three walls for counter and storage space, suited to larger kitchens with more to store.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-minus"></i></div>
+          <div class="sd-item-content">
+            <h4>Straight Kitchens</h4>
+            <p>A single wall of cabinets and appliances, suited to narrow kitchens or open-plan layouts.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-equals"></i></div>
+          <div class="sd-item-content">
+            <h4>Parallel Kitchens</h4>
+            <p>Counters run along two facing walls in a longer room, keeping the cooking and cleaning zones apart.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-cube"></i></div>
+          <div class="sd-item-content">
+            <h4>Island Kitchens</h4>
+            <p>A central island adds extra counter and storage space, suited to open-plan or larger kitchens.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/918129188188" class="sd-cta">Find My Kitchen Layout <i class="ph ph-arrow-right"></i></a>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="sd-section">
+      <div class="sd-header">
+        <h3 class="sd-title">Custom Wardrobe Designs We Build</h3>
+        <p class="sd-intro">Layout and finish are decided by the room, the storage needs, and the customer's daily use.</p>
+      </div>
+      <div class="sd-grid">
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-columns"></i></div>
+          <div class="sd-item-content">
+            <h4>Sliding Wardrobes</h4>
+            <p>Space-efficient, suited to smaller bedrooms or tighter layouts.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-door"></i></div>
+          <div class="sd-item-content">
+            <h4>Hinged Wardrobes</h4>
+            <p>Traditional swing-door format with full-depth internal access.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-coat-hanger"></i></div>
+          <div class="sd-item-content">
+            <h4>Walk-in / Dressing Units</h4>
+            <p>Combined wardrobe and dressing space for larger rooms.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-package"></i></div>
+          <div class="sd-item-content">
+            <h4>Loft & Overhead Storage</h4>
+            <p>Added storage above the main unit without extra floor space. Internal layout - Drawers, shelves, hanging sections, mirrors, glass and profile-frame shutters, LED lighting - is planned around what's actually being stored.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/918129188188" class="sd-cta">Design My Wardrobe <i class="ph ph-arrow-right"></i></a>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="sd-section">
+      <div class="sd-header">
+        <h3 class="sd-title">Materials, Finishes & Customization</h3>
+        <p class="sd-intro">Seven materials and finishes, chosen for durability, look and budget.</p>
+      </div>
+      <div class="sd-grid">
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-drop"></i></div>
+          <div class="sd-item-content">
+            <h4>Acrylic finish</h4>
+            <p>Glossy shutter, wipes clean easily and holds its colour over years of daily use.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-paint-brush"></i></div>
+          <div class="sd-item-content">
+            <h4>PU coating</h4>
+            <p>Similar high-gloss look, at a different price point.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-layers"></i></div>
+          <div class="sd-item-content">
+            <h4>Laminate finish</h4>
+            <p>Durable, cost-effective, in solid colours and wood-grain patterns.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-square-half"></i></div>
+          <div class="sd-item-content">
+            <h4>Lacquered glass</h4>
+            <p>Reflective surface, often paired with LED lighting inside the cabinet.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-tree"></i></div>
+          <div class="sd-item-content">
+            <h4>Marine ply / solid wood</h4>
+            <p>Core structure, chosen by moisture exposure and expected lifespan.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-file-dashed"></i></div>
+          <div class="sd-item-content">
+            <h4>PVC foil</h4>
+            <p>A lighter, moisture-resistant option for the core structure.</p>
+          </div>
+        </div>
+        <div class="sd-item">
+          <div class="sd-icon"><i class="ph ph-nut"></i></div>
+          <div class="sd-item-content">
+            <h4>Kitchen accessories & hardware</h4>
+            <p>Hinges, channels and baskets, sourced from brand partners.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/918129188188" class="sd-cta">Request My Material Samples <i class="ph ph-arrow-right"></i></a>
+    </div>
+    
+    </div>
+  </div>
+</div>
 
 
 
-      <!-- 6.5 How It Works Section -->
+
+<!-- Materials Section -->
+<style>
+  .materials-section {
+    padding: 60px 0;
+    background-color: var(--bg-alt);
+  }
+  .mat-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .mat-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+  }
+  .mat-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .mat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .mat-card {
+    background: linear-gradient(135deg, #ffffff 0%, #FAF8F5 100%);
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .mat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  }
+  .mat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .mat-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    flex-shrink: 0;
+  }
+  .mat-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+    margin: 0;
+  }
+  .mat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mat-list li {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+  }
+  .mat-list li i {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .mat-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .materials-section {
+      padding: 40px 0;
+    }
+    .mat-header {
+      margin-bottom: 30px;
+    }
+    .mat-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .mat-card {
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .mat-card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+    }
+    .mat-icon-wrap {
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+    }
+    .mat-card h3 {
+      font-size: 0.85rem;
+    }
+    .mat-list {
+      gap: 6px;
+    }
+    .mat-list li {
+      font-size: 0.75rem;
+      gap: 6px;
+    }
+    .mat-list li i {
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+  }
+</style>
+
+<section class="materials-section">
+  <div class="container">
+    <div class="mat-header">
+      <h2 class="mat-title">Materials, Hardware & Accessories We Use</h2>
+      <p class="mat-subtitle">Board materials, finishes, hardware and brand partners, matched to durability, look and budget.</p>
+    </div>
+    
+    <div class="mat-grid">
+      <!-- Card 1 -->
+      <div class="mat-card">
+        <div class="mat-card-header">
+          <div class="mat-icon-wrap"><i class="ph ph-stack"></i></div>
+          <h3>Board & Core Materials</h3>
+        </div>
+        <ul class="mat-list">
+          <li><i class="ph ph-arrow-right"></i> <span>WPC</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>PVC foam board</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>BWP 710 Full Gurjan marine plywood</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>HDHMR</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>HDF and other engineered boards</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Honeycomb sandwich panels</span></li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mat-card">
+        <div class="mat-card-header">
+          <div class="mat-icon-wrap"><i class="ph ph-paint-brush"></i></div>
+          <h3>Shutter & Surface Finishes</h3>
+        </div>
+        <ul class="mat-list">
+          <li><i class="ph ph-arrow-right"></i> <span>Laminates</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Acrylic finishes</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>PU finishes</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Membrane finishes</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>WPC laminate shutters</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Lacquered glass and aluminium profile-frame shutters</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Matt, gloss, wood-grain and textured options</span></li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mat-card">
+        <div class="mat-card-header">
+          <div class="mat-icon-wrap"><i class="ph ph-nut"></i></div>
+          <h3>Hardware & Fittings</h3>
+        </div>
+        <ul class="mat-list">
+          <li><i class="ph ph-arrow-right"></i> <span>Soft-close hinges</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Drawer channels</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Tandem and hidden-drawer systems</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Lift-up and tall-unit mechanisms</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Pull-out baskets</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Corner-unit solutions</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Sliding wardrobe systems</span></li>
+        </ul>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="mat-card">
+        <div class="mat-card-header">
+          <div class="mat-icon-wrap"><i class="ph ph-magic-wand"></i></div>
+          <h3>Accessories & Features</h3>
+        </div>
+        <ul class="mat-list">
+          <li><i class="ph ph-arrow-right"></i> <span>Cutlery and utensil organizers</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Pantry and bottle pull-outs</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Magic corners</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Waste-bin systems</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Wardrobe organizers</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>Mirrors and glass</span></li>
+          <li><i class="ph ph-arrow-right"></i> <span>LED and profile lighting with concealed wiring</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us Section -->
+<style>
+  .why-choose-section {
+    padding: 60px 0;
+    background-color: var(--bg-alt);
+  }
+  .why-choose-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  .wc-badge {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+  .wc-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #111;
+  }
+  .wc-dot-light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9CA3AF;
+  }
+  .wc-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: #111;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+  }
+  .wc-subtitle {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    max-width: 90%;
+  }
+  .wc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #111;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .wc-btn-primary:hover {
+    background: #333;
+    transform: translateY(-2px);
+  }
+  
+  .accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .accordion-item {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    text-align: left;
+    color: inherit;
+  }
+  .accordion-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .accordion-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    color: #111;
+  }
+  .item-dark .accordion-icon {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 18px;
+  }
+  .accordion-content p {
+    padding-bottom: 18px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.85;
+  }
+
+  /* Colors matching the modern minimal look */
+  .item-blue { background-color: #B4C6EA; color: #111; }
+  .item-gray { background-color: #D1D5DB; color: #111; }
+  .item-green { background-color: #D9F99D; color: #111; }
+  .item-dark { background-color: #111; color: #fff; }
+  .item-cream { background-color: #FFEDD5; color: #111; }
+  .item-light { background-color: #F3F4F6; color: #111; }
+
+  @media (max-width: 1024px) {
+    .why-choose-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .why-choose-section {
+      padding: 40px 0;
+    }
+    .wc-title {
+      font-size: 1.6rem;
+    }
+    .wc-subtitle {
+      font-size: 0.8rem;
+      max-width: 100%;
+    }
+    .accordion-header {
+      padding: 12px 14px;
+    }
+    .accordion-title {
+      font-size: 0.85rem;
+    }
+    .accordion-content p {
+      font-size: 0.75rem;
+      padding-bottom: 14px;
+    }
+    .accordion-container {
+      gap: 6px;
+    }
+    .accordion-icon {
+      width: 20px;
+      height: 20px;
+      font-size: 0.7rem;
+    }
+  }
+</style>
+
+<section class="why-choose-section">
+  <div class="container why-choose-container">
+    <div class="why-choose-left">
+      <div class="wc-badge">
+        <span class="wc-dot"></span><span class="wc-dot-light"></span>
+      </div>
+      <h2 class="wc-title">Why Choose Timbercubes For Your Home</h2>
+      <p class="wc-subtitle">One of the trusted modular kitchen dealers in Thrissur and nearby, having in-house team, from design through installation.</p>
+      
+      <div class="wc-cta-group">
+        <a href="https://wa.me/918129188188" class="wc-btn-primary">Talk to My Design Team <i class="ph ph-arrow-up-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="why-choose-right">
+      <div class="accordion-container">
+        
+        <div class="accordion-item item-blue">
+          <button class="accordion-header">
+            <span class="accordion-title">Precision manufacturing and quality materials</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>Components are checked at each stage before they leave the facility.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item item-gray">
+          <button class="accordion-header">
+            <span class="accordion-title">Personalised service</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>Each interior is planned around the customer's space, budget and requirements.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item item-green">
+          <button class="accordion-header">
+            <span class="accordion-title">Full-service interiors</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>Complete interior needs for houses, apartments and commercial spaces alike.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item item-dark">
+          <button class="accordion-header">
+            <span class="accordion-title">Warranty coverage</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>From 6 months up to 25 years, depending on the materials and products chosen.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item item-cream">
+          <button class="accordion-header">
+            <span class="accordion-title">Updated to changing global trends</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>Designs, materials and manufacturing methods matched to current industry trends.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item item-light">
+          <button class="accordion-header">
+            <span class="accordion-title">End-to-end coordination</span>
+            <span class="accordion-icon"><i class="ph ph-plus"></i></span>
+          </button>
+          <div class="accordion-content">
+            <p>Material selection, manufacturing, installation and finishing, handled under one project.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-header');
+    
+    accordions.forEach(acc => {
+      acc.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.ph');
+        
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          icon.classList.replace('ph-minus', 'ph-plus');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.classList.replace('ph-plus', 'ph-minus');
+        } 
+      });
+    });
+  });
+</script>
+
+<!-- 6.5 How It Works Section -->
+
       <section class="how-it-works-section section-padding">
         <div class="container">
           <div class="hiw-header">
             <div class="hiw-title-wrap">
               <span class="badge-yellow">HOW IT WORKS</span>
-              <h2>Get Your Dream Space<br>in Six Steps</h2>
+              <h2>Our Modular Kitchen<br>Design Process</h2>
             </div>
             <div class="hiw-subtitle">
               <p>From concept to reality seamlessly. And sometimes, in as little as 24 hours.</p>
             </div>
           </div>
 
-          <div class="hiw-grid">
+                    <div class="hiw-grid">
             <!-- Step 1 -->
             <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800');">
               <div class="hiw-overlay"></div>
               <div class="hiw-content">
                 <div class="hiw-number">01</div>
                 <div class="hiw-text">
-                  <h3>Consultation</h3>
-                  <p>We understand your needs, preferences, and space requirements through detailed discussions.</p>
+                  <h3>Initial Enquiry</h3>
+                  <p>Location, scope, style and budget discussed.</p>
                 </div>
               </div>
             </div>
@@ -467,8 +1365,8 @@
               <div class="hiw-content">
                 <div class="hiw-number">02</div>
                 <div class="hiw-text">
-                  <h3>Design Proposal</h3>
-                  <p>Our experts create customized designs tailored to your style and functionality needs.</p>
+                  <h3>Site Visit & Measurements</h3>
+                  <p>Room dimensions and site conditions recorded.</p>
                 </div>
               </div>
             </div>
@@ -479,8 +1377,8 @@
               <div class="hiw-content">
                 <div class="hiw-number">03</div>
                 <div class="hiw-text">
-                  <h3>Material Selection</h3>
-                  <p>Choose from a range of premium materials, finishes, and accessories.</p>
+                  <h3>Requirement Discussion</h3>
+                  <p>Lifestyle, storage and style needs planned.</p>
                 </div>
               </div>
             </div>
@@ -491,8 +1389,8 @@
               <div class="hiw-content">
                 <div class="hiw-number">04</div>
                 <div class="hiw-text">
-                  <h3>Approval & Finalization</h3>
-                  <p>Review and approve the final design and specifications.</p>
+                  <h3>Quotation & Proposal</h3>
+                  <p>Detailed quotation with clear terms shared.</p>
                 </div>
               </div>
             </div>
@@ -503,8 +1401,8 @@
               <div class="hiw-content">
                 <div class="hiw-number">05</div>
                 <div class="hiw-text">
-                  <h3>Manufacturing</h3>
-                  <p>Our skilled craftsmen bring the design to life with precision and quality.</p>
+                  <h3>Design & 3D Visualisation</h3>
+                  <p>Layout designed; 3D visual offered as a paid add-on.</p>
                 </div>
               </div>
             </div>
@@ -515,10 +1413,199 @@
               <div class="hiw-content">
                 <div class="hiw-number">06</div>
                 <div class="hiw-text">
-                  <h3>Installation</h3>
-                  <p>We ensure seamless installation, delivering a perfect fit and finish for your space.</p>
+                  <h3>Design Revisions</h3>
+                  <p>Design reviewed, revised and approved.</p>
                 </div>
               </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">07</div>
+                <div class="hiw-text">
+                  <h3>Material Selection</h3>
+                  <p>Boards, finishes and hardware confirmed.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">08</div>
+                <div class="hiw-text">
+                  <h3>Precision Manufacturing</h3>
+                  <p>Approved design built to exact dimensions.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 9 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">09</div>
+                <div class="hiw-text">
+                  <h3>Quality Checking</h3>
+                  <p>Components inspected before leaving the facility.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 10 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">10</div>
+                <div class="hiw-text">
+                  <h3>Professional Installation</h3>
+                  <p>Units installed and adjusted on-site.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 11 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">11</div>
+                <div class="hiw-text">
+                  <h3>Final Inspection</h3>
+                  <p>Alignment and finishing checked before handover.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 12 -->
+            <div class="hiw-card" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800');">
+              <div class="hiw-overlay"></div>
+              <div class="hiw-content">
+                <div class="hiw-number">12</div>
+                <div class="hiw-text">
+                  <h3>Project Handover</h3>
+                  <p>Project handed over, with care guidance given.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hiw-cta-container" style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #eaeaea;">
+            <a href="tel:+919876543210" style="display: inline-flex; align-items: center; gap: 8px; background: #111; color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 50px; font-weight: 500; font-size: 0.9rem; transition: opacity 0.3s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">Book My Free Consultation <i class="ph ph-phone"></i></a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 6.7 Project Timelines Section -->
+      <section class="timeline-section" style="background-color: #FAFAFA; padding: 60px 0; border-top: 1px solid #EAEAEA;">
+        <style>
+          .timeline-wrapper { width: 100%; margin: 0 auto; padding: 35px; background: #fff; border-radius: 12px; border: 1px solid #EFEFEF; box-shadow: 0 2px 10px rgba(0,0,0,0.02); font-family: var(--font-sans); }
+          .timeline-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #111; margin-bottom: 8px; text-align: center; }
+          .timeline-subtitle { font-size: 0.85rem; color: #555; margin-bottom: 25px; line-height: 1.6; text-align: center; }
+          .timeline-list { list-style: none; padding: 0; margin: 0 0 25px 0; }
+          .timeline-list li { display: flex; justify-content: space-between; padding: 12px 10px; border-bottom: 1px solid #f5f5f5; font-size: 0.85rem; }
+          .timeline-item-name { font-weight: 600; color: #222; }
+          .timeline-item-dur { color: #555; text-align: right; }
+          .timeline-note { font-size: 0.75rem; color: #666; line-height: 1.5; margin-bottom: 25px; padding: 15px 20px; background: #FDFDFD; border-radius: 8px; border-left: 3px solid #C2633C; border-top: 1px solid #f0f0f0; }
+          @media (max-width: 600px) { .timeline-section { padding: 40px 0; } .timeline-wrapper { padding: 25px 20px; } }
+        </style>
+        <div class="container">
+          <div class="timeline-wrapper">
+            <h2 class="timeline-title">Project Timelines</h2>
+            <p class="timeline-subtitle">Standard manufacturing & installation estimates</p>
+            <ul class="timeline-list">
+              <li><span class="timeline-item-name">Modular Kitchen</span><span class="timeline-item-dur">35 - 40 Days</span></li>
+              <li><span class="timeline-item-name">Bedroom Wardrobes</span><span class="timeline-item-dur">30 - 35 Days</span></li>
+              <li><span class="timeline-item-name">Living Room Units</span><span class="timeline-item-dur">25 - 30 Days</span></li>
+              <li><span class="timeline-item-name">Commercial Interiors</span><span class="timeline-item-dur">45 - 60 Days</span></li>
+            </ul>
+            <div class="timeline-note">*Timelines may vary based on material selection, customization, and site readiness.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6.8 Explore Kitchen Designs Banner -->
+      <section class="explore-banner-section" style="padding: 40px 0; background: #fff;">
+        <style>
+          .explore-wrapper { width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 25px 35px; background: #fdfdfd; border-radius: 12px; border: 1px solid #f0f0f0; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+          .eb-left h3 { font-size: 1.3rem; font-weight: 700; color: #111; margin-bottom: 5px; }
+          .eb-left p { font-size: 0.85rem; color: #555; margin: 0; }
+          .btn-solid-dark { background: #111; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+          .btn-solid-dark:hover { background: #C2633C; }
+          @media (max-width: 768px) { .explore-wrapper { flex-direction: column; text-align: center; gap: 20px; } }
+        </style>
+        <div class="container">
+          <div class="explore-wrapper">
+            <div class="eb-left">
+              <h3>Explore Our Kitchen Designs</h3>
+              <p>Get inspired by our latest modern kitchen projects</p>
+            </div>
+            <a href="gallery.html" class="btn-solid-dark">View Gallery <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6.9 Who We Serve -->
+      <section class="who-we-serve-section" style="padding: 40px 0; background: #FAFAFA; border-top: 1px solid #EAEAEA;">
+        <style>
+          .serve-wrapper { width: 100%; margin: 0 auto; text-align: center; }
+          .serve-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; color: #111; }
+          .serve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+          .serve-item { background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #f0f0f0; font-weight: 600; font-size: 0.9rem; color: #222; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+          .serve-item i { font-size: 1.5rem; color: #C2633C; }
+        </style>
+        <div class="container">
+          <div class="serve-wrapper">
+            <h2 class="serve-title">Who We Serve</h2>
+            <div class="serve-grid">
+              <div class="serve-item"><i class="ph ph-house"></i>Homeowners</div>
+              <div class="serve-item"><i class="ph ph-buildings"></i>Architects & Builders</div>
+              <div class="serve-item"><i class="ph ph-storefront"></i>Retail Spaces</div>
+              <div class="serve-item"><i class="ph ph-briefcase"></i>Corporate Offices</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6.10 Areas We Serve -->
+      <section class="areas-section" style="padding: 60px 0; background: #fff; border-top: 1px solid #EAEAEA;">
+        <style>
+          .areas-wrapper { width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+          .areas-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 15px; color: #111; }
+          .areas-desc { font-size: 0.9rem; color: #555; margin-bottom: 20px; line-height: 1.6; }
+          .areas-list { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
+          .area-tag { padding: 6px 12px; background: #FAFAFA; border: 1px solid #ddd; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: #444; }
+          .area-form { display: flex; flex-direction: column; gap: 10px; background: #FAFAFA; padding: 25px; border-radius: 12px; border: 1px solid #EFEFEF; }
+          .area-form-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+          .area-input { padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; width: 100%; }
+          .area-btn { background: #C2633C; color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+          .area-btn:hover { background: #a65230; }
+          @media (max-width: 768px) { .areas-wrapper { grid-template-columns: 1fr; } }
+        </style>
+        <div class="container">
+          <div class="areas-wrapper">
+            <div class="areas-left">
+              <h2 class="areas-title">Areas We Serve</h2>
+              <p class="areas-desc">We are actively undertaking residential and commercial interior projects across major districts in Kerala.</p>
+              <div class="areas-list">
+                <span class="area-tag">Thrissur</span>
+                <span class="area-tag">Calicut</span>
+                <span class="area-tag">Malappuram</span>
+                <span class="area-tag">Palakkad</span>
+                <span class="area-tag">Ernakulam</span>
+              </div>
+            </div>
+            <div class="areas-right">
+              <form class="area-form" onsubmit="event.preventDefault(); alert('Request sent! We will contact you soon.');">
+                <div class="area-form-title">Check Service Availability</div>
+                <input type="text" class="area-input" placeholder="Your Name" required>
+                <input type="email" class="area-input" placeholder="Your Email Address" required>
+                <input type="tel" class="area-input" placeholder="Your Phone Number" required>
+                <input type="text" class="area-input" placeholder="Your Location / Pincode" required>
+                <button type="submit" class="area-btn">Check My Area</button>
+              </form>
             </div>
           </div>
         </div>
@@ -650,6 +1737,134 @@
         </div>
       </section>
 
+            <!-- 7.5 FAQ Section -->
+      <section class="faq-section" style="padding: 80px 0; background-color: #FAFAFA;">
+        <style>
+          .faq-wrapper { width: 100%; max-width: 900px; margin: 0 auto; }
+          .faq-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-family: var(--font-display); font-weight: 600; text-align: center; margin-bottom: 50px; color: #111; letter-spacing: -0.02em; }
+          .faq-item { background: #fff; border: 1px solid #EAEAEA; border-radius: 8px; margin-bottom: 15px; overflow: hidden; transition: box-shadow 0.3s ease; }
+          .faq-item:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+          .faq-q { padding: 22px 25px; font-weight: 500; font-size: 1rem; color: #111; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: color 0.3s; }
+          .faq-q:hover { color: #C2633C; }
+          .faq-a { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; color: #666; font-size: 0.9rem; line-height: 1.6; }
+          .faq-item.active .faq-a { padding: 0 25px 25px 25px; max-height: 500px; }
+          .faq-icon { transition: transform 0.3s ease; color: #888; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;}
+          .faq-item.active .faq-icon { transform: rotate(45deg); color: #111; }
+          .faq-highlight { color: #D32F2F; font-weight: 600; }
+          .faq-cta-box { margin-top: 40px; text-align: center; }
+          .faq-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 12px 24px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: 0.3s; }
+          .faq-cta-btn:hover { background: #1ebd5a; transform: translateY(-2px); }
+          @media (max-width: 600px) {
+            .faq-q { font-size: 0.95rem; padding: 18px 20px; }
+            .faq-a { font-size: 0.85rem; }
+            .faq-item.active .faq-a { padding: 0 20px 20px 20px; }
+          }
+        </style>
+        <div class="container">
+          <div class="faq-wrapper">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <div class="faq-item active">
+                <div class="faq-q">How long does it take to design and install a modular kitchen? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">From design approval to installation, most modular kitchen projects at Timbercubes take about 3 to 5 weeks. Larger kitchens or projects with a high level of customisation can run longer, and the exact timeline is confirmed once the design and material selection are finalised.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Can I customise my modular kitchen design? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Yes. Layout, materials, finishes, hardware and storage are all planned around the kitchen's dimensions and the customer's requirements during the design and material-selection stages, rather than fitted to a standard template.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Which materials are available for modular kitchen cabinets? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Shutters are available in acrylic, PU-coated, laminate and lacquered glass finishes, with <span class="faq-highlight">BWP 710 Full Gurjan marine ply, WPC, PVC foam board, HDHMR or solid wood</span> used for the core structure depending on moisture exposure and expected lifespan. Hardware is sourced from brand partners including <span class="faq-highlight">Hettich, Hafele, Ebco, Sleek, Kesseböhmer etc.</span></div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Do you provide modular kitchen installation? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Yes. Installation is carried out by Timbercubes own team after the kitchen is manufactured at its own facility in Kerala, so the same company that designs and builds the kitchen also fits it on-site.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Do you provide modular kitchens outside Thrissur? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Yes. Timbercubes is based in Thrissur and also serves Kochi, Kozhikode (Calicut), Malappuram and Palakkad, with a site visit arranged in each area before design work begins.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Can you plan a modular kitchen for a small apartment? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Yes. Space-saving layouts such as corner units, pull-out baskets and tall units are used to add storage in smaller kitchens without crowding the space, based on the apartment's actual dimensions.</div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q">Can I get a wardrobe designed along with my kitchen, or separately? <i class="ph ph-plus faq-icon"></i></div>
+                <div class="faq-a">Both. Wardrobes are designed and quoted independently of the kitchen - customers can order one, the other, or both together as part of a single project.</div>
+              </div>
+            </div>
+            <div class="faq-cta-box">
+              <a href="https://wa.me/918129188188" class="faq-cta-btn">Still Have Questions? Chat on WhatsApp <i class="ph-fill ph-whatsapp-logo"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          document.querySelectorAll(".faq-q").forEach(q => {
+            q.addEventListener("click", () => {
+              const item = q.parentElement;
+              const isActive = item.classList.contains("active");
+              document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("active"));
+              if(!isActive) item.classList.add("active");
+            });
+            // Add hover behavior for desktop (as requested: "മൗസ് സ്കോർ കൊടുക്കുമ്പോഴും" which means mouse hover/scroll)
+            q.addEventListener("mouseenter", () => {
+              if (window.innerWidth > 768) {
+                const item = q.parentElement;
+                document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+              }
+            });
+          });
+        </script>
+      </section>
+
+      <!-- 7.6 Final CTA Section -->
+      <section class="final-cta-section" style="padding: 80px 0; background-color: #fff;">
+        <style>
+          .fcta-wrapper { width: 100%; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: #FAFAFA; border: 1px solid #EAEAEA; border-radius: 12px; padding: 45px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+          .fcta-left { display: flex; flex-direction: column; justify-content: center; }
+          .fcta-subtitle { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; color: #C2633C; text-transform: uppercase; margin-bottom: 10px; }
+          .fcta-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: #111; margin-bottom: 15px; }
+          .fcta-desc { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 30px; }
+          .fcta-contact-row { display: flex; gap: 20px; align-items: center; }
+          .fcta-icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #EBF3FF; color: #0056b3; border-radius: 50%; font-size: 1.4rem; text-decoration: none; transition: 0.3s; }
+          .fcta-icon-btn:hover { background: #0056b3; color: #fff; }
+          .fcta-right form { display: flex; flex-direction: column; gap: 15px; }
+          .fcta-input { padding: 14px; font-size: 0.9rem; border: 1px solid #ddd; border-radius: 6px; width: 100%; outline: none; }
+          .fcta-btn-submit { background: #111; color: #fff; border: none; padding: 15px; font-size: 0.9rem; font-weight: 600; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+          .fcta-btn-submit:hover { background: #333; }
+          @media (max-width: 768px) { .fcta-wrapper { grid-template-columns: 1fr; padding: 30px; } }
+        </style>
+        <div class="container">
+          <div class="fcta-wrapper">
+            <div class="fcta-left">
+              <div class="fcta-subtitle">Ready to Transform?</div>
+              <h2 class="fcta-title">Let's Start Designing<br>Your Dream Space</h2>
+              <p class="fcta-desc">Whether it's a modular kitchen, wardrobes, or a complete home interior makeover, our experts are here to help. Get in touch for a free consultation.</p>
+              <div class="fcta-contact-row">
+                <a href="tel:08129188188" class="fcta-icon-btn"><i class="ph-fill ph-phone"></i></a>
+                <a href="mailto:timbercubes@gmail.com" class="fcta-icon-btn"><i class="ph-fill ph-envelope-simple"></i></a>
+                <a href="https://wa.me/918129188188" class="fcta-icon-btn" style="background: #E8F5E9; color: #2E7D32;"><i class="ph-fill ph-whatsapp-logo"></i></a>
+              </div>
+            </div>
+            <div class="fcta-right">
+              <form onsubmit="event.preventDefault(); alert('Message sent to timbercubes@gmail.com');">
+                <input type="text" class="fcta-input" placeholder="Your Full Name" required>
+                <input type="email" class="fcta-input" placeholder="Email Address" required>
+                <input type="tel" class="fcta-input" placeholder="Phone Number" required>
+                <select class="fcta-input" required>
+                  <option value="">Select Service</option>
+                  <option value="Kitchen">Modular Kitchen</option>
+                  <option value="Wardrobes">Wardrobes</option>
+                  <option value="Living Room">Living Room</option>
+                  <option value="Commercial">Commercial Interiors</option>
+                </select>
+                <button type="submit" class="fcta-btn-submit">Get a Free Quote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- 8. Footer -->
@@ -752,3 +1967,4 @@
     </a>
   </body>
 </html>
+
