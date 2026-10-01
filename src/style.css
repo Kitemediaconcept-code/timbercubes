@@ -996,7 +996,7 @@ a {
 
 .partners-title h2 {
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.3;
   color: #111;
   margin: 0;
@@ -1041,17 +1041,17 @@ a {
   max-height: 75px;
   object-fit: contain;
   opacity: 0.8;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: all 0.3s ease;
 }
 .partner-cell:hover img {
   opacity: 1;
-  filter: grayscale(0%);
+  /* filter: grayscale(0%); */
 }
 
 @media (max-width: 900px) {
   .partner-cell img {
-    filter: grayscale(0%);
+    /* filter: grayscale(0%); */
     opacity: 1;
   }
   .partners-container {
@@ -1975,10 +1975,12 @@ a {
   }
   .award-text {
     text-align: center;
+    display: contents;
   }
   .award-text h3 {
     font-size: 1.3rem !important;
     align-items: center;
+    order: -1;
   }
   .award-text p {
     font-size: 0.75rem !important;
