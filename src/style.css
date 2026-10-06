@@ -371,12 +371,23 @@ a {
 .hero-desc-area {
   max-width: 400px;
   padding-bottom: 10px;
+  display: grid;
 }
 
-.hero-desc-area p {
+.hero-subtext {
+  grid-area: 1 / 1;
   font-size: 0.95rem;
   color: rgba(255,255,255,0.9);
   line-height: 1.5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease-in-out;
+  margin: 0;
+}
+
+.hero-subtext.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero-footer-row {
@@ -512,7 +523,7 @@ a {
   .hero-title-area h1 {
     font-size: 2.8rem;
   }
-  .hero-desc-area p {
+  .hero-subtext {
     font-size: 0.9rem;
   }
   .hero-footer-row {
