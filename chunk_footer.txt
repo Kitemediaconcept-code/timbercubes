@@ -1,0 +1,100 @@
+<footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col brand-col">
+          <a href="index.html" class="footer-logo-link" style="display: block; margin-bottom: 20px;">
+            <img src="/logowhite footer.png" alt="Timbercubes Logo" class="footer-logo" style="max-width: 250px; border-radius: 8px;">
+          </a>
+          <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
+            <div class="socials">
+              <a href="#"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+              <a href="#"><i class="ph ph-youtube-logo"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Featured</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Get in touch</h3>
+            <ul>
+              <li><i class="ph ph-phone"></i> 08129-188 188<br>08129 88 00 88</li>
+              <li><i class="ph ph-envelope"></i> timbercubes@gmail.com</li>
+              <li><i class="ph ph-map-pin"></i> Thrissur, Calicut, Kochi</li>
+            </ul>
+            <h3 class="mt-4">Working Hours</h3>
+            <ul>
+              <li>Mon - Sat : 9:00 AM - 10:00 PM</li>
+              <li>Sunday : Closed</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2026 Timbercubes. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Full-screen Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <div class="mobile-nav-header">
+        <a href="#" class="logo-link">
+          <div class="logo-container">
+            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
+          </div>
+        </a>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-large">
+          <a href="services.html">Services We Offer</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About us</a>
+        </div>
+        
+        <div class="mobile-nav-medium">
+          <a href="index.html">Home</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Get Free Quote</a>
+        </div>
+        
+        <div class="mobile-nav-contact">
+          <p>t: 08129-188 188<br>08129 88 00 88</p>
+          <p>m: <a href="mailto:timbercubes@gmail.com">timbercubes@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+    <!-- WhatsApp Sticky Icon -->
+    <a href="https://wa.me/918129188188" target="_blank" class="whatsapp-sticky">
+      <img src="/whatsappicon.png" alt="WhatsApp" />
+    </a>
+  </body>
+</html>
+

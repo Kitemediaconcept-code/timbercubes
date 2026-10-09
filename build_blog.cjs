@@ -1,0 +1,206 @@
+const fs = require('fs');
+
+const indexHtml = fs.readFileSync('g:/Timbercubes/index.html', 'utf8');
+
+const navEnd = indexHtml.indexOf('</header>') + 9;
+const footerStart = indexHtml.indexOf('<footer');
+
+if (navEnd < 6 || footerStart === -1) {
+    console.error("Could not find nav or footer in index.html");
+    process.exit(1);
+}
+
+const headerContent = indexHtml.substring(0, navEnd);
+const footerContent = indexHtml.substring(footerStart);
+
+const blogContent = `
+<style>
+/* Blog Page Styles */
+.blog-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: var(--font-sans); }
+
+/* Top Section: Featured & Latest */
+.blog-top-section { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-bottom: 80px; }
+@media(max-width: 991px) { .blog-top-section { grid-template-columns: 1fr; } }
+
+/* Featured Post */
+.blog-featured { position: relative; border-radius: 20px; overflow: hidden; height: 500px; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px; color: #fff; background-size: cover; background-position: center; background-image: url('/blog and newslatter/Featured in magazines and books/IMG_7550.JPG.jpeg'); }
+.blog-featured::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%); z-index: 1; }
+.blog-featured-content { position: relative; z-index: 2; }
+.blog-tag { background: #fff; color: #333; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px; }
+.blog-tag .dot { width: 8px; height: 8px; background: #E25E3E; border-radius: 50%; }
+.blog-featured h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 10px; line-height: 1.2; }
+.blog-meta { font-size: 0.9rem; color: #ddd; }
+
+/* Latest Posts */
+.blog-latest h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; color: #111; }
+.latest-list { display: flex; flex-direction: column; gap: 20px; }
+.latest-item { display: flex; gap: 15px; align-items: center; text-decoration: none; }
+.latest-img { width: 100px; height: 100px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+.latest-info h4 { font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 5px; line-height: 1.3; }
+.latest-meta { font-size: 0.8rem; color: #666; }
+
+/* Logo Launch Milestone Section */
+.milestone-section { margin-bottom: 80px; text-align: center; }
+.milestone-header { margin-bottom: 40px; }
+.milestone-subtitle { font-size: 0.8rem; font-weight: 600; color: #D36B82; text-transform: uppercase; letter-spacing: 2px; position: relative; display: inline-block; }
+.milestone-subtitle::before, .milestone-subtitle::after { content:""; position: absolute; top: 50%; width: 40px; height: 1px; background: #D36B82; }
+.milestone-subtitle::before { left: -50px; }
+.milestone-subtitle::after { right: -50px; }
+.milestone-header h2 { font-size: 3.5rem; font-weight: 700; color: #111; margin-top: 10px; font-family: var(--font-serif); }
+
+.milestone-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 0; align-items: stretch; text-align: left; margin-bottom: 10px; }
+@media(max-width: 991px) { .milestone-grid { grid-template-columns: 1fr; } }
+.milestone-main-img { width: 100%; height: 100%; min-height: 400px; object-fit: cover; }
+.milestone-details { padding: 40px; display: flex; flex-direction: column; justify-content: center; background: #FAFAFA; }
+.milestone-details h3 { font-size: 3.2rem; font-family: var(--font-serif); color: #111; line-height: 1.1; margin-bottom: 20px; }
+.milestone-details p { font-size: 1.1rem; color: #555; margin-bottom: 30px; }
+.milestone-icon-text { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #555; font-size: 1rem; }
+.milestone-icon-text i { color: #D36B82; font-size: 1.4rem; }
+
+.milestone-thumbnails { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.milestone-thumbnails img { width: 100%; height: 160px; object-fit: cover; }
+@media(max-width: 600px) { .milestone-thumbnails { grid-template-columns: repeat(2, 1fr); } }
+
+.view-all-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; padding: 15px 40px; border: 1px solid #111; color: #111; font-weight: 600; text-decoration: none; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s; }
+.view-all-btn:hover { background: #111; color: #fff; }
+
+/* Categories Grid */
+.category-section { margin-bottom: 80px; }
+.category-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.category-header h3 { font-size: 1.8rem; font-weight: 600; color: #111; }
+.cat-arrows { display: flex; gap: 10px; }
+.cat-arrows button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #ddd; background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #111; transition: all 0.3s; }
+.cat-arrows button:hover { background: #111; color: #fff; }
+
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+@media(max-width: 991px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 600px) { .cat-grid { grid-template-columns: 1fr; } }
+.cat-card { background: #fff; border-radius: 20px; overflow: hidden; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+.cat-img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+.cat-card h4 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; color: #111; line-height: 1.3; }
+.cat-card p { font-size: 0.95rem; color: #666; margin-bottom: 15px; flex-grow: 1; line-height: 1.5; }
+</style>
+
+<!-- Blog Main Content -->
+<main style="padding-top: 100px;">
+  <div class="blog-container">
+    
+    <!-- Top Section -->
+    <div class="blog-top-section">
+      <div class="blog-featured">
+        <div class="blog-featured-content">
+          <div class="blog-tag"><div class="dot"></div> Magazine Features</div>
+          <h2>Timbercubes Featured in Top Design Magazines</h2>
+          <div class="blog-meta">Oct 12 &bull; 5 min read</div>
+        </div>
+      </div>
+      
+      <div class="blog-latest">
+        <h3>Latest posts</h3>
+        <div class="latest-list">
+          <a href="#" class="latest-item">
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7511.JPG.jpeg" alt="Post" class="latest-img">
+            <div class="latest-info">
+              <h4>Calicut Showroom Inauguration Success</h4>
+              <div class="latest-meta">Aug 15 &bull; 8 min read</div>
+            </div>
+          </a>
+          <a href="#" class="latest-item">
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7512.JPG.jpeg" alt="Post" class="latest-img">
+            <div class="latest-info">
+              <h4>Exploring our new Kitchen Displays</h4>
+              <div class="latest-meta">Aug 18 &bull; 5 min read</div>
+            </div>
+          </a>
+          <a href="#" class="latest-item">
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7513.JPG.jpeg" alt="Post" class="latest-img">
+            <div class="latest-info">
+              <h4>Wardrobe Innovations at Calicut</h4>
+              <div class="latest-meta">Aug 22 &bull; 6 min read</div>
+            </div>
+          </a>
+          <a href="#" class="latest-item">
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7514.JPG.jpeg" alt="Post" class="latest-img">
+            <div class="latest-info">
+              <h4>Customer Testimonials from Opening Day</h4>
+              <div class="latest-meta">Sep 01 &bull; 4 min read</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milestone Section -->
+    <div class="milestone-section">
+      <div class="milestone-header">
+        <div class="milestone-subtitle">A Milestone in our Journey</div>
+        <h2>Logo Launch</h2>
+      </div>
+      
+      <div class="milestone-grid">
+        <img src="/blog and newslatter/Logo Relaunch/IMG_7536.JPG.jpeg" alt="Logo Launch" class="milestone-main-img">
+        <div class="milestone-details">
+          <h3>A new identity.<br>The same<br>commitment.</h3>
+          <p>Celebrating the unveiling of the Timbercubes brand identity.</p>
+          <div class="milestone-icon-text">
+            <i class="ph ph-calendar-blank"></i>
+            25 January 2017
+          </div>
+          <div class="milestone-icon-text">
+            <i class="ph ph-map-pin"></i>
+            The Mercy, Kochi
+          </div>
+        </div>
+      </div>
+      
+      <div class="milestone-thumbnails">
+        <img src="/blog and newslatter/Logo Relaunch/IMG_7538.JPG.jpeg" alt="Thumb 1">
+        <img src="/blog and newslatter/Logo Relaunch/IMG_7540.JPG.jpeg" alt="Thumb 2">
+        <img src="/blog and newslatter/Logo Relaunch/IMG_7542.JPG.jpeg" alt="Thumb 3">
+        <img src="/blog and newslatter/Logo Relaunch/IMG_7544.JPG.jpeg" alt="Thumb 4">
+      </div>
+      
+      <a href="#" class="view-all-btn">View all 15 images <i class="ph ph-arrow-right"></i></a>
+    </div>
+
+    <!-- Categories / Founders Corner -->
+    <div class="category-section">
+      <div class="category-header">
+        <h3>News & Categories</h3>
+        <div class="cat-arrows">
+          <button><i class="ph ph-arrow-left"></i></button>
+          <button><i class="ph ph-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <img src="/blog and newslatter/Featured in magazines and books/IMG_7499.JPG.jpeg" alt="Magazines" class="cat-img">
+          <div class="blog-tag" style="background:#eee;"><div class="dot"></div> Press</div>
+          <h4>Featured in Magazines & Books</h4>
+          <p>Read about Timbercubes being featured in top interior design magazines and leading publications across the region.</p>
+          <div class="blog-meta" style="color:#888;">Oct 12 &bull; 5 min read</div>
+        </div>
+        <div class="cat-card">
+          <img src="/blog and newslatter/Logo Relaunch/IMG_7541.JPG.jpeg" alt="Logo" class="cat-img">
+          <div class="blog-tag" style="background:#eee;"><div class="dot"></div> Company</div>
+          <h4>The Logo Relaunch Event</h4>
+          <p>A look back at the momentous occasion when Timbercubes unveiled its new brand identity at The Mercy, Kochi.</p>
+          <div class="blog-meta" style="color:#888;">Jan 25 &bull; 10 min read</div>
+        </div>
+        <div class="cat-card">
+          <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7527.JPG.jpeg" alt="Showroom" class="cat-img">
+          <div class="blog-tag" style="background:#eee;"><div class="dot"></div> Events</div>
+          <h4>Calicut Showroom Inauguration</h4>
+          <p>Experience the grand opening of our state-of-the-art display showroom in Calicut, featuring our latest collections.</p>
+          <div class="blog-meta" style="color:#888;">Aug 15 &bull; 8 min read</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+`;
+
+fs.writeFileSync('g:/Timbercubes/blog.html', headerContent + blogContent + footerContent, 'utf8');
+console.log("Created blog.html");
+

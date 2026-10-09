@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>No1 Modular Kitchens & Wardrobes Designers, Price in Thrissur, Calicut</title>
+    <meta name="description" content="Timbercubes is the best modular kitchen & wardrobe designers in Thrissur Kerala, we also offer kitchen interior designing services in Thrissur, Malappuram and Calicut. We are the leading modular kitchen cabinet manufacturer, Shops, Dealers in Thrissur" />
+    <meta name="keywords" content="furniture, modern interior, wardrobes, kitchen, decor, chairs, lamps" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Timbercubés | Modern Interior Living" />
+    <meta property="og:description" content="Curated furniture and decor that blend elegance, comfort, and functionality." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Lenis for Smooth Scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    
+    <link rel="stylesheet" href="/src/style.css" />
+  
+    <!-- Global SEO Tags added dynamically -->
+    <meta name="google-site-verification" content="_3WxVJqLj3Sbej38fFt8WXdG7LMAXQx3I2erx18jP0w" />
+    <meta name="Robots" content="Index,follow,All"/>
+    <meta name="YahooSeeker" content="INDEX, FOLLOW, all"/>
+    <meta name="msnbot" content="INDEX, FOLLOW, all"/>
+    <meta name="googlebot" content="noodp"/>
+    <meta name="rating" content="Safe For Kids"/>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/", 
+      "@type": "Product", 
+      "name": "modular kitchen",
+      "image": "https://timbercubes.com/images/slides/timbercubes5.jpg",
+      "description": "Timbercubes is a leading Modular kitchen, Wardrobes and Interior products manufactures in Kerala who deals with a wide range of interior products",
+      "brand": "Timbercubes"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "FurnitureStore",
+      "name": "Timbercubes",
+      "logo": "https://timbercubes.com/images/main_logo.jpg",
+      "url": "https://timbercubes.com",
+      "telephone": "08129188188",
+      "priceRange": "15000-100000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valayamkulam",
+        "addressLocality": "Thrissur",
+        "postalCode": "679591",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <link rel="canonical" href="https://timbercubes.com/" />
+
+    <!-- Local SEO Geo-Tags -->
+    <meta name="geo.region" content="IN-KL" />
+    <meta name="geo.placename" content="Kerala" />
+
+</head>
+  <body>
+    <!-- 1. Header (Pill Style as requested previously) -->
+    <header class="header">
+      <div class="container header-container">
+        <!-- Logo -->
+        <a href="#" class="logo-link">
+          <div class="logo-container">
+            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About us</a>
+          <a href="services.html">Services We Offer</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="#">Blog</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
