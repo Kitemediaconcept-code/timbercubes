@@ -1789,22 +1789,30 @@ a {
     gap: 12px;
   }
   .cat-card {
-    height: 220px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   .cat-info-pill {
-    bottom: 15px;
-    left: 15px;
+    bottom: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
   }
   .btn-layered-pill {
-    padding: 2px 8px 2px 2px;
+    padding: 2px 7px 2px 2px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .btn-text-pill {
-    padding: 4px 10px;
-    font-size: 0.7rem;
-    margin-right: 6px;
+    padding: 3px 8px;
+    font-size: 0.68rem;
+    margin-right: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .btn-arrow {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
 }
 
