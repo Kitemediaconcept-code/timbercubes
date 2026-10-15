@@ -135,27 +135,59 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .category-cards-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-}
-
-/* Mobile: 2 Cards per row with generous center gap, perfect alignment & smaller fonts */
-@media (max-width: 768px) {
   .gallery-categories-grid.section-padding {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-    background-color: #f5f6f8 !important; /* Soft contrast background */
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
   }
 
   .gallery-categories-grid .container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .category-cards-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px 18px !important;
+    column-gap: 18px !important;
+    row-gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .category-cards-wrapper .cat-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 380px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Mobile (<= 768px): 2 Cards per row with clear center space, left/right margins, and rounded containment */
+@media (max-width: 768px) {
+  .gallery-categories-grid.section-padding {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+    background-color: #f5f6f8 !important; /* Soft contrast background */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .gallery-categories-grid .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 18px !important; /* Guaranteed space on the left */
+    padding-right: 18px !important; /* Guaranteed space on the right */
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
   }
 
   .gallery-categories-grid .mb-60 {
-    margin-bottom: 20px !important;
+    margin-bottom: 22px !important;
   }
 
   .gallery-categories-grid .display-title-medium {
@@ -166,19 +198,40 @@
   .category-cards-wrapper {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* 2 cards per row */
-    column-gap: 20px !important; /* Clear, comfortable gap in center between cards */
-    row-gap: 22px !important;
+    grid-gap: 18px 16px !important;
+    gap: 18px 16px !important;
+    column-gap: 16px !important; /* Clear, distinct center space between cards */
+    row-gap: 18px !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
   }
   
   .category-cards-wrapper .cat-card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
     height: 220px !important;
     border-radius: 18px !important;
+    overflow: hidden !important;
     padding: 12px 10px !important;
     box-sizing: border-box !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     margin: 0 !important;
+  }
+
+  .category-cards-wrapper .cat-card .cat-card-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: inherit !important;
+  }
+
+  .category-cards-wrapper .cat-card .cat-card-overlay {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: inherit !important;
   }
   
   .cat-card-top {
@@ -212,7 +265,7 @@
 
   .cat-card-title {
     width: 100% !important;
-    height: 32px !important; /* Fixed 32px height ensures all titles and buttons align 100% identically */
+    height: 32px !important;
     font-size: 0.74rem !important;
     font-weight: 700 !important;
     line-height: 1.25 !important;
@@ -230,7 +283,7 @@
   }
 
   .cat-card-desc {
-    display: none !important; /* Hidden on mobile for clean, uncluttered symmetry */
+    display: none !important; /* Hidden on mobile for clean symmetry */
   }
 
   .cat-explore-btn {
@@ -249,33 +302,71 @@
   }
 }
 
-/* Extra small mobile screens (<= 380px) */
-@media (max-width: 380px) {
+/* Extra small mobile screens (<= 480px): Maintain side and center spacing proportionally */
+@media (max-width: 480px) {
+  .gallery-categories-grid.section-padding {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .gallery-categories-grid .container {
+    padding-left: 14px !important; /* Left space */
+    padding-right: 14px !important; /* Right space */
+  }
+
   .category-cards-wrapper {
-    column-gap: 14px !important;
+    grid-gap: 16px 14px !important;
+    gap: 16px 14px !important;
+    column-gap: 14px !important; /* Center space */
     row-gap: 16px !important;
   }
 
   .category-cards-wrapper .cat-card {
-    height: 200px !important;
-    border-radius: 14px !important;
+    height: 205px !important;
+    border-radius: 16px !important;
     padding: 10px 8px !important;
   }
 
   .cat-card-title {
-    font-size: 0.68rem !important;
+    font-size: 0.70rem !important;
     height: 30px !important;
     margin-bottom: 6px !important;
   }
 
   .cat-tag {
-    font-size: 0.4rem !important;
-    padding: 2px 5px !important;
+    font-size: 0.42rem !important;
+    padding: 2px 6px !important;
   }
 
   .cat-explore-btn {
-    padding: 4px 7px !important;
-    font-size: 0.46rem !important;
+    padding: 4px 8px !important;
+    font-size: 0.48rem !important;
+  }
+}
+
+/* Compact phones (<= 360px) */
+@media (max-width: 360px) {
+  .gallery-categories-grid .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .category-cards-wrapper {
+    grid-gap: 14px 10px !important;
+    gap: 14px 10px !important;
+    column-gap: 10px !important; /* Center space */
+    row-gap: 14px !important;
+  }
+
+  .category-cards-wrapper .cat-card {
+    height: 195px !important;
+    border-radius: 14px !important;
+    padding: 9px 7px !important;
+  }
+
+  .cat-card-title {
+    font-size: 0.66rem !important;
+    height: 28px !important;
   }
 }
 
