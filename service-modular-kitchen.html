@@ -112,36 +112,4454 @@
     </header>
 
     <main class="services-main">
-      <section class="service-hero">
-        <div class="container">
-          <span class="badge-outline">KITCHEN SERVICES</span>
-          <h1>Modular Kitchens</h1>
-          <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">Custom-designed modular kitchens for modern homes.</p>
-        </div>
-      </section>
+      <!-- Modular Kitchen Hero Section -->
+      <section class="kitchen-hero">
+        <img
+          class="kitchen-hero__image"
+          src="/kitchen-luxury-hero.jpg"
+          alt="Custom-designed modular kitchen in Thrissur"
+          fetchpriority="high"
+        />
 
-      <section class="service-content-wrapper">
-        <div class="container">
-          <div class="service-content">
-            <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&q=80&w=900" alt="Modular Kitchens" class="service-img">\n
-            <h2 style="font-size: 1.8rem; margin-top: 20px; font-weight: 700; color: #d9381e;">Modular Kitchen</h2>
-            <h3 style="color: #617f4b; font-size: 1.3rem; margin-top: 20px; font-weight: 600;">Kitchen Finishes</h3>
-            <ul style="font-size: 1.1rem; color: #333; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
-              <li>Laminate &ndash; Solid Colour Kitchens</li>
-              <li>Laminate &ndash; Solid Colour + Wood Grain Kitchens</li>
-              <li>Acrylic Kitchens</li>
-              <li>Polyurethane (PU) Coated Kitchens</li>
-              <li>Lacquered Glass + Laminate Kitchens</li>
-            </ul>
-    \n<div style="text-align: center; margin-top: 50px;">
-              <a href="contact.html" class="btn-layered-pill" style="display: inline-flex;">
-                <span class="btn-text-pill">Book a Wardrobe Consultation</span>
-                <i class="ph ph-arrow-right btn-arrow"></i>
+        <div class="kitchen-hero__inner">
+          <div class="kitchen-hero__content">
+            <span class="kitchen-hero__label">KITCHEN SERVICES</span>
+
+            <h1>Modular Kitchen Services in Thrissur</h1>
+
+            <h2>
+              Custom-Designed.<br />
+              Expertly Built.<br />
+              Professionally Installed.
+            </h2>
+
+            <p>
+              Modular kitchen services in Thrissur, made to your kitchen’s size,
+              built in our own facility and fitted by our own team.
+            </p>
+
+            <div class="kitchen-hero__actions">
+              <a class="kitchen-btn kitchen-btn--primary" href="contact.html">
+                Get Free Quote <span aria-hidden="true">↗</span>
               </a>
+
+              <!-- WhatsApp URL -->
+              <a class="kitchen-btn kitchen-btn--outline" href="https://wa.me/918129188188" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="kitchen-hero__highlights" aria-label="Our experience">
+            <div class="kitchen-stat kitchen-stat--glass">
+              <span class="kitchen-stat__eyebrow">SINCE</span>
+              <strong>2008</strong>
+              <span>Experience you can trust</span>
+            </div>
+
+            <div class="kitchen-stat kitchen-stat--cream">
+              <span class="kitchen-stat__eyebrow">OUR WORK</span>
+              <strong>1000+</strong>
+              <span>Projects completed</span>
+            </div>
+
+            <div class="kitchen-stat kitchen-stat--brown">
+              <span class="kitchen-stat__eyebrow">OUR PEOPLE</span>
+              <strong>In-House</strong>
+              <span>Our own team, every step</span>
             </div>
           </div>
         </div>
       </section>
+
+      <style>
+        .kitchen-hero {
+          --cream: #efe0c9;
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          background: #30251c;
+          color: var(--cream);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .kitchen-hero,
+        .kitchen-hero * {
+          box-sizing: border-box;
+        }
+
+        .kitchen-hero__image {
+          position: absolute;
+          inset: 0;
+          z-index: -3;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: right center;
+        }
+
+        .kitchen-hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -2;
+          background:
+            linear-gradient(
+              90deg,
+              rgba(24, 17, 11, 0.96) 0%,
+              rgba(24, 17, 11, 0.90) 35%,
+              rgba(24, 17, 11, 0.72) 55%,
+              rgba(24, 17, 11, 0.20) 78%,
+              rgba(24, 17, 11, 0.05) 100%
+            );
+        }
+
+        .kitchen-hero::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background: linear-gradient(
+            0deg,
+            rgba(24, 17, 11, 0.65),
+            transparent 42%
+          );
+        }
+
+        .kitchen-hero__inner {
+          width: 100%;
+          max-width: 1600px;
+          min-height: 760px;
+          margin-inline: auto;
+          padding: 120px clamp(24px, 5vw, 80px) 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 56px;
+        }
+
+        .kitchen-hero__content {
+          width: min(600px, 100%);
+          margin-left: 0;
+          margin-right: auto;
+        }
+
+        .kitchen-hero__label {
+          display: inline-block;
+          margin-bottom: 22px;
+          padding: 8px 13px;
+          border: 1px solid rgba(239, 224, 201, 0.35);
+          border-radius: 30px;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+
+        .kitchen-hero h1 {
+          margin: 0 0 20px;
+          max-width: 570px;
+          font-size: clamp(34px, 4.2vw, 58px);
+          line-height: 1.05;
+          font-weight: 500;
+          letter-spacing: -2px;
+          text-wrap: balance;
+        }
+
+        .kitchen-hero h2 {
+          margin: 0 0 19px;
+          font-size: clamp(18px, 2vw, 24px);
+          line-height: 1.35;
+          font-weight: 400;
+          color: #f3e9db;
+        }
+
+        .kitchen-hero p {
+          max-width: 445px;
+          margin: 0;
+          font-size: 14px;
+          line-height: 1.8;
+          color: #e2d7c9;
+        }
+
+        .kitchen-hero__actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-top: 28px;
+        }
+
+        .kitchen-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 22px;
+          min-height: 48px;
+          padding: 13px 19px;
+          border: 1px solid transparent;
+          border-radius: 9px;
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 600;
+          transition: background 180ms ease, color 180ms ease;
+        }
+
+        .kitchen-btn span {
+          font-size: 19px;
+          line-height: 1;
+        }
+
+        .kitchen-btn--primary {
+          background: var(--cream);
+          color: #33261d;
+        }
+
+        .kitchen-btn--primary:hover {
+          background: #fff3e2;
+        }
+
+        .kitchen-btn--outline {
+          border-color: rgba(239, 224, 201, 0.55);
+          background: rgba(35, 25, 18, 0.25);
+          color: var(--cream);
+        }
+
+        .kitchen-btn--outline:hover {
+          background: var(--cream);
+          color: #33261d;
+        }
+
+        .kitchen-btn:focus-visible {
+          outline: 3px solid white;
+          outline-offset: 5px;
+        }
+
+        .kitchen-hero__highlights {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+          width: min(790px, 100%);
+        }
+
+        .kitchen-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          min-height: 150px;
+          padding: 24px;
+          border-radius: 13px;
+        }
+
+        .kitchen-stat__eyebrow {
+          margin-bottom: 10px;
+          font-size: 9px;
+          font-weight: 600;
+          letter-spacing: 1.8px;
+        }
+
+        .kitchen-stat strong {
+          margin-bottom: 7px;
+          font-size: clamp(26px, 3vw, 37px);
+          font-weight: 500;
+          line-height: 1.1;
+          letter-spacing: -1px;
+        }
+
+        .kitchen-stat > span:last-child {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+
+        .kitchen-stat--glass {
+          background: rgba(128, 94, 67, 0.72);
+          border: 1px solid rgba(239, 224, 201, 0.2);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+
+        .kitchen-stat--cream {
+          background: #e7d5ba;
+          color: #32271e;
+        }
+
+        .kitchen-stat--brown {
+          background: #705039;
+          color: #f7ead7;
+        }
+
+        @media (max-width: 900px) {
+          .kitchen-hero__inner {
+            padding: 95px 26px 26px;
+            min-height: 720px;
+          }
+
+          .kitchen-hero__content {
+            width: 58%;
+          }
+
+          .kitchen-hero h1 {
+            letter-spacing: -1.3px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .kitchen-hero__image {
+            object-position: 38% center;
+          }
+
+          .kitchen-hero::before {
+            background: linear-gradient(
+              180deg,
+              rgba(24, 17, 11, 0.7),
+              rgba(24, 17, 11, 0.84)
+            );
+          }
+
+          .kitchen-hero__inner {
+            min-height: auto;
+            padding: 90px 20px 24px;
+            gap: 38px;
+          }
+
+          .kitchen-hero__content {
+            width: 100%;
+            margin: 0;
+          }
+
+          .kitchen-hero__label {
+            margin-bottom: 20px;
+          }
+
+          .kitchen-hero h1 {
+            max-width: 430px;
+            font-size: clamp(34px, 9vw, 46px);
+            line-height: 1.08;
+          }
+
+          .kitchen-hero h2 {
+            font-size: 20px;
+          }
+
+          .kitchen-hero p {
+            font-size: 14px;
+          }
+
+          .kitchen-hero__actions {
+            gap: 10px;
+          }
+
+          .kitchen-btn {
+            flex: 1 1 145px;
+            gap: 14px;
+            padding-inline: 14px;
+          }
+
+          .kitchen-hero__highlights {
+            gap: 9px;
+          }
+
+          .kitchen-stat {
+            min-height: 124px;
+            padding: 14px 10px;
+            border-radius: 10px;
+          }
+
+          .kitchen-stat__eyebrow {
+            font-size: 8px;
+            letter-spacing: 1px;
+          }
+
+          .kitchen-stat strong {
+            font-size: clamp(18px, 5vw, 28px);
+            letter-spacing: -0.6px;
+          }
+
+          .kitchen-stat > span:last-child {
+            font-size: 10px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .kitchen-btn {
+            transition: none;
+          }
+        }
+      </style>
+
+      <!-- Timbercubes Projects Gallery Section -->
+      <section class="tc-gallery" aria-labelledby="tc-gallery-title">
+        <div class="tc-gallery__container">
+
+          <header class="tc-gallery__header">
+            <span class="tc-gallery__badge">OUR PROJECTS</span>
+
+            <h2 id="tc-gallery-title">
+              Stunning Kitchens We’ve<br class="tc-gallery__break">
+              Delivered in Thrissur &amp; Nearby
+            </h2>
+
+            <p>
+              Every modular kitchen in Thrissur and nearby areas shown here
+              is a real Timbercubes project, not a stock image.
+            </p>
+          </header>
+
+          <!-- Replace image paths with actual Timbercubes project photos.
+               Replace Layout / Finish / Area with each project's details. -->
+
+          <div class="tc-gallery__grid">
+
+            <figure class="tc-project">
+              <a
+                class="tc-project__image-link"
+                href="/Modular%20Kitchen/l-shaped-modular-kitchen-thrissur.jpg.jpeg"
+                aria-label="View kitchen project 1 photo"
+              >
+                <img
+                  src="/Modular%20Kitchen/l-shaped-modular-kitchen-thrissur.jpg.jpeg"
+                  alt="Timbercubes modular kitchen project 1 - L-Shaped in Thrissur"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+
+              <figcaption class="tc-project__caption">
+                <div class="tc-project__details">
+                  <span>L-Shaped</span>
+                  <span>Acrylic &amp; Laminate</span>
+                  <span>Thrissur</span>
+                </div>
+
+                <a
+                  class="tc-project__arrow"
+                  href="/Modular%20Kitchen/l-shaped-modular-kitchen-thrissur.jpg.jpeg"
+                  aria-label="Open kitchen project 1 photo"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18 18 6M6 6h12v12"/>
+                  </svg>
+                </a>
+              </figcaption>
+            </figure>
+
+            <figure class="tc-project">
+              <a
+                class="tc-project__image-link"
+                href="/Modular%20Kitchen/modern-kitchen-interior-thrissur.jpg.jpeg"
+                aria-label="View kitchen project 2 photo"
+              >
+                <img
+                  src="/Modular%20Kitchen/modern-kitchen-interior-thrissur.jpg.jpeg"
+                  alt="Timbercubes modular kitchen project 2 - Parallel layout in Kunnamkulam"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+
+              <figcaption class="tc-project__caption">
+                <div class="tc-project__details">
+                  <span>Parallel Layout</span>
+                  <span>PU Matte Finish</span>
+                  <span>Kunnamkulam</span>
+                </div>
+
+                <a
+                  class="tc-project__arrow"
+                  href="/Modular%20Kitchen/modern-kitchen-interior-thrissur.jpg.jpeg"
+                  aria-label="Open kitchen project 2 photo"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18 18 6M6 6h12v12"/>
+                  </svg>
+                </a>
+              </figcaption>
+            </figure>
+
+            <figure class="tc-project">
+              <a
+                class="tc-project__image-link"
+                href="/Modular%20Kitchen/wood-finish-modular-kitchen-thrissur.jpg.jpeg"
+                aria-label="View kitchen project 3 photo"
+              >
+                <img
+                  src="/Modular%20Kitchen/wood-finish-modular-kitchen-thrissur.jpg.jpeg"
+                  alt="Timbercubes modular kitchen project 3 - Island layout in Perinthalmanna"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+
+              <figcaption class="tc-project__caption">
+                <div class="tc-project__details">
+                  <span>Island Layout</span>
+                  <span>Wood Grain &amp; Glass</span>
+                  <span>Perinthalmanna</span>
+                </div>
+
+                <a
+                  class="tc-project__arrow"
+                  href="/Modular%20Kitchen/wood-finish-modular-kitchen-thrissur.jpg.jpeg"
+                  aria-label="Open kitchen project 3 photo"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18 18 6M6 6h12v12"/>
+                  </svg>
+                </a>
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <!-- Replace these URLs with your website's actual page links. -->
+          <div class="tc-gallery__actions">
+            <a class="tc-gallery__primary" href="contact.html">
+              Start Planning My Kitchen
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 12h16m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+
+            <a class="tc-gallery__secondary" href="gallery.html">
+              View Full Gallery
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 12h16m-6-6 6 6-6 6"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <style>
+        .tc-gallery {
+          --tc-bg: #f6f2eb;
+          --tc-heading: #352516;
+          --tc-text: #705b48;
+          --tc-accent: #51321c;
+          --tc-border: #987558;
+
+          padding: clamp(48px, 6vw, 88px) 24px;
+          background: var(--tc-bg);
+          color: var(--tc-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .tc-gallery,
+        .tc-gallery * {
+          box-sizing: border-box;
+        }
+
+        .tc-gallery__container {
+          width: 100%;
+          max-width: 1320px;
+          margin-inline: auto;
+        }
+
+        .tc-gallery__header {
+          margin-bottom: 36px;
+        }
+
+        .tc-gallery__badge {
+          display: inline-block;
+          padding: 8px 17px;
+          margin-bottom: 22px;
+          border: 1px solid var(--tc-border);
+          border-radius: 999px;
+          color: var(--tc-accent);
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: 2.2px;
+        }
+
+        .tc-gallery h2 {
+          margin: 0 0 18px;
+          color: var(--tc-heading);
+          font-size: clamp(30px, 4.1vw, 58px);
+          font-weight: 600;
+          line-height: 1.12;
+          letter-spacing: -1.8px;
+        }
+
+        .tc-gallery__header p {
+          max-width: 1120px;
+          margin: 0;
+          color: var(--tc-text);
+          font-size: clamp(15px, 1.4vw, 19px);
+          line-height: 1.7;
+        }
+
+        .tc-gallery__grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+        }
+
+        .tc-project {
+          min-width: 0;
+          margin: 0;
+        }
+
+        .tc-project__image-link {
+          display: block;
+          overflow: hidden;
+          border-radius: 18px;
+          background: #e6ded3;
+          aspect-ratio: 1 / 1;
+        }
+
+        .tc-project__image-link img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 400ms ease;
+        }
+
+        .tc-project__caption {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 14px 4px 0;
+        }
+
+        .tc-project__details {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 8px 0;
+          min-width: 0;
+          color: var(--tc-text);
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        .tc-project__details span {
+          overflow-wrap: anywhere;
+        }
+
+        .tc-project__details span + span::before {
+          content: "|";
+          display: inline-block;
+          margin-inline: 12px;
+          color: var(--tc-border);
+        }
+
+        .tc-project__arrow {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 44px;
+          width: 44px;
+          height: 44px;
+          border: 1px solid var(--tc-border);
+          border-radius: 50%;
+          color: var(--tc-accent);
+          text-decoration: none;
+          transition: background 200ms ease, color 200ms ease;
+        }
+
+        .tc-gallery svg {
+          display: block;
+          flex-shrink: 0;
+          width: 22px;
+          height: 22px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tc-gallery__actions {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 20px 36px;
+          margin-top: 46px;
+        }
+
+        .tc-gallery__primary {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;
+          min-height: 56px;
+          padding: 16px 28px;
+          border: 1px solid var(--tc-accent);
+          border-radius: 999px;
+          background: var(--tc-accent);
+          color: #fff8ef;
+          text-align: center;
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.4;
+          transition: background 200ms ease;
+        }
+
+        .tc-gallery__secondary {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          min-height: 44px;
+          color: var(--tc-heading);
+          font-size: 15px;
+          line-height: 1.4;
+          text-decoration: underline;
+          text-underline-offset: 7px;
+          text-decoration-thickness: 1px;
+        }
+
+        .tc-gallery a:focus-visible {
+          outline: 3px solid #92643e;
+          outline-offset: 5px;
+        }
+
+        @media (hover: hover) {
+          .tc-project__image-link:hover img {
+            transform: scale(1.045);
+          }
+
+          .tc-project__arrow:hover {
+            background: var(--tc-accent);
+            color: #fff8ef;
+          }
+
+          .tc-gallery__primary:hover {
+            background: #6b452a;
+          }
+
+          .tc-gallery__secondary:hover {
+            color: #94623d;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .tc-gallery__grid {
+            gap: 18px;
+          }
+
+          .tc-project__details {
+            font-size: 13px;
+          }
+
+          .tc-project__details span + span::before {
+            margin-inline: 7px;
+          }
+
+          .tc-gallery h2 {
+            letter-spacing: -1.2px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .tc-gallery {
+            padding: 48px 20px;
+          }
+
+          .tc-gallery__header {
+            margin-bottom: 28px;
+          }
+
+          .tc-gallery__badge {
+            margin-bottom: 18px;
+            font-size: 10px;
+          }
+
+          .tc-gallery h2 {
+            font-size: clamp(30px, 6vw, 42px);
+            line-height: 1.15;
+            letter-spacing: -1px;
+          }
+
+          .tc-gallery__break {
+            display: none;
+          }
+
+          .tc-gallery__grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+          }
+
+          .tc-project__image-link {
+            aspect-ratio: 4 / 3;
+            border-radius: 16px;
+          }
+
+          .tc-project__details {
+            font-size: 15px;
+          }
+
+          .tc-project__details span + span::before {
+            margin-inline: 12px;
+          }
+
+          .tc-gallery__actions {
+            margin-top: 34px;
+            gap: 16px;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .tc-gallery__primary {
+            width: 100%;
+            padding-inline: 18px;
+            gap: 16px;
+            font-size: 14px;
+          }
+
+          .tc-gallery__secondary {
+            font-size: 14px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tc-gallery *,
+          .tc-gallery *::before,
+          .tc-gallery *::after {
+            transition: none;
+          }
+
+          .tc-project__image-link:hover img {
+            transform: none;
+          }
+        }
+      </style>
+
+      <!-- OUR SERVICES: Design, Manufacturing & Installation -->
+      <section class="tc-services" aria-labelledby="tc-services-title">
+        <div class="tc-services__container">
+
+          <header class="tc-services__header">
+            <span class="tc-services__badge">OUR SERVICES</span>
+
+            <h2 id="tc-services-title">
+              Our Modular Kitchen Services:
+              <span>Design, Manufacturing &amp; Installation</span>
+            </h2>
+          </header>
+
+          <div class="tc-services__grid">
+
+            <!-- SERVICE 01 -->
+            <article class="tc-service">
+              <div class="tc-service__image">
+                <!-- Kitchen Design process image -->
+                <img
+                  src="/images/kitchen-design.jpg"
+                  alt="Kitchen layout drawings and material samples"
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+
+              <div class="tc-service__body">
+                <div class="tc-service__meta" aria-hidden="true">
+                  <span class="tc-service__number">01</span>
+                  <span class="tc-service__divider"></span>
+
+                  <svg viewBox="0 0 48 48">
+                    <path d="m8 31 23-23a4 4 0 0 1 6 6L14 37l-9 3 3-9Z"/>
+                    <path d="m27 12 6 6M8 31l6 6"/>
+                    <path d="M23 40h19V21L23 40Z"/>
+                    <path d="M32 35h5v-5"/>
+                  </svg>
+                </div>
+
+                <h3>Custom Kitchen Design</h3>
+
+                <p>
+                  Timbercubes’ modular kitchen designers in Thrissur measure
+                  your site and plan the layout around your appliances, sink,
+                  plumbing and electrical points. You then select materials,
+                  finishes and hardware within your budget, and 3D visuals
+                  are available as a paid add-on.
+                </p>
+              </div>
+            </article>
+
+            <!-- SERVICE 02 -->
+            <article class="tc-service">
+              <div class="tc-service__image">
+                <!-- Factory Manufacturing image -->
+                <img
+                  src="/images/kitchen-manufacturing.jpg"
+                  alt="Cabinet manufacturing equipment on a factory floor"
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+
+              <div class="tc-service__body">
+                <div class="tc-service__meta" aria-hidden="true">
+                  <span class="tc-service__number">02</span>
+                  <span class="tc-service__divider"></span>
+
+                  <svg viewBox="0 0 24 24">
+                    <path d="
+                      M9.5 3 10 1h4l.5 2 1.5.9 2-.6 2 3.4-1.5 1.5
+                      V10l2 1v4l-2 1v1.8l1.5 1.5-2 3.4-2-.6-1.5.9
+                      -.5 2h-4l-.5-2-1.5-.9-2 .6-2-3.4 1.5-1.5V16
+                      l-2-1v-4l2-1V8.2L4 6.7l2-3.4 2 .6Z"
+                      transform="translate(1 0) scale(.85)"
+                    />
+                    <circle cx="11.2" cy="11.05" r="4"/>
+                  </svg>
+                </div>
+
+                <h3>In-House Manufacturing</h3>
+
+                <p>
+                  Timbercubes is one of the modular kitchen manufacturers
+                  in Thrissur with its own facility in Kerala. Your kitchen
+                  is built there to the approved measurements and checked
+                  for size, edges, shutter alignment and hardware before
+                  dispatch.
+                </p>
+              </div>
+            </article>
+
+            <!-- SERVICE 03 -->
+            <article class="tc-service">
+              <div class="tc-service__image">
+                <!-- Installation Team image -->
+                <img
+                  src="/images/kitchen-installation.jpg"
+                  alt="Installer aligning a modular kitchen cabinet door"
+                  width="800"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+
+              <div class="tc-service__body">
+                <div class="tc-service__meta" aria-hidden="true">
+                  <span class="tc-service__number">03</span>
+                  <span class="tc-service__divider"></span>
+
+                  <svg viewBox="0 0 24 24">
+                    <path d="
+                      m14.7 6.3 3 3
+                      a5 5 0 0 1-6.4 6.4
+                      l-6 6a2.1 2.1 0 0 1-3-3
+                      l6-6a5 5 0 0 1 6.4-6.4Z"
+                      transform="translate(0 -3)"
+                    />
+                    <path d="m16 16 5 5M3 3l5 5m-5-5 2-.5L8 5l-.5 2"/>
+                  </svg>
+                </div>
+
+                <h3>Professional Installation</h3>
+
+                <p>
+                  Fitted by the same company that built it. Our team installs
+                  every unit, completes a final inspection of each shutter,
+                  drawer and lift-up, and explains how to care for the
+                  fittings at handover.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .tc-services {
+          --tcs-background: #f6f2eb;
+          --tcs-heading: #2c2019;
+          --tcs-text: #5e554e;
+          --tcs-accent: #926c49;
+          --tcs-border: #ded3c7;
+
+          padding: clamp(48px, 6vw, 88px) 24px;
+          background: var(--tcs-background);
+          color: var(--tcs-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .tc-services,
+        .tc-services *,
+        .tc-services *::before,
+        .tc-services *::after {
+          box-sizing: border-box;
+        }
+
+        .tc-services__container {
+          width: 100%;
+          max-width: 1320px;
+          margin-inline: auto;
+        }
+
+        .tc-services__header {
+          max-width: 1100px;
+          margin: 0 auto 38px;
+          text-align: center;
+        }
+
+        .tc-services__badge {
+          display: inline-block;
+          margin-bottom: 22px;
+          padding: 9px 22px;
+          border: 1px solid var(--tcs-accent);
+          border-radius: 999px;
+          color: #62432b;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 1.3;
+          letter-spacing: 3px;
+        }
+
+        .tc-services__header h2 {
+          margin: 0;
+          color: var(--tcs-heading);
+          font-size: clamp(28px, 3.3vw, 46px);
+          font-weight: 500;
+          line-height: 1.22;
+          letter-spacing: -1.4px;
+          text-wrap: balance;
+        }
+
+        .tc-services__header h2 span {
+          display: block;
+          margin-top: 7px;
+        }
+
+        .tc-services__grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          align-items: stretch;
+          gap: 20px;
+        }
+
+        .tc-service {
+          min-width: 0;
+          overflow: hidden;
+          padding: 12px;
+          border: 1px solid var(--tcs-border);
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.12);
+          transition:
+            border-color 250ms ease,
+            box-shadow 250ms ease;
+        }
+
+        .tc-service__image {
+          overflow: hidden;
+          aspect-ratio: 5 / 3;
+          border-radius: 13px;
+          background: #e6ded3;
+        }
+
+        .tc-service__image img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 500ms ease;
+        }
+
+        .tc-service__body {
+          padding: 22px 16px 16px;
+        }
+
+        .tc-service__meta {
+          display: flex;
+          align-items: center;
+          gap: 22px;
+          min-height: 44px;
+          margin-bottom: 21px;
+        }
+
+        .tc-service__number {
+          color: var(--tcs-accent);
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 1;
+          font-variant-numeric: tabular-nums;
+        }
+
+        .tc-service__divider {
+          width: 1px;
+          height: 38px;
+          background: #b9a28c;
+        }
+
+        .tc-service__meta svg {
+          display: block;
+          width: 42px;
+          height: 42px;
+          fill: none;
+          stroke: var(--tcs-heading);
+          stroke-width: 1.3;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tc-service__meta svg[viewBox="0 0 48 48"] {
+          stroke-width: 1.8;
+        }
+
+        .tc-service h3 {
+          margin: 0 0 12px;
+          color: var(--tcs-heading);
+          font-size: clamp(20px, 1.8vw, 25px);
+          font-weight: 600;
+          line-height: 1.25;
+          letter-spacing: -0.65px;
+        }
+
+        .tc-service p {
+          margin: 0;
+          color: var(--tcs-text);
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.75;
+        }
+
+        @media (hover: hover) {
+          .tc-service:hover {
+            border-color: #b99c7e;
+            box-shadow: 0 12px 30px rgba(62, 42, 25, 0.06);
+          }
+
+          .tc-service:hover img {
+            transform: scale(1.035);
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .tc-services__grid {
+            gap: 14px;
+          }
+
+          .tc-service {
+            padding: 10px;
+            border-radius: 17px;
+          }
+
+          .tc-service__body {
+            padding: 20px 8px 14px;
+          }
+
+          .tc-service__meta {
+            gap: 17px;
+          }
+
+          .tc-service h3 {
+            font-size: 21px;
+          }
+
+          .tc-service p {
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .tc-services {
+            padding: 48px 20px;
+          }
+
+          .tc-services__header {
+            margin-bottom: 28px;
+          }
+
+          .tc-services__badge {
+            margin-bottom: 18px;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+          }
+
+          .tc-services__header h2 {
+            font-size: clamp(27px, 5.8vw, 38px);
+            line-height: 1.2;
+            letter-spacing: -0.8px;
+          }
+
+          .tc-services__header h2 span {
+            margin-top: 10px;
+            font-size: 0.85em;
+            line-height: 1.35;
+          }
+
+          .tc-services__grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+          }
+
+          .tc-service {
+            padding: 12px;
+            border-radius: 20px;
+          }
+
+          .tc-service__body {
+            padding: 22px 12px 18px;
+          }
+
+          .tc-service__meta {
+            margin-bottom: 18px;
+          }
+
+          .tc-service h3 {
+            font-size: 24px;
+          }
+
+          .tc-service p {
+            font-size: 15px;
+            line-height: 1.75;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tc-service,
+          .tc-service__image img {
+            transition: none;
+          }
+
+          .tc-service:hover img {
+            transform: none;
+          }
+        }
+      </style>
+
+      <script>
+        (() => {
+          const cards = document.querySelectorAll(
+            ".tc-services .tc-service"
+          );
+
+          const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          );
+
+          // Content stays visible when JavaScript or animation is unavailable.
+          if (
+            reduceMotion.matches ||
+            !("IntersectionObserver" in window) ||
+            !("animate" in Element.prototype)
+          ) {
+            return;
+          }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                if (!reduceMotion.matches) {
+                  entry.target.animate(
+                    [
+                      { opacity: 0, transform: "translateY(24px)" },
+                      { opacity: 1, transform: "translateY(0)" }
+                    ],
+                    {
+                      duration: 600,
+                      easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+                    }
+                  );
+                }
+
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.12 }
+          );
+
+          cards.forEach((card) => observer.observe(card));
+        })();
+      </script>
+
+      <!-- KITCHEN LAYOUTS SECTION -->
+      <section class="kitchen-layouts">
+        <div class="kl-container">
+
+          <header class="kl-heading">
+            <span class="kl-label">KITCHEN LAYOUTS</span>
+
+            <h2>Find the Perfect Layout for Your Space</h2>
+
+            <p>
+              Your room’s size and shape decide which layout works best
+              for a modular kitchen in Thrissur.
+            </p>
+          </header>
+
+          <div class="kl-grid">
+
+            <!-- L-SHAPED KITCHEN -->
+            <article class="kl-card">
+              <img
+                class="kl-image"
+                src="/images/l-shaped-kitchen.jpg"
+                alt="L-shaped kitchen"
+                loading="lazy"
+                width="800"
+                height="700"
+              >
+
+              <div class="kl-content">
+                <svg
+                  class="kl-plan"
+                  viewBox="0 0 100 100"
+                  role="img"
+                  aria-label="L-shaped floor plan"
+                >
+                  <path d="M8 8H92V27H27V92H8Z"/>
+                  <path class="kl-detail" d="M28 8V27M50 8V27M72 8V27M8 49H27M8 70H27"/>
+                  <rect class="kl-fixture" x="56" y="12" width="16" height="11" rx="1"/>
+                  <circle class="kl-detail" cx="61" cy="17" r="2"/>
+                  <circle class="kl-detail" cx="67" cy="17" r="2"/>
+                </svg>
+
+                <div>
+                  <h3>L-Shaped Kitchen</h3>
+                  <p>
+                    Fits small and medium kitchens along two connecting
+                    walls, with a magic corner unit storing pots and pans
+                    in the joining corner.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- U-SHAPED KITCHEN -->
+            <article class="kl-card">
+              <img
+                class="kl-image"
+                src="/images/u-shaped-kitchen.jpg"
+                alt="U-shaped kitchen"
+                loading="lazy"
+                width="800"
+                height="700"
+              >
+
+              <div class="kl-content">
+                <svg
+                  class="kl-plan"
+                  viewBox="0 0 100 100"
+                  role="img"
+                  aria-label="U-shaped floor plan"
+                >
+                  <path d="M8 8H92V92H73V27H27V92H8Z"/>
+                  <path class="kl-detail" d="M8 49H27M8 70H27M73 49H92M73 70H92"/>
+                  <rect class="kl-fixture" x="40" y="12" width="18" height="11" rx="2"/>
+                  <path class="kl-detail" d="M49 10V16"/>
+                </svg>
+
+                <div>
+                  <h3>U-Shaped Kitchen</h3>
+                  <p>
+                    Suits larger kitchens where more than one person
+                    cooks, with counters on three sides and room for
+                    tall pantry units.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- STRAIGHT KITCHEN -->
+            <article class="kl-card">
+              <img
+                class="kl-image"
+                src="/images/straight-kitchen.jpg"
+                alt="Straight kitchen along one wall"
+                loading="lazy"
+                width="800"
+                height="700"
+              >
+
+              <div class="kl-content">
+                <svg
+                  class="kl-plan"
+                  viewBox="0 0 100 100"
+                  role="img"
+                  aria-label="Straight kitchen floor plan"
+                >
+                  <path d="M6 35H94V60H6Z"/>
+                  <path class="kl-detail" d="M34 35V60M63 35V60"/>
+                  <rect class="kl-fixture" x="13" y="41" width="15" height="13" rx="2"/>
+                  <rect class="kl-fixture" x="69" y="40" width="18" height="15" rx="1"/>
+                  <circle class="kl-detail" cx="74" cy="45" r="2"/>
+                  <circle class="kl-detail" cx="82" cy="50" r="2"/>
+                </svg>
+
+                <div>
+                  <h3>Straight Kitchen</h3>
+                  <p>
+                    Suits narrow kitchens and apartments, with tall
+                    units and lift-up cabinets adding storage upwards.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- PARALLEL KITCHEN -->
+            <article class="kl-card">
+              <img
+                class="kl-image"
+                src="/images/parallel-kitchen.jpg"
+                alt="Parallel kitchen with two opposing counters"
+                loading="lazy"
+                width="800"
+                height="700"
+              >
+
+              <div class="kl-content">
+                <svg
+                  class="kl-plan"
+                  viewBox="0 0 100 100"
+                  role="img"
+                  aria-label="Parallel kitchen floor plan"
+                >
+                  <path d="M8 8H29V92H8ZM71 8H92V92H71Z"/>
+                  <path class="kl-detail" d="M8 35H29M8 65H29M71 35H92M71 65H92"/>
+                  <rect class="kl-fixture" x="12" y="41" width="13" height="17" rx="2"/>
+                  <rect class="kl-fixture" x="75" y="41" width="13" height="17" rx="1"/>
+                  <circle class="kl-detail" cx="81.5" cy="46" r="2"/>
+                  <circle class="kl-detail" cx="81.5" cy="53" r="2"/>
+                </svg>
+
+                <div>
+                  <h3>Parallel Kitchen</h3>
+                  <p>
+                    Suits long, narrow kitchens, keeping cooking on
+                    one side and washing on the other.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- ISLAND KITCHEN -->
+            <article class="kl-card">
+              <img
+                class="kl-image"
+                src="/images/island-kitchen.jpg"
+                alt="Open kitchen with a central island"
+                loading="lazy"
+                width="800"
+                height="700"
+              >
+
+              <div class="kl-content">
+                <svg
+                  class="kl-plan"
+                  viewBox="0 0 100 100"
+                  role="img"
+                  aria-label="Island kitchen floor plan"
+                >
+                  <path d="M8 8H92V27H8ZM28 48H72V76H28Z"/>
+                  <path class="kl-detail" d="M31 8V27M68 8V27"/>
+                  <rect class="kl-fixture" x="41" y="12" width="17" height="11" rx="2"/>
+                  <circle cx="37" cy="85" r="5"/>
+                  <circle cx="63" cy="85" r="5"/>
+                </svg>
+
+                <div>
+                  <h3>Island Kitchen</h3>
+                  <p>
+                    Suits large, open kitchens, adding a centre counter
+                    for cutting and preparation.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- WHATSAPP CTA -->
+            <aside class="kl-cta">
+              <svg class="kl-tape" viewBox="0 0 120 90" aria-hidden="true">
+                <ellipse cx="44" cy="24" rx="30" ry="16"/>
+                <ellipse cx="44" cy="24" rx="14" ry="7"/>
+                <path d="M14 24V56C14 65 28 72 44 72H108V42H74V24"/>
+                <path d="M44 42H108"/>
+                <path d="
+                  M25 59V68
+                  M36 62V71
+                  M47 63V72
+                  M58 62V72
+                  M69 58V72
+                  M80 62V72
+                  M91 62V72
+                  M102 58V72
+                "/>
+              </svg>
+
+              <h3>Not sure which<br>layout fits?</h3>
+
+              <a
+                class="kl-button"
+                href="https://wa.me/918129188188?text=Hi%20Timbercubes%2C%20I%20would%20like%20help%20choosing%20a%20kitchen%20layout.%20My%20kitchen%20size%20is%3A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Send Your Kitchen Size<br>on WhatsApp</span>
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12H20M13 5L20 12L13 19"/>
+                </svg>
+              </a>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .kitchen-layouts {
+          --kl-bg: #f6f2eb;
+          --kl-heading: #392416;
+          --kl-text: #79624f;
+          --kl-border: #dcc5ae;
+
+          padding: 72px 24px;
+          background: var(--kl-bg);
+          color: var(--kl-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .kitchen-layouts,
+        .kitchen-layouts *,
+        .kitchen-layouts *::before,
+        .kitchen-layouts *::after {
+          box-sizing: border-box;
+        }
+
+        .kl-container {
+          max-width: 1320px;
+          margin-inline: auto;
+        }
+
+        .kl-heading {
+          margin-bottom: 38px;
+          text-align: center;
+        }
+
+        .kl-label {
+          display: inline-block;
+          margin-bottom: 22px;
+          padding: 9px 23px;
+          border: 1px solid #91694c;
+          border-radius: 999px;
+          font-size: 11px;
+          line-height: 1.3;
+          letter-spacing: 2.5px;
+        }
+
+        .kl-heading h2 {
+          margin: 0 0 20px;
+          color: var(--kl-heading);
+          font-size: clamp(30px, 3.8vw, 50px);
+          font-weight: 600;
+          line-height: 1.15;
+          letter-spacing: -1.5px;
+          text-wrap: balance;
+        }
+
+        .kl-heading p {
+          max-width: 1050px;
+          margin: 0 auto;
+          color: var(--kl-text);
+          font-size: 17px;
+          line-height: 1.7;
+        }
+
+        .kl-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 20px;
+          align-items: stretch;
+        }
+
+        .kl-card {
+          min-width: 0;
+          padding: 7px;
+          overflow: hidden;
+          border: 1px solid var(--kl-border);
+          border-radius: 20px;
+          background: #faf7f1;
+          transition:
+            border-color 220ms ease,
+            box-shadow 220ms ease;
+        }
+
+        .kl-image {
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 8 / 7;
+          object-fit: cover;
+          border-radius: 14px;
+          background: #e5dacd;
+        }
+
+        .kl-content {
+          display: grid;
+          grid-template-columns: 88px minmax(0, 1fr);
+          align-items: start;
+          gap: 18px;
+          padding: 26px 14px 28px;
+        }
+
+        .kl-plan {
+          display: block;
+          width: 100%;
+          height: auto;
+          fill: #d7c9b5;
+          stroke: #735b46;
+          stroke-width: 1.8;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .kl-plan .kl-detail {
+          fill: none;
+          stroke-width: 1;
+        }
+
+        .kl-plan .kl-fixture {
+          fill: #f6f2eb;
+          stroke-width: 1;
+        }
+
+        .kl-content h3 {
+          margin: 0 0 12px;
+          color: var(--kl-heading);
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 1.3;
+          letter-spacing: -0.5px;
+        }
+
+        .kl-content p {
+          margin: 0;
+          color: var(--kl-text);
+          font-size: 15px;
+          line-height: 1.65;
+        }
+
+        .kl-cta {
+          position: relative;
+          isolation: isolate;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-width: 0;
+          overflow: hidden;
+          padding: 42px 26px;
+          border-radius: 20px;
+          background:
+            radial-gradient(
+              ellipse at top left,
+              #583a27 0%,
+              #342013 70%
+            );
+          color: #fbefdd;
+          text-align: center;
+        }
+
+        .kl-cta::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 145%;
+          aspect-ratio: 1;
+          border: 1px solid rgba(228, 191, 146, 0.18);
+          border-radius: 50%;
+          transform: rotate(-20deg);
+          pointer-events: none;
+        }
+
+        .kl-tape {
+          display: block;
+          width: 116px;
+          height: 88px;
+          margin-bottom: 30px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.7;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .kl-cta h3 {
+          margin: 0 0 30px;
+          color: #fbefdd;
+          font-size: clamp(29px, 2.8vw, 40px);
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: -0.7px;
+        }
+
+        .kl-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 18px;
+          width: 100%;
+          max-width: 340px;
+          min-height: 72px;
+          padding: 16px 22px;
+          border-radius: 999px;
+          background: #fbefdd;
+          color: #392416;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.4;
+          text-decoration: none;
+          transition: background 200ms ease;
+        }
+
+        .kl-button svg {
+          width: 27px;
+          height: 27px;
+          flex-shrink: 0;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .kl-button:focus-visible {
+          outline: 3px solid #d8b38d;
+          outline-offset: 5px;
+        }
+
+        @media (hover: hover) {
+          .kl-card:hover {
+            border-color: #aa805b;
+            box-shadow: 0 12px 28px rgba(57, 36, 22, 0.06);
+          }
+
+          .kl-button:hover {
+            background: #ffffff;
+          }
+        }
+
+        /* Tablet */
+        @media (max-width: 1050px) {
+          .kl-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .kl-content {
+            grid-template-columns: 78px minmax(0, 1fr);
+            gap: 16px;
+          }
+        }
+
+        /* Mobile: 2 cards per row */
+        @media (max-width: 600px) {
+          .kitchen-layouts {
+            padding: 40px 14px;
+          }
+
+          .kl-heading {
+            margin-bottom: 24px;
+          }
+
+          .kl-label {
+            margin-bottom: 14px;
+            padding: 6px 16px;
+            font-size: 10px;
+            letter-spacing: 1.8px;
+          }
+
+          .kl-heading h2 {
+            font-size: clamp(23px, 6vw, 30px);
+            letter-spacing: -0.8px;
+            margin-bottom: 10px;
+          }
+
+          .kl-heading p {
+            font-size: 13.5px;
+            line-height: 1.5;
+          }
+
+          .kl-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+          }
+
+          .kl-card {
+            padding: 7px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .kl-image {
+            border-radius: 10px;
+          }
+
+          .kl-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 4px 6px;
+            flex-grow: 1;
+          }
+
+          .kl-plan {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+          }
+
+          .kl-content h3 {
+            font-size: 13.5px;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+            margin: 0 0 5px;
+            min-height: 34px;
+          }
+
+          .kl-content p {
+            font-size: 11px;
+            line-height: 1.45;
+            color: var(--kl-text);
+            margin: 0;
+            flex-grow: 1;
+          }
+
+          .kl-cta {
+            min-height: auto;
+            padding: 16px 10px;
+            gap: 10px;
+            border-radius: 15px;
+            justify-content: space-between;
+          }
+
+          .kl-tape {
+            width: 54px;
+            height: 40px;
+            margin-bottom: 8px;
+          }
+
+          .kl-cta h3 {
+            font-size: clamp(14px, 4vw, 17px);
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+            margin: 0 0 10px;
+          }
+
+          .kl-button {
+            min-height: 42px;
+            padding: 8px 10px;
+            gap: 6px;
+            font-size: 11px;
+            border-radius: 999px;
+            width: 100%;
+          }
+
+          .kl-button span {
+            font-size: 10.5px;
+            line-height: 1.25;
+          }
+
+          .kl-button svg {
+            width: 14px;
+            height: 14px;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .kitchen-layouts {
+            padding: 34px 10px;
+          }
+
+          .kl-grid {
+            gap: 8px;
+          }
+
+          .kl-card {
+            padding: 5px;
+            border-radius: 12px;
+          }
+
+          .kl-content h3 {
+            font-size: 12px;
+            min-height: 30px;
+          }
+
+          .kl-content p {
+            font-size: 10.5px;
+          }
+
+          .kl-plan {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .kl-card,
+          .kl-button {
+            transition: none;
+          }
+        }
+      </style>
+
+      <!-- KITCHEN FINISHES SECTION -->
+      <section class="tc-finishes" aria-labelledby="tc-finishes-title">
+        <div class="tc-finishes__container">
+
+          <header class="tc-finishes__header">
+            <span class="tc-finishes__label">KITCHEN FINISHES</span>
+
+            <h2 id="tc-finishes-title">
+              Modular Kitchen Finishes We Offer in Thrissur
+            </h2>
+
+            <p>
+              Every finish for a modular kitchen in Thrissur can be
+              matched to your budget and style.
+            </p>
+          </header>
+
+          <div class="tc-finishes__grid">
+
+            <!-- SOLID COLOUR -->
+            <article class="tc-finish">
+              <img
+                class="tc-finish__image"
+                src="/images/solid-colour-kitchen.jpg"
+                alt="Kitchen with solid-colour laminate cabinets"
+                width="800"
+                height="800"
+                loading="lazy"
+              >
+
+              <!-- Decorative colour samples -->
+              <div class="tc-finish__swatches" aria-hidden="true">
+                <span style="--swatch: #89927b"></span>
+                <span style="--swatch: #d4c7b3"></span>
+                <span style="--swatch: #464b38"></span>
+              </div>
+
+              <div class="tc-finish__content">
+                <h3>Laminate – Solid Colour Kitchens</h3>
+                <p>
+                  Handles daily wear well and is the budget-friendly
+                  choice, in a wide range of solid colours.
+                </p>
+              </div>
+            </article>
+
+            <!-- WOOD GRAIN -->
+            <article class="tc-finish">
+              <img
+                class="tc-finish__image"
+                src="/images/wood-grain-kitchen.jpg"
+                alt="Kitchen combining wood-grain and solid-colour cabinets"
+                width="800"
+                height="800"
+                loading="lazy"
+              >
+
+              <div class="tc-finish__swatches" aria-hidden="true">
+                <span class="tc-swatch--wood"></span>
+                <span style="--swatch: #ded3bd"></span>
+                <span style="--swatch: #92816b"></span>
+              </div>
+
+              <div class="tc-finish__content">
+                <h3>Laminate – Solid Colour + Wood Grain Kitchens</h3>
+                <p>
+                  Solid colours mixed with wood-grain panels for
+                  a warmer, two-tone look.
+                </p>
+              </div>
+            </article>
+
+            <!-- ACRYLIC -->
+            <article class="tc-finish">
+              <img
+                class="tc-finish__image"
+                src="/images/acrylic-kitchen.jpg"
+                alt="Kitchen with glossy acrylic cabinets"
+                width="800"
+                height="800"
+                loading="lazy"
+              >
+
+              <div class="tc-finish__swatches" aria-hidden="true">
+                <span style="--swatch: #e1d9cb"></span>
+                <span style="--swatch: #e9d7c2"></span>
+                <span style="--swatch: #bcb1a1"></span>
+              </div>
+
+              <div class="tc-finish__content">
+                <h3>Acrylic Kitchens</h3>
+                <p>
+                  A glossy surface that wipes clean easily, which helps
+                  in a kitchen with daily frying and masala stains.
+                </p>
+
+                <a class="tc-finish__link" href="service-acrylic-kitchen.html">
+                  View Acrylic Kitchens
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 12h16m-6-6 6 6-6 6"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- PU COATED -->
+            <article class="tc-finish">
+              <img
+                class="tc-finish__image"
+                src="/images/pu-coated-kitchen.jpg"
+                alt="Kitchen with smooth high-gloss PU-coated cabinets"
+                width="800"
+                height="800"
+                loading="lazy"
+              >
+
+              <div class="tc-finish__swatches" aria-hidden="true">
+                <span style="--swatch: #9b856c"></span>
+                <span style="--swatch: #d8cab6"></span>
+                <span style="--swatch: #706151"></span>
+              </div>
+
+              <div class="tc-finish__content">
+                <h3>Polyurethane (PU) Coated Kitchens</h3>
+                <p>
+                  A sprayed paint coating with a smooth, seamless,
+                  high-gloss look.
+                </p>
+              </div>
+            </article>
+
+            <!-- LACQUERED GLASS -->
+            <article class="tc-finish">
+              <img
+                class="tc-finish__image"
+                src="/images/lacquered-glass-kitchen.jpg"
+                alt="Kitchen combining lacquered-glass and laminate shutters"
+                width="800"
+                height="800"
+                loading="lazy"
+              >
+
+              <div class="tc-finish__swatches" aria-hidden="true">
+                <span style="--swatch: #675e51"></span>
+                <span style="--swatch: #d6bc98"></span>
+                <span style="--swatch: #99816a"></span>
+              </div>
+
+              <div class="tc-finish__content">
+                <h3>Lacquered Glass + Laminate Kitchens</h3>
+                <p>
+                  Reflective glass shutters combined with laminate,
+                  often paired with LED lighting.
+                </p>
+              </div>
+            </article>
+
+            <!-- CTA -->
+            <aside class="tc-finish-cta">
+              <!-- Material sample illustration built entirely with CSS -->
+              <div class="tc-material-fan" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <a class="tc-finish-cta__button" href="contact.html">
+                <span>Help Me Choose a Finish</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h16m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .tc-finishes {
+          --tcf-bg: #f6f2eb;
+          --tcf-heading: #302016;
+          --tcf-text: #6d6259;
+          --tcf-border: #dfceba;
+          --tcf-accent: #805432;
+
+          padding: clamp(46px, 6vw, 80px) 24px;
+          background: var(--tcf-bg);
+          color: var(--tcf-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .tc-finishes,
+        .tc-finishes *,
+        .tc-finishes *::before,
+        .tc-finishes *::after {
+          box-sizing: border-box;
+        }
+
+        .tc-finishes__container {
+          max-width: 1320px;
+          margin-inline: auto;
+        }
+
+        .tc-finishes__header {
+          margin-bottom: 36px;
+          text-align: center;
+        }
+
+        .tc-finishes__label {
+          display: inline-block;
+          padding: 9px 21px;
+          margin-bottom: 20px;
+          border: 1px solid var(--tcf-accent);
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 1.3;
+          letter-spacing: 2px;
+        }
+
+        .tc-finishes__header h2 {
+          max-width: 1150px;
+          margin: 0 auto 18px;
+          color: var(--tcf-heading);
+          font-size: clamp(30px, 3.6vw, 48px);
+          font-weight: 600;
+          line-height: 1.15;
+          letter-spacing: -1.5px;
+          text-wrap: balance;
+        }
+
+        .tc-finishes__header p {
+          max-width: 1000px;
+          margin: 0 auto;
+          color: var(--tcf-text);
+          font-size: 17px;
+          line-height: 1.7;
+        }
+
+        .tc-finishes__grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 20px;
+          align-items: stretch;
+        }
+
+        .tc-finish {
+          min-width: 0;
+          padding: 12px;
+          overflow: hidden;
+          border: 1px solid var(--tcf-border);
+          border-radius: 19px;
+          background: #faf7f1;
+          transition:
+            border-color 200ms ease,
+            box-shadow 200ms ease;
+        }
+
+        .tc-finish__image {
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 12px;
+          background: #e3d8c9;
+        }
+
+        .tc-finish__swatches {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          width: fit-content;
+          max-width: calc(100% - 24px);
+          padding: 8px;
+          margin: -27px 0 0 12px;
+          border-radius: 999px;
+          background: #fffaf1;
+          box-shadow: 0 5px 12px rgba(65, 44, 26, 0.09);
+        }
+
+        .tc-finish__swatches > span {
+          display: block;
+          flex: 0 0 38px;
+          width: 38px;
+          height: 38px;
+          border: 1px solid rgba(70, 47, 29, 0.12);
+          border-radius: 50%;
+          background: var(--swatch, #a78356);
+        }
+
+        .tc-finish__swatches .tc-swatch--wood {
+          background:
+            repeating-linear-gradient(
+              88deg,
+              transparent 0 3px,
+              rgba(73, 42, 17, 0.22) 3px 4px,
+              transparent 4px 7px
+            ),
+            linear-gradient(90deg, #ba9362, #91673d, #c39b69);
+        }
+
+        .tc-finish__content {
+          padding: 20px 13px 18px;
+        }
+
+        .tc-finish__content h3 {
+          margin: 0 0 14px;
+          color: var(--tcf-heading);
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 1.3;
+          letter-spacing: -0.5px;
+        }
+
+        .tc-finish__content p {
+          margin: 0;
+          color: var(--tcf-text);
+          font-size: 16px;
+          line-height: 1.7;
+        }
+
+        .tc-finish__link {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          min-height: 44px;
+          margin-top: 14px;
+          color: var(--tcf-accent);
+          font-size: 15px;
+          line-height: 1.5;
+          text-decoration: underline;
+          text-underline-offset: 6px;
+        }
+
+        .tc-finishes a svg {
+          display: block;
+          flex-shrink: 0;
+          width: 23px;
+          height: 23px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tc-finishes a:focus-visible {
+          outline: 3px solid #a67b50;
+          outline-offset: 5px;
+        }
+
+        .tc-finish-cta {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 34px;
+          min-width: 0;
+          min-height: 440px;
+          padding: 38px 20px;
+          overflow: hidden;
+          border-radius: 19px;
+          background:
+            radial-gradient(
+              ellipse at top right,
+              #594737,
+              #2b1c12 75%
+            );
+        }
+
+        .tc-material-fan {
+          position: relative;
+          width: min(260px, 100%);
+          height: 260px;
+        }
+
+        .tc-material-fan span {
+          position: absolute;
+          left: calc(50% - 46px);
+          bottom: 27px;
+          width: 92px;
+          height: 190px;
+          border: 1px solid rgba(255, 242, 222, 0.4);
+          border-radius: 5px;
+          transform-origin: 50% 92%;
+          box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .tc-material-fan span:nth-child(1) {
+          background: #7e826b;
+          transform: rotate(-42deg);
+        }
+
+        .tc-material-fan span:nth-child(2) {
+          background: #e0d4bd;
+          transform: rotate(-21deg);
+        }
+
+        .tc-material-fan span:nth-child(3) {
+          background:
+            repeating-linear-gradient(
+              90deg,
+              transparent 0 3px,
+              rgba(70, 39, 15, 0.24) 3px 4px
+            ),
+            linear-gradient(90deg, #92704a, #ba976c, #8e693f);
+          transform: rotate(0);
+        }
+
+        .tc-material-fan span:nth-child(4) {
+          background: linear-gradient(115deg, #ac9780, #e6d7c3, #ac9780);
+          transform: rotate(21deg);
+        }
+
+        .tc-material-fan span:nth-child(5) {
+          background: linear-gradient(115deg, #64594e, #39312a);
+          transform: rotate(42deg);
+        }
+
+        .tc-finish-cta__button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          width: 100%;
+          max-width: 340px;
+          min-height: 60px;
+          padding: 16px 20px;
+          border-radius: 999px;
+          background: #fbf0df;
+          color: #352317;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.4;
+          text-align: center;
+          text-decoration: none;
+          transition: background 200ms ease;
+        }
+
+        @media (hover: hover) {
+          .tc-finish:hover {
+            border-color: #b28c66;
+            box-shadow: 0 10px 24px rgba(57, 37, 22, 0.05);
+          }
+
+          .tc-finish__link:hover {
+            color: #362215;
+          }
+
+          .tc-finish-cta__button:hover {
+            background: #ffffff;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .tc-finishes__grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .tc-finish__content {
+            padding-inline: 8px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          .tc-finishes {
+            padding: 40px 14px;
+          }
+
+          .tc-finishes__header {
+            margin-bottom: 24px;
+          }
+
+          .tc-finishes__label {
+            padding: 6px 16px;
+            margin-bottom: 14px;
+            font-size: 10px;
+            letter-spacing: 1.8px;
+          }
+
+          .tc-finishes__header h2 {
+            font-size: clamp(23px, 6vw, 30px);
+            letter-spacing: -0.8px;
+            margin-bottom: 10px;
+          }
+
+          .tc-finishes__header p {
+            font-size: 13.5px;
+            line-height: 1.5;
+          }
+
+          .tc-finishes__grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+          }
+
+          .tc-finish {
+            padding: 7px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .tc-finish__image {
+            border-radius: 10px;
+          }
+
+          .tc-finish__swatches {
+            gap: 5px;
+            padding: 4px 6px;
+            margin: -16px 0 0 6px;
+            box-shadow: 0 3px 8px rgba(65, 44, 26, 0.08);
+          }
+
+          .tc-finish__swatches > span {
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+          }
+
+          .tc-finish__content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 10px 4px 6px;
+          }
+
+          .tc-finish__content h3 {
+            font-size: 13.5px;
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.3px;
+            margin: 0 0 6px;
+            min-height: 34px;
+          }
+
+          .tc-finish__content p {
+            font-size: 11px;
+            line-height: 1.45;
+            color: var(--tcf-text);
+            margin: 0;
+            flex-grow: 1;
+          }
+
+          .tc-finish__link {
+            margin-top: 8px;
+            min-height: auto;
+            font-size: 11px;
+            gap: 4px;
+            text-underline-offset: 4px;
+          }
+
+          .tc-finish__link svg {
+            width: 13px;
+            height: 13px;
+          }
+
+          .tc-finish-cta {
+            min-height: auto;
+            gap: 12px;
+            padding: 16px 8px;
+            border-radius: 15px;
+            justify-content: space-between;
+          }
+
+          .tc-material-fan {
+            width: 100%;
+            max-width: 115px;
+            height: 105px;
+          }
+
+          .tc-material-fan span {
+            width: 38px;
+            height: 78px;
+            left: calc(50% - 19px);
+            bottom: 12px;
+            border-radius: 3px;
+          }
+
+          .tc-finish-cta__button {
+            min-height: 42px;
+            padding: 8px 10px;
+            gap: 6px;
+            font-size: 11px;
+            border-radius: 999px;
+            width: 100%;
+          }
+
+          .tc-finish-cta__button svg {
+            width: 14px;
+            height: 14px;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .tc-finishes {
+            padding: 34px 10px;
+          }
+
+          .tc-finishes__grid {
+            gap: 8px;
+          }
+
+          .tc-finish {
+            padding: 5px;
+            border-radius: 12px;
+          }
+
+          .tc-finish__content h3 {
+            font-size: 12px;
+            min-height: 32px;
+          }
+
+          .tc-finish__content p {
+            font-size: 10.5px;
+          }
+
+          .tc-finish__swatches > span {
+            flex: 0 0 17px;
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tc-finish,
+          .tc-finish-cta__button {
+            transition: none;
+          }
+        }
+      </style>
+
+      <!-- SMART KITCHEN PLANNING SECTION -->
+      <section class="tc-planning" aria-labelledby="tc-planning-title">
+
+        <!-- Reusable SVG icons -->
+        <svg class="tcp-svg-defs" xmlns="http://www.w3.org/2000/svg"
+             aria-hidden="true" width="0" height="0">
+          <defs>
+            <symbol id="tcp-workflow" viewBox="0 0 48 48">
+              <path d="M22 10 10 35M26 10l12 25M13 38h22"/>
+              <circle cx="24" cy="7" r="4"/>
+              <circle cx="8" cy="39" r="4"/>
+              <circle cx="40" cy="39" r="4"/>
+            </symbol>
+
+            <symbol id="tcp-storage" viewBox="0 0 48 48">
+              <rect x="7" y="4" width="34" height="40" rx="1"/>
+              <path d="M7 17h34M7 30h34M21 10h6M21 23h6M21 37h6"/>
+            </symbol>
+
+            <symbol id="tcp-moisture" viewBox="0 0 48 48">
+              <path d="M23 39C8 41 5 29 10 20L21 4l11 16"/>
+              <path d="M33 20c4 3 8 3 11 3v10c0 6-6 10-11 12-5-2-11-6-11-12V23c4 0 8-1 11-3Z"/>
+              <path d="m28 32 4 4 7-8"/>
+            </symbol>
+
+            <symbol id="tcp-utilities" viewBox="0 0 48 48">
+              <path d="M19 4h10v14l15 11v5H4v-5l15-11V4Z"/>
+              <path d="M20 18h8M16 39c-3 3 3 4 0 7M24 39c-3 3 3 4 0 7M32 39c-3 3 3 4 0 7"/>
+            </symbol>
+
+            <symbol id="tcp-lighting" viewBox="0 0 48 48">
+              <path d="M4 10h40v10H4ZM24 28v12M15 27l-6 10M33 27l6 10"/>
+            </symbol>
+          </defs>
+        </svg>
+
+        <div class="tc-planning__container">
+
+          <header class="tc-planning__header">
+            <span class="tc-planning__badge">SMART PLANNING</span>
+
+            <h2 id="tc-planning-title">
+              Smart Kitchen Planning for Kerala Homes
+            </h2>
+
+            <p>
+              Kerala kitchens handle heavy daily cooking, big vessels and
+              monsoon humidity. Kitchen interior design in Thrissur has
+              to plan for all three.
+            </p>
+          </header>
+
+          <div class="tc-planning__layout">
+
+            <div class="tc-planning__photo">
+              <img
+                src="/images/kerala-kitchen.jpg"
+                alt="Modern kitchen with wood and cream cabinets and natural light"
+                width="900"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+
+            <ol class="tc-planning__features">
+
+              <li class="tcp-feature">
+                <div class="tcp-feature__icon" aria-hidden="true">
+                  <svg><use href="#tcp-workflow"></use></svg>
+                </div>
+
+                <span class="tcp-feature__number" aria-hidden="true">01</span>
+
+                <div class="tcp-feature__text">
+                  <h3>Working triangle</h3>
+                  <p>
+                    The hob, sink and fridge are kept within easy reach
+                    of each other, so cooking takes fewer steps.
+                  </p>
+                </div>
+              </li>
+
+              <li class="tcp-feature">
+                <div class="tcp-feature__icon" aria-hidden="true">
+                  <svg><use href="#tcp-storage"></use></svg>
+                </div>
+
+                <span class="tcp-feature__number" aria-hidden="true">02</span>
+
+                <div class="tcp-feature__text">
+                  <h3>Storage planning</h3>
+                  <p>
+                    Tandem drawers for heavy vessels, cutlery trays,
+                    bottle pull-outs and tall pantry units, sized to
+                    what your family stores.
+                  </p>
+                </div>
+              </li>
+
+              <li class="tcp-feature">
+                <div class="tcp-feature__icon" aria-hidden="true">
+                  <svg><use href="#tcp-moisture"></use></svg>
+                </div>
+
+                <span class="tcp-feature__number" aria-hidden="true">03</span>
+
+                <div class="tcp-feature__text">
+                  <h3>Moisture-aware materials</h3>
+                  <p>
+                    Water-resistant core boards are used under the sink
+                    and near wet areas, where damage usually starts.
+                  </p>
+                </div>
+              </li>
+
+              <li class="tcp-feature">
+                <div class="tcp-feature__icon" aria-hidden="true">
+                  <svg><use href="#tcp-utilities"></use></svg>
+                </div>
+
+                <span class="tcp-feature__number" aria-hidden="true">04</span>
+
+                <div class="tcp-feature__text">
+                  <h3>Hob, chimney and sink planning</h3>
+                  <p>
+                    Positions are fixed around your gas, plumbing and
+                    electrical points before anything is built.
+                  </p>
+                </div>
+              </li>
+
+              <li class="tcp-feature">
+                <div class="tcp-feature__icon" aria-hidden="true">
+                  <svg><use href="#tcp-lighting"></use></svg>
+                </div>
+
+                <span class="tcp-feature__number" aria-hidden="true">05</span>
+
+                <div class="tcp-feature__text">
+                  <h3>Lighting</h3>
+                  <p>
+                    LED lights under the wall cabinets keep the counter
+                    well lit.
+                  </p>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
+        </div>
+
+        <!-- Decorative summary strip -->
+        <div class="tc-planning__strip" aria-hidden="true">
+          <div class="tc-planning__strip-inner">
+
+            <div class="tcp-summary">
+              <svg><use href="#tcp-workflow"></use></svg>
+              <span>Workflow</span>
+            </div>
+
+            <div class="tcp-summary">
+              <svg><use href="#tcp-storage"></use></svg>
+              <span>Storage</span>
+            </div>
+
+            <div class="tcp-summary">
+              <svg><use href="#tcp-moisture"></use></svg>
+              <span>Moisture</span>
+            </div>
+
+            <div class="tcp-summary">
+              <svg><use href="#tcp-utilities"></use></svg>
+              <span>Utilities</span>
+            </div>
+
+            <div class="tcp-summary">
+              <svg><use href="#tcp-lighting"></use></svg>
+              <span>Lighting</span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <style>
+        .tc-planning {
+          --tcp-bg: #f6f2eb;
+          --tcp-heading: #302016;
+          --tcp-text: #6b625b;
+          --tcp-accent: #805432;
+          --tcp-line: #dfcfbc;
+          --tcp-icon-bg: #eee3d4;
+
+          position: relative;
+          padding-top: clamp(46px, 5vw, 74px);
+          background: var(--tcp-bg);
+          color: var(--tcp-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .tc-planning,
+        .tc-planning *,
+        .tc-planning *::before,
+        .tc-planning *::after {
+          box-sizing: border-box;
+        }
+
+        .tcp-svg-defs {
+          position: absolute;
+          overflow: hidden;
+          pointer-events: none;
+        }
+
+        .tc-planning__container {
+          width: min(100% - 48px, 1320px);
+          margin-inline: auto;
+        }
+
+        .tc-planning__header {
+          margin-bottom: 36px;
+          text-align: center;
+        }
+
+        .tc-planning__badge {
+          display: inline-block;
+          padding: 8px 23px;
+          margin-bottom: 20px;
+          border: 1px solid #9b7653;
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 1.3;
+          letter-spacing: 1.8px;
+        }
+
+        .tc-planning__header h2 {
+          margin: 0 0 17px;
+          color: var(--tcp-heading);
+          font-size: clamp(30px, 3.5vw, 47px);
+          font-weight: 600;
+          line-height: 1.15;
+          letter-spacing: -1.4px;
+          text-wrap: balance;
+        }
+
+        .tc-planning__header p {
+          max-width: 1160px;
+          margin: 0 auto;
+          color: var(--tcp-text);
+          font-size: 16px;
+          line-height: 1.75;
+        }
+
+        .tc-planning__layout {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          gap: 36px;
+          align-items: stretch;
+        }
+
+        .tc-planning__photo {
+          position: relative;
+          min-height: 580px;
+          overflow: hidden;
+          border-radius: 18px;
+          background: #e5d9c8;
+        }
+
+        .tc-planning__photo img {
+          position: absolute;
+          inset: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .tc-planning__features {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-width: 0;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .tcp-feature {
+          display: grid;
+          grid-template-columns: 72px 28px minmax(0, 1fr);
+          gap: 18px;
+          align-items: start;
+          padding: 22px 0;
+          border-bottom: 1px solid var(--tcp-line);
+        }
+
+        .tcp-feature:first-child {
+          padding-top: 8px;
+        }
+
+        .tcp-feature:last-child {
+          padding-bottom: 8px;
+          border-bottom: 0;
+        }
+
+        .tcp-feature__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 72px;
+          height: 76px;
+          border-radius: 14px;
+          background: var(--tcp-icon-bg);
+          color: var(--tcp-accent);
+        }
+
+        .tc-planning svg:not(.tcp-svg-defs) {
+          display: block;
+          width: 44px;
+          height: 44px;
+          flex-shrink: 0;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.6;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tcp-feature__number {
+          padding-top: 7px;
+          color: #a38565;
+          font-size: 19px;
+          line-height: 1.4;
+          font-variant-numeric: tabular-nums;
+        }
+
+        .tcp-feature__text {
+          min-width: 0;
+          padding-top: 4px;
+        }
+
+        .tcp-feature__text h3 {
+          margin: 0 0 10px;
+          color: var(--tcp-heading);
+          font-size: 21px;
+          font-weight: 600;
+          line-height: 1.3;
+          letter-spacing: -0.5px;
+        }
+
+        .tcp-feature__text p {
+          margin: 0;
+          color: var(--tcp-text);
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        .tc-planning__strip {
+          margin-top: 32px;
+          padding: 25px 24px;
+          background: #eee3d3;
+        }
+
+        .tc-planning__strip-inner {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+          max-width: 1320px;
+          margin-inline: auto;
+        }
+
+        .tcp-summary {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          min-width: 0;
+          min-height: 50px;
+          padding: 0 16px;
+          color: var(--tcp-accent);
+        }
+
+        .tcp-summary + .tcp-summary {
+          border-left: 1px solid #cfb18f;
+        }
+
+        .tcp-summary span {
+          color: #443426;
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        /* Tablet */
+        @media (max-width: 1050px) {
+          .tc-planning__layout {
+            grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+            gap: 26px;
+          }
+
+          .tcp-feature {
+            grid-template-columns: 58px 25px minmax(0, 1fr);
+            gap: 12px;
+          }
+
+          .tcp-feature__icon {
+            width: 58px;
+            height: 64px;
+            border-radius: 12px;
+          }
+
+          .tcp-feature__icon svg {
+            width: 36px !important;
+            height: 36px !important;
+          }
+
+          .tcp-feature__text h3 {
+            font-size: 19px;
+          }
+
+          .tcp-summary {
+            gap: 12px;
+            padding-inline: 10px;
+          }
+        }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+          .tc-planning {
+            padding-top: 44px;
+          }
+
+          .tc-planning__container {
+            width: calc(100% - 36px);
+          }
+
+          .tc-planning__header {
+            margin-bottom: 28px;
+          }
+
+          .tc-planning__header h2 {
+            font-size: 32px;
+            letter-spacing: -0.8px;
+          }
+
+          .tc-planning__header p {
+            font-size: 15px;
+            line-height: 1.7;
+          }
+
+          .tc-planning__layout {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 24px;
+          }
+
+          .tc-planning__photo {
+            min-height: 0;
+            aspect-ratio: 4 / 3;
+            border-radius: 16px;
+          }
+
+          .tcp-feature {
+            grid-template-columns: 56px minmax(0, 1fr);
+            gap: 5px 16px;
+            padding: 22px 0;
+          }
+
+          .tcp-feature__icon {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            width: 56px;
+            height: 62px;
+          }
+
+          .tcp-feature__number {
+            grid-column: 2;
+            padding-top: 0;
+            font-size: 13px;
+          }
+
+          .tcp-feature__text {
+            grid-column: 2;
+            padding-top: 0;
+          }
+
+          .tcp-feature__text h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+          }
+
+          .tcp-feature__text p {
+            font-size: 14px;
+            line-height: 1.75;
+          }
+
+          .tc-planning__strip {
+            margin-top: 26px;
+            padding: 22px 18px;
+          }
+
+          .tc-planning__strip-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px 0;
+          }
+
+          .tcp-summary {
+            flex: 0 0 33.333%;
+            flex-direction: column;
+            gap: 8px;
+            padding-inline: 6px;
+          }
+
+          .tcp-summary + .tcp-summary {
+            border-left: 0;
+          }
+
+          .tcp-summary span {
+            font-size: 12px;
+          }
+
+          .tcp-summary svg {
+            width: 35px !important;
+            height: 35px !important;
+          }
+        }
+      </style>
+
+      <!-- COST & TESTIMONIALS SECTION -->
+      <div class="tc-cost-reviews">
+
+        <!-- COST SECTION -->
+        <section class="tcc-section" aria-labelledby="tcc-title">
+          <div class="tcc-container">
+
+            <header class="tcc-header">
+              <span class="tcc-badge">COST &amp; QUOTATION</span>
+
+              <h2 id="tcc-title">
+                What Decides Your Modular Kitchen Cost
+              </h2>
+
+              <p>
+                Modular kitchen cost in Thrissur depends on six things.
+                Your quotation shows each one separately, with what is
+                included and what is not, so you know the full cost
+                before work begins.
+              </p>
+            </header>
+
+            <ul class="tcc-factors">
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M8 44 44 8l12 12-36 36Z"/>
+                  <path d="
+                    m37 15 7 7
+                    m-14 0 5 5
+                    m-12 2 7 7
+                    m-14 0 5 5
+                    m-12 2 7 7
+                  "/>
+                </svg>
+                <span>Kitchen size</span>
+              </li>
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M27 56H8V8h48v48H43"/>
+                  <path d="M24 8v15h20V8M44 23v15h12M8 36h19v20"/>
+                  <path d="M31 56V40a16 16 0 0 1 16 16"/>
+                </svg>
+                <span>Layout</span>
+              </li>
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="8" y="14" width="29" height="43" rx="3"/>
+                  <path d="M31 14V8a3 3 0 0 1 3-3h19a3 3 0 0 1 3 3v43a3 3 0 0 1-3 3H37"/>
+                  <rect x="14" y="21" width="17" height="29" rx="1"/>
+                  <path d="M47 28h3v14"/>
+                </svg>
+                <span>Shutter finish</span>
+              </li>
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="m6 22 26-15 26 15-26 15Z"/>
+                  <path d="m15 32-9 5 26 15 26-15-9-5"/>
+                  <path d="m15 47-9 5 26 15 26-15-9-5"
+                        transform="translate(0 -5)"/>
+                </svg>
+                <span>Core material</span>
+              </li>
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="27" y="5" width="10" height="54" rx="5"/>
+                  <path d="M27 12H12a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h15M37 12h15a3 3 0 0 1 3 3v34a3 3 0 0 1-3 3H37"/>
+                  <path d="M27 20h10M27 32h10M27 44h10"/>
+                  <circle cx="17" cy="21" r="2"/>
+                  <circle cx="17" cy="43" r="2"/>
+                  <circle cx="47" cy="21" r="2"/>
+                  <circle cx="47" cy="43" r="2"/>
+                </svg>
+                <span>Hardware</span>
+              </li>
+
+              <li class="tcc-factor">
+                <svg viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M8 21h48l-5 30H13ZM8 29h48M11 40h42"/>
+                  <path d="M19 21l3 30M32 21v30M45 21l-3 30"/>
+                  <path d="M17 21V12h30v9M6 55h52"/>
+                </svg>
+                <span>Accessories</span>
+              </li>
+
+            </ul>
+
+            <div class="tcc-action">
+              <a class="tcc-button" href="contact.html">
+                <span>Request My Detailed Quotation</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h16m-6-6 6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL SECTION -->
+        <section class="tcr-section" aria-labelledby="tcr-title">
+          <div class="tcc-container">
+
+            <header class="tcc-header">
+              <span class="tcc-badge">CLIENT STORIES</span>
+              <h2 id="tcr-title">Kitchens Our Clients Love</h2>
+            </header>
+
+            <div class="tcr-grid">
+
+              <figure class="tcr-card">
+                <span class="tcr-quote" aria-hidden="true">“</span>
+
+                <blockquote>
+                  <p>The attention to detail was impressive. Every aspect of the kitchen was carefully planned and perfectly executed on schedule.</p>
+                </blockquote>
+
+                <figcaption class="tcr-client">
+                  <span class="tcr-avatar" aria-hidden="true">
+                    <img src="/testimonial_sharafudheen.png" alt="Mr. Sharafudheen" style="width: 100%; height: 100%; object-fit: cover;">
+                  </span>
+
+                  <span class="tcr-client-info">
+                    <strong>Mr. Sharafudheen &amp; Family</strong>
+                    <span>Changaramkulam, Thrissur</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <figure class="tcr-card">
+                <span class="tcr-quote" aria-hidden="true">“</span>
+
+                <blockquote>
+                  <p>We are extremely happy with the finish and storage. Timbercubes transformed our space into a kitchen that is both stylish and highly functional.</p>
+                </blockquote>
+
+                <figcaption class="tcr-client">
+                  <span class="tcr-avatar" aria-hidden="true">
+                    <img src="/testimonial_faizal.png" alt="Mr. Faizal" style="width: 100%; height: 100%; object-fit: cover;">
+                  </span>
+
+                  <span class="tcr-client-info">
+                    <strong>Mr. Faizal &amp; Family</strong>
+                    <span>Chalissery, Palakkad</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <figure class="tcr-card">
+                <span class="tcr-quote" aria-hidden="true">“</span>
+
+                <blockquote>
+                  <p>The team made the entire experience easy and stress-free. The finished kitchen is modern, elegant, and perfectly suited to our daily cooking.</p>
+                </blockquote>
+
+                <figcaption class="tcr-client">
+                  <span class="tcr-avatar" aria-hidden="true">
+                    <img src="/testimonial_sarithasalam2.png" alt="Mrs. Saritha Salam" style="width: 100%; height: 100%; object-fit: cover;">
+                  </span>
+
+                  <span class="tcr-client-info">
+                    <strong>Mrs. Saritha Salam</strong>
+                    <span>Asset Patio, Ernakulam</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <style>
+        .tc-cost-reviews {
+          --tcc-bg: #f6f2eb;
+          --tcc-heading: #342117;
+          --tcc-text: #736153;
+          --tcc-accent: #8c5b2e;
+          --tcc-border: #ddcbb7;
+          --tcc-tile: #eee5d9;
+
+          background: var(--tcc-bg);
+          color: var(--tcc-heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+        }
+
+        .tc-cost-reviews,
+        .tc-cost-reviews *,
+        .tc-cost-reviews *::before,
+        .tc-cost-reviews *::after {
+          box-sizing: border-box;
+        }
+
+        .tcc-container {
+          width: min(100% - 48px, 1320px);
+          margin-inline: auto;
+        }
+
+        .tcc-section {
+          padding: clamp(46px, 5vw, 76px) 0 38px;
+        }
+
+        .tcc-header {
+          margin-bottom: 30px;
+          text-align: center;
+        }
+
+        .tcc-badge {
+          display: inline-block;
+          margin-bottom: 20px;
+          padding: 9px 22px;
+          border: 1px solid #96704c;
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 1.3;
+          letter-spacing: 1.9px;
+        }
+
+        .tcc-header h2 {
+          margin: 0 0 16px;
+          color: var(--tcc-heading);
+          font-size: clamp(30px, 3.5vw, 48px);
+          font-weight: 600;
+          line-height: 1.15;
+          letter-spacing: -1.4px;
+          text-wrap: balance;
+        }
+
+        .tcc-header p {
+          max-width: 1020px;
+          margin: 0 auto;
+          color: var(--tcc-text);
+          font-size: 17px;
+          line-height: 1.75;
+        }
+
+        .tcc-factors {
+          display: grid;
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 17px;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+
+        .tcc-factor {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          min-width: 0;
+          min-height: 180px;
+          padding: 24px 12px;
+          border-radius: 20px;
+          background: var(--tcc-tile);
+          text-align: center;
+        }
+
+        .tcc-factor svg {
+          display: block;
+          width: 76px;
+          height: 76px;
+          fill: none;
+          stroke: var(--tcc-accent);
+          stroke-width: 1.7;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tcc-factor span {
+          color: var(--tcc-heading);
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+
+        .tcc-action {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+        }
+
+        .tcc-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 22px;
+          max-width: 100%;
+          min-height: 56px;
+          padding: 16px 30px;
+          border-radius: 999px;
+          background: #3f291e;
+          color: #fff7ec;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.4;
+          text-align: center;
+          text-decoration: none;
+          transition: background 180ms ease;
+        }
+
+        .tcc-button svg {
+          flex-shrink: 0;
+          width: 23px;
+          height: 23px;
+          fill: none;
+          stroke: currentColor;
+          stroke-width: 1.5;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .tcc-button:focus-visible {
+          outline: 3px solid #a9845b;
+          outline-offset: 5px;
+        }
+
+        .tcr-section {
+          padding-bottom: clamp(46px, 5vw, 76px);
+        }
+
+        .tcr-section > .tcc-container {
+          padding-top: 32px;
+          border-top: 1px solid var(--tcc-border);
+        }
+
+        .tcr-section .tcc-header {
+          margin-bottom: 28px;
+        }
+
+        .tcr-section .tcc-badge {
+          margin-bottom: 15px;
+        }
+
+        .tcr-section h2 {
+          margin-bottom: 0;
+          font-size: clamp(30px, 3.2vw, 44px);
+        }
+
+        .tcr-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 22px;
+        }
+
+        .tcr-card {
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+          margin: 0;
+          padding: 25px 28px;
+          border: 1px solid #d5bda4;
+          border-radius: 17px;
+          background: #faf7f1;
+        }
+
+        .tcr-quote {
+          display: block;
+          height: 46px;
+          color: #b18c59;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 88px;
+          line-height: 1;
+        }
+
+        .tcr-card blockquote {
+          flex: 1;
+          margin: 0;
+          padding: 8px 0 30px;
+        }
+
+        .tcr-card blockquote p {
+          margin: 0;
+          color: var(--tcc-text);
+          font-size: 18px;
+          line-height: 1.7;
+          overflow-wrap: anywhere;
+        }
+
+        .tcr-client {
+          display: flex;
+          align-items: center;
+          gap: 17px;
+          padding-top: 19px;
+          border-top: 1px solid #e2d5c6;
+        }
+
+        .tcr-avatar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 54px;
+          width: 54px;
+          height: 54px;
+          overflow: hidden;
+          border-radius: 50%;
+          background: #e8dfd4;
+        }
+
+        .tcr-avatar svg {
+          display: block;
+          width: 48px;
+          height: 48px;
+          fill: #bbad9d;
+        }
+
+        .tcr-client-info {
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+          gap: 6px;
+          overflow-wrap: anywhere;
+        }
+
+        .tcr-client-info strong {
+          color: var(--tcc-heading);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+
+        .tcr-client-info > span {
+          color: var(--tcc-text);
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        @media (hover: hover) {
+          .tcc-button:hover {
+            background: #65432d;
+          }
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+          .tcc-factors {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+
+          .tcc-factor {
+            min-height: 160px;
+          }
+
+          .tcr-grid {
+            gap: 16px;
+          }
+
+          .tcr-card {
+            padding: 22px 20px;
+          }
+
+          .tcr-card blockquote p {
+            font-size: 16px;
+          }
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+          .tcc-container {
+            width: calc(100% - 36px);
+          }
+
+          .tcc-header h2 {
+            font-size: 31px;
+            letter-spacing: -0.8px;
+          }
+
+          .tcc-header p {
+            font-size: 15px;
+          }
+
+          .tcc-badge {
+            font-size: 10px;
+            letter-spacing: 1.6px;
+          }
+
+          .tcc-factors {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+          }
+
+          .tcc-factor {
+            gap: 14px;
+            min-height: 150px;
+            padding: 20px 10px;
+            border-radius: 16px;
+          }
+
+          .tcc-factor svg {
+            width: 62px;
+            height: 62px;
+          }
+
+          .tcc-factor span {
+            font-size: 15px;
+          }
+
+          .tcc-button {
+            width: 100%;
+            gap: 14px;
+            padding: 16px 20px;
+            font-size: 14px;
+          }
+
+          .tcr-grid {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+          }
+
+          .tcr-card {
+            padding: 24px;
+          }
+
+          .tcr-card blockquote p {
+            font-size: 17px;
+          }
+
+          .tcr-section h2 {
+            font-size: 31px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tcc-button {
+            transition: none;
+          }
+        }
+      </style>
+
+      <!-- FAQs & CONSULTATION SECTION -->
+      <section class="tc-contact-section">
+
+        <!-- Reusable icons -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="0"
+          height="0"
+          style="position:absolute"
+          aria-hidden="true"
+        >
+          <defs>
+            <symbol id="tc-icon-chat" viewBox="0 0 64 64">
+              <path
+                d="M39 36c4-2 7-7 7-12C46 13 37 6 26 6S6 13 6 24c0 6 3 11 8 14l-3 13 13-8h2c5 0 9-1 13-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M44 25c9 1 15 7 15 15 0 5-2 9-6 12l2 8-10-5c-9 1-17-3-20-10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linejoin="round"
+              />
+              <circle cx="18" cy="24" r="2" fill="currentColor"/>
+              <circle cx="26" cy="24" r="2" fill="currentColor"/>
+              <circle cx="34" cy="24" r="2" fill="currentColor"/>
+            </symbol>
+
+            <symbol id="tc-icon-whatsapp" viewBox="0 0 24 24">
+              <path
+                d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.8a8.5 8.5 0 1 1 16.2-4Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8.2 7.3c-.4 0-1.2.6-1.2 1.7 0 2.8 4 6.8 6.8 6.8 1.1 0 1.7-.8 1.7-1.2l-2.2-1.3-.9.9c-1.6-.7-2.7-1.8-3.4-3.4l.9-.9-1.3-2.6Z"
+                fill="currentColor"
+              />
+            </symbol>
+
+            <symbol id="tc-icon-phone" viewBox="0 0 24 24">
+              <path
+                d="m7 3 3 5-2 2c1.3 2.7 3.3 4.7 6 6l2-2 5 3c0 3-2 4-4 4C10 21 3 14 3 7c0-2 1-4 4-4Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+            </symbol>
+
+            <symbol id="tc-icon-clock" viewBox="0 0 24 24">
+              <circle
+                cx="12" cy="12" r="9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <path
+                d="M12 6v6l4 2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+              />
+            </symbol>
+
+            <symbol id="tc-icon-arrow" viewBox="0 0 24 24">
+              <path
+                d="M4 12h15m-6-6 6 6-6 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </symbol>
+          </defs>
+        </svg>
+
+        <div class="tc-container">
+
+          <header class="tc-faq-heading">
+            <span class="tc-label">FAQs</span>
+            <h2>Your Kitchen Questions, Answered</h2>
+          </header>
+
+          <div class="tc-faq-layout">
+
+            <aside class="tc-faq-help">
+              <div class="tc-chat-illustration">
+                <svg aria-hidden="true">
+                  <use href="#tc-icon-chat"></use>
+                </svg>
+              </div>
+
+              <h3>Have another question?</h3>
+              <p>We’re here to help you plan your perfect kitchen.</p>
+
+              <!-- Confirm the WhatsApp number before publishing. -->
+              <a
+                class="tc-button tc-button-outline"
+                href="https://wa.me/918129188188"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg aria-hidden="true">
+                  <use href="#tc-icon-whatsapp"></use>
+                </svg>
+                Ask Us on WhatsApp
+              </a>
+            </aside>
+
+            <div class="tc-accordion">
+
+              <details open>
+                <summary>What does a modular kitchen cost?</summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    There is no fixed price, because every kitchen is built to
+                    its own measurements. After the site visit, you get a
+                    quotation listing each material, finish and hardware item,
+                    with clear inclusions and exclusions.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  How long does it take to make and install a modular kitchen?
+                </summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    About 3 to 5 weeks from final design approval to
+                    installation, depending on the materials chosen and site
+                    readiness. If you have a housewarming or move-in date,
+                    share it early, because the schedule is agreed before
+                    production starts.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>Which finish suits Kerala’s humidity?</summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    The core board behind the finish matters more than the
+                    finish itself. BWP 710 Gurjan marine plywood, WPC and PVC
+                    foam board are the moisture-resistant core options, and
+                    laminate, acrylic or PU can go over any of them.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  What is the difference between laminate, acrylic and PU finishes?
+                </summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    Laminate is a printed sheet pressed onto the shutter, in
+                    solid colours and wood grains. Acrylic is a glossy sheet
+                    bonded to the shutter. PU is a sprayed paint coating with
+                    a seamless, high-gloss look. Your quotation shows the cost
+                    of each.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  Can a modular kitchen be fitted in an existing kitchen during renovation?
+                </summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    Yes. Timbercubes takes on renovation projects as well as
+                    new homes. The site visit checks the walls, ceiling
+                    height, plumbing and electrical points so the new kitchen
+                    fits the existing space.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>
+                  Can I choose my own brands for hardware and accessories?
+                </summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    Yes. Your preferred brands of hardware, fittings and
+                    accessories can be used where they are technically
+                    suitable and available. Brand choice affects the cost,
+                    and the quotation shows this.
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>What does the warranty cover?</summary>
+                <div class="tc-faq-answer">
+                  <p>
+                    Warranty periods range from 6 months to 25 years,
+                    depending on the materials, hardware and products chosen.
+                    The exact terms for your kitchen are shared before work
+                    begins.
+                  </p>
+                </div>
+              </details>
+
+            </div>
+          </div>
+
+          <section
+            class="tc-consultation"
+            aria-labelledby="tc-consultation-title"
+          >
+
+            <div class="tc-consultation-info">
+              <p class="tc-eyebrow">LET’S PLAN YOUR KITCHEN</p>
+
+              <h2 id="tc-consultation-title">
+                Get Your Free Modular Kitchen Consultation in Thrissur
+              </h2>
+
+              <p class="tc-consultation-description">
+                Book a free consultation for modular kitchen services in
+                Thrissur. Leave your name, phone number and locality, and our
+                team will call you back to plan a site visit.
+              </p>
+
+              <div class="tc-contact-list">
+                <a class="tc-contact-row" href="tel:+918129188188">
+                  <span class="tc-contact-icon">
+                    <svg aria-hidden="true">
+                      <use href="#tc-icon-phone"></use>
+                    </svg>
+                  </span>
+                  <span>Call <strong>08129 188 188</strong></span>
+                </a>
+
+                <div class="tc-contact-row">
+                  <span class="tc-contact-icon">
+                    <svg aria-hidden="true">
+                      <use href="#tc-icon-clock"></use>
+                    </svg>
+                  </span>
+                  <span>Monday to Sunday, 9 AM to 10 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="tc-consultation-form"
+              action="#"
+              onsubmit="event.preventDefault(); alert('Thank you! Your free consultation request has been submitted. Our team will contact you shortly.');"
+              method="post"
+              aria-labelledby="tc-form-title"
+            >
+              <h3 id="tc-form-title">Tell us about your kitchen</h3>
+
+              <div class="tc-field">
+                <label for="tc-name">Name</label>
+                <input
+                  id="tc-name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  maxlength="100"
+                  required
+                >
+              </div>
+
+              <div class="tc-field">
+                <label for="tc-phone">Phone</label>
+                <input
+                  id="tc-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Your phone number"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  minlength="10"
+                  maxlength="20"
+                  required
+                >
+              </div>
+
+              <div class="tc-field">
+                <label for="tc-locality">Locality</label>
+                <input
+                  id="tc-locality"
+                  name="locality"
+                  type="text"
+                  placeholder="Your locality"
+                  autocomplete="address-level2"
+                  maxlength="150"
+                  required
+                >
+              </div>
+
+              <div class="tc-form-actions">
+                <button class="tc-button tc-button-primary" type="submit">
+                  Book My Free Consultation
+                  <svg aria-hidden="true">
+                    <use href="#tc-icon-arrow"></use>
+                  </svg>
+                </button>
+
+                <a
+                  class="tc-button tc-button-outline"
+                  href="https://wa.me/918129188188"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg aria-hidden="true">
+                    <use href="#tc-icon-whatsapp"></use>
+                  </svg>
+                  WhatsApp Us
+                </a>
+              </div>
+            </form>
+
+          </section>
+        </div>
+      </section>
+
+      <style>
+        .tc-contact-section {
+          --background: #f6f2eb;
+          --paper: #fcfaf6;
+          --heading: #342117;
+          --text: #796657;
+          --accent: #925d30;
+          --border: #e2d2bf;
+
+          padding: 72px 24px;
+          background: var(--background);
+          color: var(--heading);
+          font-family: 'Manrope', Arial, Helvetica, sans-serif;
+          line-height: 1.6;
+        }
+
+        .tc-contact-section,
+        .tc-contact-section *,
+        .tc-contact-section *::before,
+        .tc-contact-section *::after {
+          box-sizing: border-box;
+        }
+
+        .tc-contact-section a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .tc-contact-section button,
+        .tc-contact-section input {
+          font: inherit;
+        }
+
+        .tc-contact-section .tc-container {
+          width: min(100%, 1240px);
+          margin-inline: auto;
+        }
+
+        .tc-faq-heading {
+          margin-bottom: 42px;
+          text-align: center;
+        }
+
+        .tc-contact-section .tc-label {
+          display: inline-block;
+          padding: 5px 27px;
+          border: 1px solid var(--border);
+          border-radius: 100px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .tc-faq-heading h2 {
+          margin: 14px 0 0;
+          font-size: clamp(28px, 3.2vw, 44px);
+          line-height: 1.2;
+          letter-spacing: -1.3px;
+        }
+
+        /* FAQ layout */
+
+        .tc-faq-layout {
+          display: grid;
+          grid-template-columns: 280px minmax(0, 1fr);
+          gap: 34px;
+          align-items: start;
+        }
+
+        .tc-faq-help {
+          padding: 34px 28px 34px 0;
+          border-right: 1px solid var(--border);
+        }
+
+        .tc-chat-illustration {
+          width: 96px;
+          height: 96px;
+          margin-bottom: 25px;
+          padding: 14px;
+          border-radius: 50%;
+          background: #eee1cf;
+        }
+
+        .tc-chat-illustration svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        .tc-faq-help h3 {
+          margin: 0 0 12px;
+          font-size: 30px;
+          line-height: 1.2;
+          letter-spacing: -.7px;
+        }
+
+        .tc-faq-help p {
+          margin: 0 0 26px;
+          color: var(--text);
+          font-size: 16px;
+        }
+
+        .tc-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          min-height: 54px;
+          padding: 13px 20px;
+          border: 1px solid var(--accent);
+          border-radius: 10px;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 1.4;
+          text-align: center;
+          cursor: pointer;
+          transition: background .2s ease, color .2s ease;
+        }
+
+        .tc-button svg {
+          width: 23px;
+          height: 23px;
+          flex-shrink: 0;
+        }
+
+        .tc-contact-section .tc-button-outline {
+          color: var(--accent);
+          background: transparent;
+        }
+
+        .tc-contact-section .tc-button-outline:hover {
+          background: #eee1cf;
+        }
+
+        .tc-button-primary {
+          color: #fff;
+          background: var(--accent);
+        }
+
+        .tc-button-primary:hover {
+          background: #744521;
+        }
+
+        /* Native HTML accordion */
+
+        .tc-accordion {
+          overflow: hidden;
+          border: 1px solid var(--border);
+          border-radius: 15px;
+          background: var(--paper);
+          box-shadow: 0 3px 8px rgb(52 33 23 / 3%);
+        }
+
+        .tc-accordion details + details {
+          border-top: 1px solid var(--border);
+        }
+
+        .tc-accordion summary {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 22px;
+          min-height: 70px;
+          padding: 20px 26px;
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 1.45;
+          list-style: none;
+          cursor: pointer;
+        }
+
+        .tc-accordion summary::-webkit-details-marker {
+          display: none;
+        }
+
+        .tc-accordion summary::after {
+          content: "+";
+          flex-shrink: 0;
+          width: 22px;
+          font-size: 26px;
+          font-weight: 400;
+          line-height: 1;
+          text-align: center;
+        }
+
+        .tc-accordion details[open] summary::after {
+          content: "−";
+        }
+
+        .tc-accordion details[open] summary {
+          border-bottom: 1px solid var(--border);
+        }
+
+        .tc-faq-answer {
+          padding: 19px 26px 23px;
+          background: #f8f1e7;
+          color: var(--text);
+          font-size: 16px;
+        }
+
+        .tc-faq-answer p {
+          margin: 0;
+        }
+
+        .tc-contact-section :is(a, button, input, summary):focus-visible {
+          outline: 3px solid #bd8a51;
+          outline-offset: 4px;
+        }
+
+        /* Consultation */
+
+        .tc-consultation {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          margin-top: 48px;
+          overflow: hidden;
+          border: 1px solid var(--border);
+          border-radius: 20px;
+          background: var(--paper);
+          box-shadow: 0 12px 28px rgb(65 39 17 / 8%);
+        }
+
+        .tc-consultation-info {
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+          padding: 46px;
+          color: #fbf4e8;
+          background:
+            radial-gradient(
+              ellipse at 10% 0%,
+              rgb(143 92 48 / 25%),
+              transparent 65%
+            ),
+            #342116;
+        }
+
+        /* Decorative curves */
+
+        .tc-consultation-info::before,
+        .tc-consultation-info::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          right: -180px;
+          bottom: -210px;
+          width: 620px;
+          height: 310px;
+          border: 1px solid rgb(187 139 74 / 60%);
+          border-radius: 50%;
+          transform: rotate(-24deg);
+          pointer-events: none;
+        }
+
+        .tc-consultation-info::after {
+          right: -205px;
+          bottom: -232px;
+        }
+
+        .tc-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin: 0 0 24px;
+          color: #e7cba4;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 2.5px;
+        }
+
+        .tc-eyebrow::after {
+          content: "";
+          width: 38px;
+          height: 1px;
+          background: currentColor;
+        }
+
+        .tc-consultation-info h2 {
+          margin: 0 0 22px;
+          font-size: clamp(29px, 3vw, 42px);
+          line-height: 1.16;
+          letter-spacing: -1px;
+        }
+
+        .tc-consultation-description {
+          margin: 0;
+          color: #eadfd3;
+          font-size: 16px;
+          line-height: 1.75;
+        }
+
+        .tc-contact-list {
+          display: grid;
+          gap: 16px;
+          margin-top: 30px;
+        }
+
+        .tc-contact-row {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 15px;
+        }
+
+        .tc-contact-icon {
+          display: grid;
+          place-items: center;
+          flex-shrink: 0;
+          width: 42px;
+          height: 42px;
+          border: 1px solid #c6985f;
+          border-radius: 50%;
+          color: #e4bf8b;
+        }
+
+        .tc-contact-icon svg {
+          width: 21px;
+          height: 21px;
+        }
+
+        .tc-contact-row strong {
+          font-size: 19px;
+        }
+
+        /* Form */
+
+        .tc-consultation-form {
+          padding: 44px 46px;
+        }
+
+        .tc-consultation-form h3 {
+          margin: 0 0 27px;
+          font-size: 29px;
+          line-height: 1.25;
+          letter-spacing: -.8px;
+        }
+
+        .tc-field {
+          margin-bottom: 19px;
+        }
+
+        .tc-field label {
+          display: block;
+          margin-bottom: 7px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .tc-field input {
+          display: block;
+          width: 100%;
+          min-height: 53px;
+          padding: 13px 17px;
+          border: 1px solid #d9c7b4;
+          border-radius: 9px;
+          background: #fffdf9;
+          color: var(--heading);
+          font-size: 16px;
+        }
+
+        .tc-field input::placeholder {
+          color: #998e84;
+        }
+
+        .tc-form-actions {
+          display: grid;
+          gap: 13px;
+          margin-top: 25px;
+        }
+
+        .tc-form-actions .tc-button {
+          width: 100%;
+          min-height: 56px;
+        }
+
+        /* Tablet */
+
+        @media (max-width: 1000px) {
+          .tc-faq-layout {
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 24px;
+          }
+
+          .tc-faq-help {
+            padding-right: 20px;
+          }
+
+          .tc-faq-help h3 {
+            font-size: 26px;
+          }
+
+          .tc-faq-help .tc-button {
+            padding-inline: 12px;
+            font-size: 13px;
+          }
+
+          .tc-consultation-info,
+          .tc-consultation-form {
+            padding: 32px;
+          }
+
+          .tc-consultation-form h3 {
+            font-size: 25px;
+          }
+        }
+
+        /* Mobile */
+
+        @media (max-width: 760px) {
+          .tc-contact-section {
+            padding: 48px 18px;
+          }
+
+          .tc-faq-heading {
+            margin-bottom: 28px;
+          }
+
+          .tc-faq-heading h2 {
+            letter-spacing: -.7px;
+          }
+
+          .tc-faq-layout {
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+
+          .tc-accordion {
+            grid-row: 1;
+          }
+
+          .tc-faq-help {
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            text-align: center;
+          }
+
+          .tc-chat-illustration {
+            width: 66px;
+            height: 66px;
+            margin: 0 auto 14px;
+            padding: 10px;
+          }
+
+          .tc-faq-help h3 {
+            font-size: 24px;
+          }
+
+          .tc-faq-help p {
+            margin-bottom: 18px;
+            font-size: 15px;
+          }
+
+          .tc-faq-help .tc-button {
+            font-size: 15px;
+            padding-inline: 22px;
+          }
+
+          .tc-accordion summary {
+            min-height: 64px;
+            padding: 17px 18px;
+            font-size: 15px;
+          }
+
+          .tc-faq-answer {
+            padding: 17px 18px 20px;
+            font-size: 14px;
+          }
+
+          .tc-consultation {
+            grid-template-columns: 1fr;
+            margin-top: 30px;
+            border-radius: 16px;
+          }
+
+          .tc-consultation-info,
+          .tc-consultation-form {
+            padding: 30px 24px;
+          }
+
+          .tc-consultation-info h2 {
+            max-width: 480px;
+            font-size: 32px;
+          }
+
+          .tc-consultation-description {
+            font-size: 15px;
+          }
+
+          .tc-consultation-form h3 {
+            font-size: 25px;
+          }
+
+          .tc-contact-row {
+            font-size: 14px;
+          }
+
+          .tc-contact-row strong {
+            font-size: 17px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tc-button {
+            transition: none;
+          }
+        }
+      </style>
     </main>
 
     <!-- Footer -->

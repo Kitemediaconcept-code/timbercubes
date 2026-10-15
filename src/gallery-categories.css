@@ -137,20 +137,145 @@
 @media (max-width: 1024px) {
   .category-cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
+/* Mobile: 2 Cards per row with generous center gap, perfect alignment & smaller fonts */
 @media (max-width: 768px) {
+  .gallery-categories-grid.section-padding {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    background-color: #f5f6f8 !important; /* Soft contrast background */
+  }
+
+  .gallery-categories-grid .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .gallery-categories-grid .mb-60 {
+    margin-bottom: 20px !important;
+  }
+
+  .gallery-categories-grid .display-title-medium {
+    font-size: 1.45rem !important;
+    line-height: 1.2 !important;
+  }
+
   .category-cards-wrapper {
-    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; /* 2 cards per row */
+    column-gap: 20px !important; /* Clear, comfortable gap in center between cards */
+    row-gap: 22px !important;
+    width: 100% !important;
   }
   
   .category-cards-wrapper .cat-card {
-    height: 500px;
+    height: 220px !important;
+    border-radius: 18px !important;
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    margin: 0 !important;
   }
   
+  .cat-card-top {
+    width: 100% !important;
+    height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .cat-tag {
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    padding: 2.5px 7px !important;
+    font-size: 0.44rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+    border-radius: 6px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cat-card-bottom {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+  }
+
   .cat-card-title {
-    font-size: 1.8rem;
+    width: 100% !important;
+    height: 32px !important; /* Fixed 32px height ensures all titles and buttons align 100% identically */
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin: 0 0 8px 0 !important;
+    word-break: break-word !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .cat-card-title br {
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .cat-card-desc {
+    display: none !important; /* Hidden on mobile for clean, uncluttered symmetry */
+  }
+
+  .cat-explore-btn {
+    padding: 5px 10px !important;
+    font-size: 0.52rem !important;
+    font-weight: 800 !important;
+    border-radius: 14px !important;
+    gap: 4px !important;
+    letter-spacing: 0.25px !important;
+    white-space: nowrap !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .cat-explore-btn i {
+    font-size: 0.62rem !important;
+  }
+}
+
+/* Extra small mobile screens (<= 380px) */
+@media (max-width: 380px) {
+  .category-cards-wrapper {
+    column-gap: 14px !important;
+    row-gap: 16px !important;
+  }
+
+  .category-cards-wrapper .cat-card {
+    height: 200px !important;
+    border-radius: 14px !important;
+    padding: 10px 8px !important;
+  }
+
+  .cat-card-title {
+    font-size: 0.68rem !important;
+    height: 30px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .cat-tag {
+    font-size: 0.4rem !important;
+    padding: 2px 5px !important;
+  }
+
+  .cat-explore-btn {
+    padding: 4px 7px !important;
+    font-size: 0.46rem !important;
   }
 }
 
