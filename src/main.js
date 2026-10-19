@@ -134,3 +134,16 @@ if (lightbox && lightboxImg && lightboxClose) {
 
 
 
+
+// Testimonial Read More Logic for Mobile
+document.querySelectorAll('.testimonial-card').forEach(card => {
+  const readMoreBtn = card.querySelector('.testimonial-read-more');
+  const quoteText = card.querySelector('.testimonial-quote-text');
+  if (readMoreBtn && quoteText) {
+    readMoreBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = quoteText.classList.toggle('is-expanded');
+      readMoreBtn.textContent = isExpanded ? 'Read less' : 'Read more';
+    });
+  }
+});
