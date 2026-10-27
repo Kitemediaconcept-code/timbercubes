@@ -95,6 +95,18 @@ if (mobileBtn && mobileOverlay && mobileCloseBtn) {
   });
 }
 
+// Mobile Services Dropdown Accordion Toggle
+const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+const mobileSubServices = document.getElementById('mobileSubServices');
+
+if (mobileServicesToggle && mobileSubServices) {
+  mobileServicesToggle.addEventListener('click', () => {
+    const isExpanded = mobileServicesToggle.getAttribute('aria-expanded') === 'true';
+    mobileServicesToggle.setAttribute('aria-expanded', !isExpanded);
+    mobileSubServices.classList.toggle('collapsed', isExpanded);
+  });
+}
+
 // Gallery Lightbox Logic
 const lightbox = document.getElementById('galleryLightbox');
 const lightboxImg = document.getElementById('lightboxImg');

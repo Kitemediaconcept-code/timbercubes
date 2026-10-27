@@ -89,7 +89,43 @@
         <nav class="nav">
           <a href="index.html">Home</a>
           <a href="about.html">About us</a>
-          <a href="services.html">Services We Offer</a>
+          <div class="nav-item-has-menu">
+            <a href="services.html">Services We Offer <i class="ph ph-caret-down nav-caret"></i></a>
+            <div class="nav-mega-menu">
+              <a href="service-modular-kitchen.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-cooking-pot"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Modular Kitchen</span>
+                  <span class="mega-card-desc">Custom layouts & finishes</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-bedroom-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-bed"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Bedroom Interiors</span>
+                  <span class="mega-card-desc">Wardrobes & luxury beds</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-living-room-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-couch"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Living Room Interiors</span>
+                  <span class="mega-card-desc">TV units & custom seating</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-commercial-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-storefront"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Commercial Interiors</span>
+                  <span class="mega-card-desc">Offices, retail & workspaces</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+            </div>
+          </div>
           <a href="testimonials.html">Testimonials</a>
           <a href="blog.html">Blog</a>
           <a href="gallery.html">Gallery</a>
@@ -332,7 +368,18 @@
       
       <div class="mobile-nav-content">
         <div class="mobile-nav-large">
-          <a href="services.html">Services We Offer</a>
+          <div class="mobile-nav-services-wrap">
+            <button class="mobile-services-toggle" id="mobileServicesToggle" type="button" aria-expanded="true">
+              <span>Services We Offer</span>
+              <i class="ph ph-caret-down mobile-services-arrow"></i>
+            </button>
+            <div class="mobile-sub-services open" id="mobileSubServices">
+              <a href="service-modular-kitchen.html"><i class="ph ph-cooking-pot"></i> <span>Modular Kitchen</span></a>
+              <a href="service-bedroom-interiors.html"><i class="ph ph-bed"></i> <span>Bedroom Interiors</span></a>
+              <a href="service-living-room-interiors.html"><i class="ph ph-couch"></i> <span>Living Room Interiors</span></a>
+              <a href="service-commercial-interiors.html"><i class="ph ph-storefront"></i> <span>Commercial Interiors</span></a>
+            </div>
+          </div>
           <a href="gallery.html">Gallery</a>
           <a href="about.html">About us</a>
         </div>

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured in Top Magazines and Architecture Books | Timbercubés Blog</title>
+    <meta name="description" content="Discover how Timbercubes' bespoke kitchens and wardrobe creations gained recognition in prominent interior design publications." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      .article-page-wrapper {
+        padding: 130px 20px 80px;
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: var(--font-sans);
+      }
+      .article-meta-top {
+        margin-bottom: 24px;
+      }
+      .article-badge {
+        display: inline-block;
+        background: #bef264;
+        color: #1a2e05;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+        letter-spacing: 0.3px;
+      }
+      .article-date {
+        display: block;
+        font-size: 0.85rem;
+        color: #9ca3af;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .article-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #111827;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        margin-bottom: 30px;
+      }
+      @media(max-width: 640px) {
+        .article-title {
+          font-size: 2.0rem;
+        }
+      }
+
+      .article-featured-image {
+        width: 100%;
+        max-height: 480px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      }
+
+      .article-body {
+        font-size: 1.05rem;
+        color: #374151;
+        line-height: 1.8;
+      }
+      .article-body h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #111827;
+        margin: 36px 0 16px;
+        letter-spacing: -0.5px;
+      }
+      .article-body p {
+        margin-bottom: 20px;
+      }
+      .article-body ul {
+        margin: 20px 0 30px 24px;
+      }
+      .article-body ul li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+
+      .article-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 36px 0;
+      }
+      @media(max-width: 640px) {
+        .article-gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+      .article-gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .read-next-section {
+        max-width: 1200px;
+        margin: 60px auto 100px;
+        padding: 0 20px;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 50px;
+      }
+      .read-next-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .read-next-header h2 {
+        font-size: 2.0rem;
+        font-weight: 700;
+        color: #111827;
+        letter-spacing: -0.5px;
+      }
+      .read-next-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      @media(max-width: 768px) {
+        .read-next-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .next-card {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.25s ease;
+      }
+      .next-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+        border-color: #d1d5db;
+      }
+      .next-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .next-card-content {
+        padding: 20px;
+      }
+      .next-card-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 8px;
+        line-height: 1.35;
+      }
+      .next-card-desc {
+        font-size: 0.86rem;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Header -->
+    <header class="header">
+      <div class="container header-container">
+        <a href="index.html" class="logo-link">
+          <div class="logo-container">
+            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
+          </div>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <div class="nav-item-has-menu">
+            <a href="services.html">Services We Offer <i class="ph ph-caret-down nav-caret"></i></a>
+            <div class="nav-mega-menu">
+              <a href="service-modular-kitchen.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-cooking-pot"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Modular Kitchen</span>
+                  <span class="mega-card-desc">Custom layouts &amp; finishes</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-bedroom-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-bed"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Bedroom Interiors</span>
+                  <span class="mega-card-desc">Wardrobes &amp; luxury beds</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-living-room-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-couch"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Living Room Interiors</span>
+                  <span class="mega-card-desc">TV units &amp; custom seating</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+              <a href="service-commercial-interiors.html" class="mega-menu-card">
+                <div class="mega-card-icon"><i class="ph ph-storefront"></i></div>
+                <div class="mega-card-info">
+                  <span class="mega-card-title">Commercial Interiors</span>
+                  <span class="mega-card-desc">Offices, retail &amp; workspaces</span>
+                </div>
+                <div class="mega-card-check"><i class="ph ph-check"></i></div>
+              </a>
+            </div>
+          </div>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html" class="active">Blog</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="header-icons">
+          <a href="#" class="btn-layered-pill hide-on-mobile">
+            <span class="btn-text-pill">Get Free Quote</span>
+            <i class="ph ph-arrow-right btn-arrow"></i>
+          </a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Open mobile menu">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Article Content -->
+    <main>
+      <article class="article-page-wrapper">
+        <div class="article-meta-top">
+          <span class="article-badge">Press &amp; Media</span>
+          <span class="article-date">October 12, 2023 &bull; Design Publications</span>
+          <h1 class="article-title">Featured in Top Magazines and Architecture Books</h1>
+        </div>
+
+        <img src="/blog and newslatter/Featured in magazines and books/IMG_7550.JPG.jpeg" alt="Featured in Magazines" class="article-featured-image">
+
+        <div class="article-body">
+          <h2>Spotlight on Bespoke Craftsmanship &amp; Ergonomic Kitchen Design</h2>
+          <p>
+            Timbercubes has earned widespread acclaim and coverage across renowned architectural volumes and premier home decor magazines. These features highlight our persistent commitment to combining functional ergonomics with elevated European aesthetics tailored specifically for Indian home routines.
+          </p>
+
+          <p>
+            From intelligent pull-out pantry solutions to concealed soft-close wardrobe mechanics and anti-scratch acrylic finishes, each published piece examines how precision factory automation elevates residential living spaces.
+          </p>
+
+          <h2>Editorial Highlights &amp; Architectural Recognition</h2>
+          <ul>
+            <li><strong>Design Excellence Awards:</strong> Noted for innovative utilization of compact floor plans and seamless open-plan modular kitchen islands.</li>
+            <li><strong>Material Innovations:</strong> Focus on water-resistant marine plywood, anti-fingerprint lacquered glass, and anti-termite treated woodwork.</li>
+            <li><strong>Homeowner Case Studies:</strong> In-depth photo essays following completed client projects from Calicut to Thrissur and Ernakulam.</li>
+          </ul>
+
+          <div class="article-gallery">
+            <img src="/blog and newslatter/Featured in magazines and books/IMG_7499.JPG.jpeg" alt="Magazine Press 1">
+            <img src="/blog and newslatter/Featured in magazines and books/IMG_7509.JPG.jpeg" alt="Magazine Press 2">
+            <img src="/blog and newslatter/Featured in magazines and books/IMG_7551.JPG.jpeg" alt="Magazine Press 3">
+          </div>
+
+          <p>
+            Being recognized by seasoned interior critics reinforces our resolve to keep pioneering state-of-the-art modular concepts backed by durable warranties and expert installation.
+          </p>
+        </div>
+      </article>
+
+      <!-- Read Next Section -->
+      <section class="read-next-section">
+        <div class="read-next-header">
+          <h2>Read Our Next Article</h2>
+        </div>
+        <div class="read-next-grid">
+          <a href="blog-logo-launch.html" class="next-card">
+            <img src="/blog and newslatter/Logo Relaunch/IMG_7535.JPG.jpeg" alt="Logo Launch" class="next-card-img">
+            <div class="next-card-content">
+              <span class="article-badge">Milestone</span>
+              <h3 class="next-card-title">A Milestone in Our Journey: The Logo Launch</h3>
+              <p class="next-card-desc">Celebrating the grand unveiling of the Timbercubes brand identity at The Mercy, Kochi.</p>
+            </div>
+          </a>
+          <a href="blog-calicut-showroom.html" class="next-card">
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7511.JPG.jpeg" alt="Calicut Showroom" class="next-card-img">
+            <div class="next-card-content">
+              <span class="article-badge">Showroom</span>
+              <h3 class="next-card-title">Calicut Display Showroom Grand Inauguration</h3>
+              <p class="next-card-desc">Step inside our showroom to experience real modular kitchen setups, materials, and luxury wardrobe collections in person.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo-link" style="display: block; margin-bottom: 20px;">
+              <img src="/logowhite footer.png" alt="Timbercubes Logo" class="footer-logo" style="max-width: 250px; border-radius: 8px;">
+            </a>
+            <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
+            <div class="socials">
+              <a href="#"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+              <a href="#"><i class="ph ph-youtube-logo"></i></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services We Offer</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="service-modular-kitchen.html">Modular Kitchen</a></li>
+              <li><a href="service-bedroom-interiors.html">Bedroom Interiors</a></li>
+              <li><a href="service-living-room-interiors.html">Living Room Interiors</a></li>
+              <li><a href="service-commercial-interiors.html">Commercial Interiors</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><i class="ph ph-phone"></i> 08129-188 188<br>08129 88 00 88</li>
+              <li><i class="ph ph-envelope"></i> timbercubes@gmail.com</li>
+              <li><i class="ph ph-map-pin"></i> Thrissur, Calicut, Kochi</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2026 Timbercubes. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Full-screen Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <div class="mobile-nav-header">
+        <a href="#" class="logo-link">
+          <div class="logo-container">
+            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
+          </div>
+        </a>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-large">
+          <div class="mobile-nav-services-wrap">
+            <button class="mobile-services-toggle" id="mobileServicesToggle" type="button" aria-expanded="true">
+              <span>Services We Offer</span>
+              <i class="ph ph-caret-down mobile-services-arrow"></i>
+            </button>
+            <div class="mobile-sub-services open" id="mobileSubServices">
+              <a href="service-modular-kitchen.html"><i class="ph ph-cooking-pot"></i> <span>Modular Kitchen</span></a>
+              <a href="service-bedroom-interiors.html"><i class="ph ph-bed"></i> <span>Bedroom Interiors</span></a>
+              <a href="service-living-room-interiors.html"><i class="ph ph-couch"></i> <span>Living Room Interiors</span></a>
+              <a href="service-commercial-interiors.html"><i class="ph ph-storefront"></i> <span>Commercial Interiors</span></a>
+            </div>
+          </div>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About us</a>
+        </div>
+        
+        <div class="mobile-nav-medium">
+          <a href="index.html">Home</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="#">Get Free Quote</a>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
