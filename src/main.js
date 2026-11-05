@@ -159,3 +159,37 @@ document.querySelectorAll('.testimonial-card').forEach(card => {
     });
   }
 });
+
+// Author Modal Global Logic
+window.openAuthorModal = function() {
+  const modal = document.getElementById('authorModal');
+  if (modal) {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (typeof lenis !== 'undefined') lenis.stop();
+  }
+};
+
+window.closeAuthorModal = function() {
+  const modal = document.getElementById('authorModal');
+  if (modal) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (typeof lenis !== 'undefined') lenis.start();
+  }
+};
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeAuthorModal();
+  }
+});
+
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('authorModal');
+  if (modal && e.target === modal) {
+    window.closeAuthorModal();
+  }
+});

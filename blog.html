@@ -1,426 +1,546 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & Latest News | Timbercubés</title>
-    <meta name="description" content="Stay updated with the latest trends, milestones, and interior innovations at Timbercubes." />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
-    <link rel="stylesheet" href="/src/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Latest News | Timbercubés</title>
+  <meta name="description"
+    content="Stay updated with the latest trends, milestones, and interior innovations at Timbercubes." />
 
-    <style>
-      .blog-page-hero {
-        padding: 140px 20px 40px;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .blog-hero-tag {
-        display: inline-block;
-        background: #bbf7d0;
-        color: #15803d;
-        font-size: 0.78rem;
-        font-weight: 700;
-        padding: 4px 14px;
-        border-radius: 20px;
-        letter-spacing: 0.5px;
-        margin-bottom: 16px;
-      }
-      .blog-page-hero h1 {
-        font-size: 3.2rem;
-        font-weight: 800;
-        letter-spacing: -1.5px;
-        color: #111827;
-        margin-bottom: 14px;
-        line-height: 1.15;
-      }
-      .blog-page-hero p {
-        font-size: 1.05rem;
-        color: #6b7280;
-        line-height: 1.6;
-        max-width: 620px;
-        margin: 0 auto;
-      }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
-      /* Blog Grid Container */
-      .blog-grid-section {
-        max-width: 1240px;
-        margin: 0 auto 100px;
-        padding: 0 20px;
-      }
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <style>
+    .blog-page-hero {
+      padding: 140px 20px 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .blog-hero-tag {
+      display: inline-block;
+      background: #bbf7d0;
+      color: #15803d;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .blog-page-hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      color: #111827;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .blog-page-hero p {
+      font-size: 1.05rem;
+      color: #6b7280;
+      line-height: 1.6;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* Blog Grid Container */
+    .blog-grid-section {
+      max-width: 1240px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 1024px) {
       .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
       }
-      @media (max-width: 992px) {
-        .blog-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-      }
-      @media (max-width: 640px) {
-        .blog-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-        .blog-page-hero h1 {
-          font-size: 2.3rem;
-        }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
-      /* Clean Reference Card Styling */
-      .blog-card {
-        background: #f9fafb;
-        border: 1px solid #e5e7eb;
-        border-radius: 20px;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        position: relative;
+      .blog-page-hero h1 {
+        font-size: 2.3rem;
       }
-      .blog-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 16px 32px rgba(0,0,0,0.08);
-        border-color: #d1d5db;
-        background: #ffffff;
-      }
+    }
 
-      .blog-card-media {
-        position: relative;
-        width: 100%;
-        height: 240px;
-        overflow: hidden;
-        background: #f3f4f6;
-      }
-      .blog-card-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-      .blog-card:hover .blog-card-media img {
-        transform: scale(1.04);
-      }
+    /* Clean Reference Card Styling */
+    .blog-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
 
-      .blog-card-badge {
-        position: absolute;
-        top: 14px;
-        left: 14px;
-        background: #bef264;
-        color: #1a2e05;
-        font-size: 0.72rem;
-        font-weight: 700;
-        padding: 4px 12px;
-        border-radius: 20px;
-        z-index: 2;
-        letter-spacing: 0.3px;
-      }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      border-color: #d1d5db;
+      background: #ffffff;
+    }
 
-      .blog-card-body {
-        padding: 22px 24px 26px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-      .blog-card-title {
-        font-size: 1.18rem;
-        font-weight: 700;
-        color: #111827;
-        line-height: 1.35;
-        margin-bottom: 10px;
-        transition: color 0.2s ease;
-      }
-      .blog-card:hover .blog-card-title {
-        color: var(--accent);
-      }
-      .blog-card-desc {
-        font-size: 0.88rem;
-        color: #6b7280;
-        line-height: 1.55;
-        margin-bottom: 18px;
-        flex-grow: 1;
-      }
+    .blog-card-media {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .blog-card-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 0.8rem;
-        color: #9ca3af;
-        border-top: 1px solid #f3f4f6;
-        padding-top: 14px;
-      }
-      .blog-card-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-weight: 600;
-        color: #111827;
-        font-size: 0.82rem;
-        transition: transform 0.2s ease, color 0.2s ease;
-      }
-      .blog-card:hover .blog-card-cta {
-        color: var(--accent);
-        transform: translateX(3px);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 1. Header -->
-    <header class="header">
-      <div class="container header-container">
-        <a href="index.html" class="logo-link">
-          <div class="logo-container">
-            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
-          </div>
-        </a>
+    .blog-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
 
-        <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About us</a>
-          <div class="nav-item-has-menu">
-            <a href="services.html">Services We Offer <i class="ph ph-caret-down nav-caret"></i></a>
-            <div class="nav-mega-menu">
-              <a href="service-modular-kitchen.html" class="mega-menu-card">
-                <div class="mega-card-icon"><i class="ph ph-cooking-pot"></i></div>
-                <div class="mega-card-info">
-                  <span class="mega-card-title">Modular Kitchen</span>
-                  <span class="mega-card-desc">Custom layouts &amp; finishes</span>
-                </div>
-                <div class="mega-card-check"><i class="ph ph-check"></i></div>
-              </a>
-              <a href="service-bedroom-interiors.html" class="mega-menu-card">
-                <div class="mega-card-icon"><i class="ph ph-bed"></i></div>
-                <div class="mega-card-info">
-                  <span class="mega-card-title">Bedroom Interiors</span>
-                  <span class="mega-card-desc">Wardrobes &amp; luxury beds</span>
-                </div>
-                <div class="mega-card-check"><i class="ph ph-check"></i></div>
-              </a>
-              <a href="service-living-room-interiors.html" class="mega-menu-card">
-                <div class="mega-card-icon"><i class="ph ph-couch"></i></div>
-                <div class="mega-card-info">
-                  <span class="mega-card-title">Living Room Interiors</span>
-                  <span class="mega-card-desc">TV units &amp; custom seating</span>
-                </div>
-                <div class="mega-card-check"><i class="ph ph-check"></i></div>
-              </a>
-              <a href="service-commercial-interiors.html" class="mega-menu-card">
-                <div class="mega-card-icon"><i class="ph ph-storefront"></i></div>
-                <div class="mega-card-info">
-                  <span class="mega-card-title">Commercial Interiors</span>
-                  <span class="mega-card-desc">Offices, retail &amp; workspaces</span>
-                </div>
-                <div class="mega-card-check"><i class="ph ph-check"></i></div>
-              </a>
-            </div>
-          </div>
-          <a href="testimonials.html">Testimonials</a>
-          <a href="blog.html" class="active">Blog</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact Us</a>
-        </nav>
+    .blog-card:hover .blog-card-media img {
+      transform: scale(1.04);
+    }
 
-        <div class="header-icons">
-          <a href="#" class="btn-layered-pill hide-on-mobile">
-            <span class="btn-text-pill">Get Free Quote</span>
-            <i class="ph ph-arrow-right btn-arrow"></i>
-          </a>
+    .blog-card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #bef264;
+      color: #1a2e05;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      z-index: 2;
+      letter-spacing: 0.3px;
+    }
+
+    .blog-card-body {
+      padding: 22px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .blog-card-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      transition: color 0.2s ease;
+    }
+
+    .blog-card:hover .blog-card-title {
+      color: var(--accent);
+    }
+
+    .blog-card-desc {
+      font-size: 0.88rem;
+      color: #6b7280;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      border-top: 1px solid #f3f4f6;
+      padding-top: 14px;
+    }
+
+    .blog-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: #111827;
+      font-size: 0.82rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .blog-card:hover .blog-card-cta {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1. Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-container">
+          <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
         </div>
-        <button class="mobile-menu-btn" aria-label="Open mobile menu">
-          <div class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </button>
-      </div>
-    </header>
+      </a>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Header matching reference screenshot 1 -->
-      <section class="blog-page-hero">
-        <span class="blog-hero-tag">Blog</span>
-        <h1>Latest News</h1>
-        <p>Stay updated with our latest milestones, design innovations, and stories from Timbercubes.</p>
-      </section>
-
-      <!-- Blog Cards Grid -->
-      <section class="blog-grid-section">
-        <div class="blog-grid">
-          
-          <!-- Card 1: Logo Launch -->
-          <a href="blog-logo-launch.html" class="blog-card">
-            <div class="blog-card-media">
-              <span class="blog-card-badge">Milestone</span>
-              <img src="/blog and newslatter/Logo Relaunch/IMG_7535.JPG.jpeg" alt="Logo Relaunch Event">
-            </div>
-            <div class="blog-card-body">
-              <h2 class="blog-card-title">A Milestone in Our Journey: The Logo Launch</h2>
-              <p class="blog-card-desc">Celebrating the grand unveiling of the Timbercubes brand identity, marking a new chapter in craftsmanship and innovation.</p>
-              <div class="blog-card-footer">
-                <span>Jan 25, 2017 &bull; 4 min read</span>
-                <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <div class="nav-item-has-menu">
+          <a href="services.html">Services We Offer <i class="ph ph-caret-down nav-caret"></i></a>
+          <div class="nav-mega-menu">
+            <a href="service-modular-kitchen.html" class="mega-menu-card">
+              <div class="mega-card-icon"><i class="ph ph-cooking-pot"></i></div>
+              <div class="mega-card-info">
+                <span class="mega-card-title">Modular Kitchen</span>
+                <span class="mega-card-desc">Custom layouts &amp; finishes</span>
               </div>
-            </div>
-          </a>
-
-          <!-- Card 2: Magazine Feature -->
-          <a href="blog-magazine-features.html" class="blog-card">
-            <div class="blog-card-media">
-              <span class="blog-card-badge">Press &amp; Media</span>
-              <img src="/blog and newslatter/Featured in magazines and books/IMG_7550.JPG.jpeg" alt="Featured in Magazines and Books">
-            </div>
-            <div class="blog-card-body">
-              <h2 class="blog-card-title">Featured in Top Magazines and Architecture Books</h2>
-              <p class="blog-card-desc">Discover how Timbercubes' bespoke kitchens and wardrobe creations gained recognition in prominent interior design publications.</p>
-              <div class="blog-card-footer">
-                <span>Oct 12, 2023 &bull; 5 min read</span>
-                <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 3: Calicut Display Showroom Inauguration -->
-          <a href="blog-calicut-showroom.html" class="blog-card">
-            <div class="blog-card-media">
-              <span class="blog-card-badge">Showroom</span>
-              <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7511.JPG.jpeg" alt="Calicut Display Showroom Inauguration">
-            </div>
-            <div class="blog-card-body">
-              <h2 class="blog-card-title">Calicut Display Showroom Grand Inauguration</h2>
-              <p class="blog-card-desc">Step inside our state-of-the-art Calicut showroom, experiencing real modular kitchen mockups and luxury storage solutions firsthand.</p>
-              <div class="blog-card-footer">
-                <span>Aug 15, 2023 &bull; 6 min read</span>
-                <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-col brand-col">
-            <a href="index.html" class="footer-logo-link" style="display: block; margin-bottom: 20px;">
-              <img src="/logowhite footer.png" alt="Timbercubes Logo" class="footer-logo" style="max-width: 250px; border-radius: 8px;">
+              <div class="mega-card-check"><i class="ph ph-check"></i></div>
             </a>
-            <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
-            <div class="socials">
-              <a href="#"><i class="ph ph-facebook-logo"></i></a>
-              <a href="#"><i class="ph ph-instagram-logo"></i></a>
-              <a href="#"><i class="ph ph-pinterest-logo"></i></a>
-              <a href="#"><i class="ph ph-youtube-logo"></i></a>
-            </div>
-          </div>
-          
-          <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="services.html">Services We Offer</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-col">
-            <h3>Services</h3>
-            <ul>
-              <li><a href="service-modular-kitchen.html">Modular Kitchen</a></li>
-              <li><a href="service-bedroom-interiors.html">Bedroom Interiors</a></li>
-              <li><a href="service-living-room-interiors.html">Living Room Interiors</a></li>
-              <li><a href="service-commercial-interiors.html">Commercial Interiors</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-col">
-            <h3>Contact Us</h3>
-            <ul>
-              <li><i class="ph ph-phone"></i> 08129-188 188<br>08129 88 00 88</li>
-              <li><i class="ph ph-envelope"></i> timbercubes@gmail.com</li>
-              <li><i class="ph ph-map-pin"></i> Thrissur, Calicut, Kochi</li>
-            </ul>
-            <h3 class="mt-4">Working Hours</h3>
-            <ul>
-              <li>Mon - Sat : 9:00 AM - 10:00 PM</li>
-              <li>Sunday : Also Open</li>
-            </ul>
+            <a href="service-bedroom-interiors.html" class="mega-menu-card">
+              <div class="mega-card-icon"><i class="ph ph-bed"></i></div>
+              <div class="mega-card-info">
+                <span class="mega-card-title">Bedroom Interiors</span>
+                <span class="mega-card-desc">Wardrobes &amp; luxury beds</span>
+              </div>
+              <div class="mega-card-check"><i class="ph ph-check"></i></div>
+            </a>
+            <a href="service-living-room-interiors.html" class="mega-menu-card">
+              <div class="mega-card-icon"><i class="ph ph-couch"></i></div>
+              <div class="mega-card-info">
+                <span class="mega-card-title">Living Room Interiors</span>
+                <span class="mega-card-desc">TV units &amp; custom seating</span>
+              </div>
+              <div class="mega-card-check"><i class="ph ph-check"></i></div>
+            </a>
+            <a href="service-commercial-interiors.html" class="mega-menu-card">
+              <div class="mega-card-icon"><i class="ph ph-storefront"></i></div>
+              <div class="mega-card-info">
+                <span class="mega-card-title">Commercial Interiors</span>
+                <span class="mega-card-desc">Offices, retail &amp; workspaces</span>
+              </div>
+              <div class="mega-card-check"><i class="ph ph-check"></i></div>
+            </a>
           </div>
         </div>
-        
-        <div class="footer-bottom">
-          <p>&copy; 2026 Timbercubes. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-    <!-- Full-screen Mobile Nav Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
-      <div class="mobile-nav-header">
-        <a href="#" class="logo-link">
-          <div class="logo-container">
-            <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
-          </div>
+      <div class="header-icons">
+        <a href="#" class="btn-layered-pill hide-on-mobile">
+          <span class="btn-text-pill">Get Free Quote</span>
+          <i class="ph ph-arrow-right btn-arrow"></i>
         </a>
-        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
-          <i class="ph ph-x"></i>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open mobile menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Header matching reference screenshot 1 -->
+    <section class="blog-page-hero">
+      <div class="blog-hero-content-wrap" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <span class="blog-hero-tag">Blog</span>
+          <h1>Latest News</h1>
+          <p>Stay updated with our latest milestones, design innovations, and stories from Timbercubes.</p>
+        </div>
+
+        <!-- Small Author Section (Right Side) -->
+        <button class="author-chip" type="button" onclick="openAuthorModal()" title="View Abdul Jalal's full profile" style="margin-bottom: 8px;">
+          <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="author-chip-avatar">
+          <div class="author-chip-info">
+            <span class="author-chip-label">Blog Author &amp; Founder</span>
+            <strong class="author-chip-name">Abdul Jalal Panthenkadan</strong>
+          </div>
+          <span class="author-chip-action">Bio <i class="ph ph-arrow-up-right"></i></span>
         </button>
       </div>
-      
-      <div class="mobile-nav-content">
-        <div class="mobile-nav-large">
-          <div class="mobile-nav-services-wrap">
-            <button class="mobile-services-toggle" id="mobileServicesToggle" type="button" aria-expanded="true">
-              <span>Services We Offer</span>
-              <i class="ph ph-caret-down mobile-services-arrow"></i>
-            </button>
-            <div class="mobile-sub-services open" id="mobileSubServices">
-              <a href="service-modular-kitchen.html"><i class="ph ph-cooking-pot"></i> <span>Modular Kitchen</span></a>
-              <a href="service-bedroom-interiors.html"><i class="ph ph-bed"></i> <span>Bedroom Interiors</span></a>
-              <a href="service-living-room-interiors.html"><i class="ph ph-couch"></i> <span>Living Room Interiors</span></a>
-              <a href="service-commercial-interiors.html"><i class="ph ph-storefront"></i> <span>Commercial Interiors</span></a>
+    </section>
+
+    <!-- Blog Cards Grid -->
+    <section class="blog-grid-section">
+      <div class="blog-grid">
+
+        <!-- Card 1: Logo Launch -->
+        <a href="blog-logo-launch.html" class="blog-card">
+          <div class="blog-card-media">
+            <span class="blog-card-badge">Milestone</span>
+            <img src="/blog and newslatter/Logo Relaunch/IMG_7535.JPG.jpeg" alt="Logo Relaunch Event">
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title">A Fresh Start for Timbercubes: Our New Brand Identity and Logo</h2>
+            <p class="blog-card-desc">Unveiling our new brand identity and logo at The Mercy Luxury Business Hotel in
+              Kochi, marking our next stage of growth.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author-inline">
+                <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="blog-card-author-img">
+                <span class="blog-card-author-name">Abdul Jalal P.</span>
+              </div>
+              <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
             </div>
           </div>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About us</a>
+        </a>
+
+        <!-- Card 2: Magazine Feature -->
+        <a href="blog-magazine-features.html" class="blog-card">
+          <div class="blog-card-media">
+            <span class="blog-card-badge">Press &amp; Media</span>
+            <img src="/blog and newslatter/Featured in magazines and books/magazine-cover-feature.jpg"
+              alt="Featured in Magazines and Books">
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title">Featured in Top Magazines and Architecture Books</h2>
+            <p class="blog-card-desc">Discover how Timbercubes' bespoke kitchens and wardrobe creations gained
+              recognition in prominent interior design publications.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author-inline">
+                <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="blog-card-author-img">
+                <span class="blog-card-author-name">Abdul Jalal P.</span>
+              </div>
+              <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Calicut Display Showroom Inauguration -->
+        <a href="blog-calicut-showroom.html" class="blog-card">
+          <div class="blog-card-media">
+            <span class="blog-card-badge">Showroom</span>
+            <img src="/blog and newslatter/tibercubes Calicut display showroom inaguration/IMG_7511.JPG.jpeg"
+              alt="Calicut Display Showroom Inauguration">
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title">The Timbercubes Showroom Inauguration in Calicut: Pride, Gratitude and a New
+              Beginning</h2>
+            <p class="blog-card-desc">On 26 October 2017, we opened our Calicut showroom to bring quality kitchen,
+              wardrobe, and interior solutions closer to you.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author-inline">
+                <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="blog-card-author-img">
+                <span class="blog-card-author-name">Abdul Jalal P.</span>
+              </div>
+              <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4: Home Pest Control -->
+        <a href="blog-pest-control.html" class="blog-card">
+          <div class="blog-card-media">
+            <span class="blog-card-badge">Home Care &amp; Guide</span>
+            <img src="/pest-control-banner.jpg" alt="Home Pest Control Guide">
+          </div>
+          <div class="blog-card-body">
+            <h2 class="blog-card-title">Home Pest Control: Protect Your Home Before and After Construction</h2>
+            <p class="blog-card-desc">A complete guide to pre-construction anti-termite treatment and post-construction
+              habits to keep Kerala homes pest-free.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author-inline">
+                <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="blog-card-author-img">
+                <span class="blog-card-author-name">Abdul Jalal P.</span>
+              </div>
+              <span class="blog-card-cta">Read Article <i class="ph ph-arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <a href="index.html" class="footer-logo-link" style="display: block; margin-bottom: 20px;">
+            <img src="/logowhite footer.png" alt="Timbercubes Logo" class="footer-logo"
+              style="max-width: 250px; border-radius: 8px;">
+          </a>
+          <p>Timbercubes specializes in crafting stylish and functional interior solutions for modern homes.</p>
+          <div class="socials">
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+            <a href="#"><i class="ph ph-youtube-logo"></i></a>
+          </div>
         </div>
-        
-        <div class="mobile-nav-medium">
-          <a href="index.html">Home</a>
-          <a href="testimonials.html">Testimonials</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="#">Get Free Quote</a>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services We Offer</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
-        
-        <div class="mobile-nav-contact">
-          <p>t: 08129-188 188<br>08129 88 00 88</p>
-          <p>m: <a href="mailto:timbercubes@gmail.com">timbercubes@gmail.com</a></p>
+
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="service-modular-kitchen.html">Modular Kitchen</a></li>
+            <li><a href="service-bedroom-interiors.html">Bedroom Interiors</a></li>
+            <li><a href="service-living-room-interiors.html">Living Room Interiors</a></li>
+            <li><a href="service-commercial-interiors.html">Commercial Interiors</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="ph ph-phone"></i> 08129-188 188<br>08129 88 00 88</li>
+            <li><i class="ph ph-envelope"></i> timbercubes@gmail.com</li>
+            <li><i class="ph ph-map-pin"></i> Thrissur, Calicut, Kochi</li>
+          </ul>
+          <h3 class="mt-4">Working Hours</h3>
+          <ul>
+            <li>Mon - Sat : 9:00 AM - 10:00 PM</li>
+            <li>Sunday : Also Open</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Timbercubes. All rights reserved.</p>
       </div>
     </div>
-    
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </footer>
+
+  <!-- Full-screen Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-header">
+      <a href="#" class="logo-link">
+        <div class="logo-container">
+          <img src="/logo.png" alt="Timbercubes Logo" class="brand-logo" />
+        </div>
+      </a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-large">
+        <div class="mobile-nav-services-wrap">
+          <button class="mobile-services-toggle" id="mobileServicesToggle" type="button" aria-expanded="true">
+            <span>Services We Offer</span>
+            <i class="ph ph-caret-down mobile-services-arrow"></i>
+          </button>
+          <div class="mobile-sub-services open" id="mobileSubServices">
+            <a href="service-modular-kitchen.html"><i class="ph ph-cooking-pot"></i> <span>Modular Kitchen</span></a>
+            <a href="service-bedroom-interiors.html"><i class="ph ph-bed"></i> <span>Bedroom Interiors</span></a>
+            <a href="service-living-room-interiors.html"><i class="ph ph-couch"></i> <span>Living Room
+                Interiors</span></a>
+            <a href="service-commercial-interiors.html"><i class="ph ph-storefront"></i> <span>Commercial
+                Interiors</span></a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About us</a>
+      </div>
+
+      <div class="mobile-nav-medium">
+        <a href="index.html">Home</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Get Free Quote</a>
+      </div>
+
+      <div class="mobile-nav-contact">
+        <p>t: 08129-188 188<br>08129 88 00 88</p>
+        <p>m: <a href="mailto:timbercubes@gmail.com">timbercubes@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Author Details Modal -->
+  <div class="author-modal" id="authorModal" aria-hidden="true" role="dialog" aria-label="Author Profile">
+    <div class="author-modal-card">
+      <button class="author-modal-close" onclick="closeAuthorModal()" aria-label="Close modal">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="author-modal-header">
+        <img src="/author-abdul-jalal.jpg" alt="Abdul Jalal Panthenkadan" class="author-modal-avatar">
+        <div class="author-modal-meta">
+          <span class="author-badge-pill">Founder &amp; Blog Author</span>
+          <h3 class="author-modal-name">Abdul Jalal Panthenkadan</h3>
+          <p class="author-modal-title">Founder &amp; Blog Author, Timbercubes (Est. 2008)</p>
+        </div>
+      </div>
+
+      <div class="author-tags-row" style="margin-bottom: 20px;">
+        <span class="author-tag"><i class="ph ph-certificate"></i> ~20 Years in Interior Industry</span>
+        <span class="author-tag"><i class="ph ph-buildings"></i> 8 Years UAE Business Experience</span>
+        <span class="author-tag"><i class="ph ph-shield-check"></i> NIPHM Certified in Pest Management</span>
+      </div>
+
+      <div class="author-modal-bio">
+        <p>
+          Abdul Jalal Panthenkadan is the founder of Timbercubes, established in 2008. He has nearly two decades of
+          experience in the interior industry, and eight years of professional experience in Dubai, UAE, gave him a
+          broader understanding of business.
+        </p>
+        <p>
+          His expertise covers modern interior concepts, kitchen and wardrobe manufacturing, furniture materials,
+          hardware and emerging design trends. He has also completed a certification course in Rodent and Household Pest
+          Management from the National Institute of Plant Health Management (NIPHM), Government of India, which adds to
+          his knowledge of protecting interiors and materials.
+        </p>
+        <p>
+          Through his blogs and articles, he shares his industry knowledge, practical experience and views on the latest
+          developments in interior design and manufacturing. His aim is to give readers useful ideas that help them
+          understand interior spaces, materials and design possibilities.
+        </p>
+        <p>
+          He believes good interiors are not just about appearance. They should make spaces beautiful, functional and
+          comfortable, and this belief guides his work at Timbercubes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
