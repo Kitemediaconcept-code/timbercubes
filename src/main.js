@@ -193,3 +193,57 @@ document.addEventListener('click', (e) => {
     window.closeAuthorModal();
   }
 });
+
+// Service & Location Projects Gallery Filtering Logic
+document.addEventListener('DOMContentLoaded', () => {
+  // Service-based gallery filter
+  const serviceFilterBtns = document.querySelectorAll('.service-filter-btn');
+  const serviceItems = document.querySelectorAll('.service-filter-item');
+
+  if (serviceFilterBtns.length > 0 && serviceItems.length > 0) {
+    serviceFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        serviceFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        serviceItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-service') === filter) {
+            item.classList.remove('is-hidden');
+          } else {
+            item.classList.add('is-hidden');
+          }
+        });
+
+        if (typeof lenis !== 'undefined') lenis.resize();
+      });
+    });
+  }
+
+  // Location filter (legacy / fallback)
+  const filterBtns = document.querySelectorAll('.loc-filter-btn');
+  const items = document.querySelectorAll('.location-filter-item');
+
+  if (filterBtns.length > 0 && items.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        items.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-location') === filter) {
+            item.classList.remove('is-hidden');
+          } else {
+            item.classList.add('is-hidden');
+          }
+        });
+
+        // Trigger Lenis scroll refresh if available
+        if (typeof lenis !== 'undefined') lenis.resize();
+      });
+    });
+  }
+});
