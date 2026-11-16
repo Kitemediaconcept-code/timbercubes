@@ -143,10 +143,6 @@
 
             <h2>Office, Retail and Cafe Fit-Outs, Built In-House</h2>
 
-            <p>
-              Offices, shops and cafés that suit daily operations and look right for the brand. Furniture made to exact site measurements, checked before fitting, and one contact to deal with from start to end.
-            </p>
-
             <div class="kitchen-hero__actions">
               <a class="kitchen-btn kitchen-btn--primary" href="contact.html">
                 <span>Get Free Quote</span>
@@ -163,25 +159,28 @@
               </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="kitchen-hero__highlights" aria-label="Our experience">
-            <div class="kitchen-stat kitchen-stat--glass">
-              <span class="kitchen-stat__eyebrow">EXPERIENCE</span>
-              <strong>18+ Yrs</strong>
-              <span>In commercial interiors</span>
-            </div>
+      <!-- Highlights Section Below Hero -->
+      <section class="kitchen-highlights-bar" aria-label="Our experience">
+        <div class="kitchen-highlights-container">
+          <div class="kitchen-stat kitchen-stat--glass">
+            <span class="kitchen-stat__eyebrow">EXPERIENCE</span>
+            <strong>18+ Yrs</strong>
+            <span>In commercial interiors</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--cream">
-              <span class="kitchen-stat__eyebrow">PORTFOLIO</span>
-              <strong>1000+</strong>
-              <span>Projects delivered</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--cream">
+            <span class="kitchen-stat__eyebrow">PORTFOLIO</span>
+            <strong>1000+</strong>
+            <span>Projects delivered</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--brown">
-              <span class="kitchen-stat__eyebrow">IN-HOUSE</span>
-              <strong>Factory</strong>
-              <span>Own facility in Kerala</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--brown">
+            <span class="kitchen-stat__eyebrow">IN-HOUSE</span>
+            <strong>Factory</strong>
+            <span>Own facility in Kerala</span>
           </div>
         </div>
       </section>
@@ -243,13 +242,13 @@
         .kitchen-hero__inner {
           width: 100%;
           max-width: 1600px;
-          min-height: 760px;
+          min-height: 580px;
           margin-inline: auto;
-          padding: 120px clamp(24px, 5vw, 80px) 40px;
+          padding: 140px clamp(24px, 5vw, 80px) 70px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          gap: 56px;
+          justify-content: center;
+          gap: 30px;
         }
 
         .kitchen-hero__content {
@@ -360,6 +359,20 @@
           outline-offset: 5px;
         }
 
+        .kitchen-highlights-bar {
+          background-color: #ffffff;
+          padding: 40px 20px;
+          border-bottom: 1px solid #e5e7eb;
+        }
+
+        .kitchen-highlights-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
         .kitchen-hero__highlights {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -416,8 +429,12 @@
 
         @media (max-width: 900px) {
           .kitchen-hero__inner {
-            padding: 95px 26px 26px;
-            min-height: 720px;
+            padding: 100px 26px 40px;
+            min-height: 520px;
+          }
+
+          .kitchen-highlights-container {
+            gap: 14px;
           }
 
           .kitchen-hero__content {

@@ -143,10 +143,6 @@
 
             <h2>Made to Fit Your Home</h2>
 
-            <p>
-              TV units, sofas, centre tables, consoles, study tables and workstations are planned together as one design, each sized to the actual walls, corners and ceiling height. Every unit is fitted in place by a professional team.
-            </p>
-
             <div class="kitchen-hero__actions">
               <a class="kitchen-btn kitchen-btn--primary" href="contact.html">
                 <span>Get Free Quote</span>
@@ -163,25 +159,28 @@
               </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="kitchen-hero__highlights" aria-label="Our experience">
-            <div class="kitchen-stat kitchen-stat--glass">
-              <span class="kitchen-stat__eyebrow">SINCE</span>
-              <strong>2008</strong>
-              <span>Experience you can trust</span>
-            </div>
+      <!-- Highlights Section Below Hero -->
+      <section class="kitchen-highlights-bar" aria-label="Our experience">
+        <div class="kitchen-highlights-container">
+          <div class="kitchen-stat kitchen-stat--glass">
+            <span class="kitchen-stat__eyebrow">SINCE</span>
+            <strong>2008</strong>
+            <span>Experience you can trust</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--cream">
-              <span class="kitchen-stat__eyebrow">OUR WORK</span>
-              <strong>1000+</strong>
-              <span>Projects completed</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--cream">
+            <span class="kitchen-stat__eyebrow">OUR WORK</span>
+            <strong>1000+</strong>
+            <span>Projects completed</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--brown">
-              <span class="kitchen-stat__eyebrow">QUALITY</span>
-              <strong>In-House</strong>
-              <span>Manufacturing &amp; Install</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--brown">
+            <span class="kitchen-stat__eyebrow">QUALITY</span>
+            <strong>In-House</strong>
+            <span>Manufacturing &amp; Install</span>
           </div>
         </div>
       </section>
@@ -243,13 +242,13 @@
         .kitchen-hero__inner {
           width: 100%;
           max-width: 1600px;
-          min-height: 760px;
+          min-height: 580px;
           margin-inline: auto;
-          padding: 120px clamp(24px, 5vw, 80px) 40px;
+          padding: 140px clamp(24px, 5vw, 80px) 70px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          gap: 56px;
+          justify-content: center;
+          gap: 30px;
         }
 
         .kitchen-hero__content {
@@ -359,6 +358,20 @@
           color: #33261d;
         }
 
+        .kitchen-highlights-bar {
+          background-color: #ffffff;
+          padding: 40px 20px;
+          border-bottom: 1px solid #e5e7eb;
+        }
+
+        .kitchen-highlights-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
         .kitchen-hero__highlights {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -415,8 +428,12 @@
 
         @media (max-width: 900px) {
           .kitchen-hero__inner {
-            padding: 95px 26px 26px;
-            min-height: 720px;
+            padding: 100px 26px 40px;
+            min-height: 520px;
+          }
+
+          .kitchen-highlights-container {
+            gap: 14px;
           }
 
           .kitchen-hero__content {

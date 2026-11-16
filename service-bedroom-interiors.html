@@ -146,10 +146,6 @@
               Designed to Suit Your Space
             </h2>
 
-            <p>
-              Designed, manufactured and installed by one in-house team: sliding wardrobes, hinged wardrobes, walk-in wardrobes, dressing units, cots and side tables, all made to the room’s exact measurement.
-            </p>
-
             <div class="kitchen-hero__actions">
               <a class="kitchen-btn kitchen-btn--primary" href="contact.html">
                 <span>Get Free Quote</span>
@@ -166,25 +162,28 @@
               </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="kitchen-hero__highlights" aria-label="Our experience">
-            <div class="kitchen-stat kitchen-stat--glass">
-              <span class="kitchen-stat__eyebrow">SINCE</span>
-              <strong>2008</strong>
-              <span>Experience you can trust</span>
-            </div>
+      <!-- Highlights Section Below Hero -->
+      <section class="kitchen-highlights-bar" aria-label="Our experience">
+        <div class="kitchen-highlights-container">
+          <div class="kitchen-stat kitchen-stat--glass">
+            <span class="kitchen-stat__eyebrow">SINCE</span>
+            <strong>2008</strong>
+            <span>Experience you can trust</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--cream">
-              <span class="kitchen-stat__eyebrow">OUR WORK</span>
-              <strong>1000+</strong>
-              <span>Projects completed</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--cream">
+            <span class="kitchen-stat__eyebrow">OUR WORK</span>
+            <strong>1000+</strong>
+            <span>Projects completed</span>
+          </div>
 
-            <div class="kitchen-stat kitchen-stat--brown">
-              <span class="kitchen-stat__eyebrow">RATED 5-STAR</span>
-              <strong>5-Star</strong>
-              <span>Google &amp; Justdial rated</span>
-            </div>
+          <div class="kitchen-stat kitchen-stat--brown">
+            <span class="kitchen-stat__eyebrow">RATED 5-STAR</span>
+            <strong>5-Star</strong>
+            <span>Google &amp; Justdial rated</span>
           </div>
         </div>
       </section>
@@ -246,17 +245,17 @@
         .kitchen-hero__inner {
           width: 100%;
           max-width: 1600px;
-          min-height: 760px;
+          min-height: 580px;
           margin-inline: auto;
-          padding: 120px clamp(24px, 5vw, 80px) 40px;
+          padding: 140px clamp(24px, 5vw, 80px) 70px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          gap: 56px;
+          justify-content: center;
+          gap: 30px;
         }
 
         .kitchen-hero__content {
-          width: min(640px, 100%);
+          width: min(650px, 100%);
           margin-left: 0;
           margin-right: auto;
         }
@@ -367,6 +366,20 @@
           outline-offset: 5px;
         }
 
+        .kitchen-highlights-bar {
+          background-color: #ffffff;
+          padding: 40px 20px;
+          border-bottom: 1px solid #e5e7eb;
+        }
+
+        .kitchen-highlights-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
         .kitchen-hero__highlights {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -379,9 +392,10 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          min-height: 150px;
+          min-height: 140px;
           padding: 24px;
-          border-radius: 13px;
+          border-radius: 14px;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         }
 
         .kitchen-stat__eyebrow {
@@ -423,8 +437,8 @@
 
         @media (max-width: 900px) {
           .kitchen-hero__inner {
-            padding: 95px 26px 26px;
-            min-height: 720px;
+            padding: 100px 26px 40px;
+            min-height: 520px;
           }
 
           .kitchen-hero__content {
@@ -433,6 +447,10 @@
 
           .kitchen-hero h1 {
             letter-spacing: -1.3px;
+          }
+
+          .kitchen-highlights-container {
+            gap: 14px;
           }
         }
 
@@ -451,7 +469,7 @@
 
           .kitchen-hero__inner {
             min-height: auto;
-            padding: 85px 16px 20px;
+            padding: 90px 20px 36px;
             gap: 28px;
             box-sizing: border-box;
           }
@@ -474,36 +492,42 @@
             margin-bottom: 12px;
           }
 
-          .kitchen-hero p {
-            font-size: 13.5px;
-            line-height: 1.6;
-          }
-
           .kitchen-hero__actions {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             width: 100%;
           }
 
           .kitchen-btn {
-            width: 100%;
+            flex: 1 1 140px;
             min-height: 48px;
-            padding: 12px 6px;
+            padding: 12px 14px;
             font-size: 13px;
             font-weight: 600;
             justify-content: center;
             align-items: center;
             text-align: center;
             box-sizing: border-box;
-            white-space: nowrap;
-            gap: 6px;
+            gap: 8px;
           }
 
-          .kitchen-hero__highlights {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 8px;
+          .kitchen-highlights-bar {
+            padding: 24px 16px;
+          }
+
+          .kitchen-highlights-container {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+
+          .kitchen-stat {
+            min-height: 100px;
+            padding: 18px 16px;
+            border-radius: 12px;
+            align-items: flex-start;
+            text-align: left;
+          }
             width: 100%;
             max-width: 100%;
             box-sizing: border-box;
